@@ -1,0 +1,17 @@
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: #F1F1F1;
+    -fx-opacity: 1;
+}
+
+.tab {
+    -fx-background-color: -fx-background;
+    -fx-background: White;
+}
+
+.tab:hover {
+    -fx-background: Gainsboro;
+}
+
+.tab:selected {
+    -fx-background: LightBlue;
+}

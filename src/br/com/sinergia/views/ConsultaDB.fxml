@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="PanelFundo" fx:id="PanelFundo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1133.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.sinergia.controllers.fxml.ConsultaDBController">
+   <children>
+      <TextArea fx:id="TxtQuery" layoutX="14.0" layoutY="8.0" prefHeight="253.0" prefWidth="1109.0" style="-fx-border-color: GRAY;" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="8.0" />
+      <VBox layoutX="14.0" layoutY="275.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="275.0">
+         <children>
+            <HBox prefHeight="24.0" prefWidth="1109.0" style="-fx-border-color: Black;">
+               <children>
+                  <GridPane alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="1107.0" HBox.hgrow="ALWAYS">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Text fx:id="TxQtdCol" stroke="#750000" strokeType="OUTSIDE" strokeWidth="0.0" text="Qtd. Colunas:" underline="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                        <Text fx:id="TxQtdLinha" layoutX="86.0" layoutY="26.0" stroke="#750000" strokeType="OUTSIDE" strokeWidth="0.0" text="Qtd. Linhas:" underline="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Text fx:id="TxTempoExec" strokeType="OUTSIDE" strokeWidth="0.0" text="Tempo Exec:" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                        <Text fx:id="TxTempoMont" strokeType="OUTSIDE" strokeWidth="0.0" text="Tempo Montagem:" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                     </children>
+                  </GridPane>
+               </children>
+            </HBox>
+            <TableView fx:id="TableQuery" layoutX="14.0" layoutY="275.0" prefHeight="405.0" prefWidth="1109.0" style="-fx-border-color: black;" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="275.0" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

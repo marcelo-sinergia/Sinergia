@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="PanelFundo" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.sinergia.controllers.fxml.CadGrupoProdController">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="300.0" prefHeight="550.0" prefWidth="300.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="31.0" prefWidth="627.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="20.0" prefWidth="640.0" spacing="3.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <JFXButton fx:id="BtnAtualizar" buttonType="RAISED" contentDisplay="CENTER" layoutX="10.0" layoutY="13.0" prefHeight="18.0" prefWidth="20.0" ripplerFill="#289fd7" style="-fx-border-color: LightGray;" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="1.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="18.0" fitWidth="22.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@../properties/images/Icone_Refresh.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Atualizar">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                              </JFXButton>
+                              <JFXButton fx:id="BtnAdicionar" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="52.0" layoutY="11.0" prefHeight="18.0" prefWidth="20.0" ripplerFill="#289fd7" style="-fx-border-color: LightGray;" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="1.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView cache="true" fitHeight="18.0" fitWidth="22.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@../properties/images/Icone_Adicionar.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Adicionar">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                              </JFXButton>
+                              <JFXButton fx:id="BtnSalvar" buttonType="RAISED" contentDisplay="CENTER" disable="true" layoutX="94.0" layoutY="11.0" prefHeight="18.0" prefWidth="20.0" ripplerFill="#289fd7" style="-fx-border-color: LightGray;" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="1.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="18.0" fitWidth="22.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@../properties/images/Icone_Salvar.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Salvar">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                              </JFXButton>
+                              <JFXButton fx:id="BtnCancelar" buttonType="RAISED" contentDisplay="CENTER" disable="true" layoutX="136.0" layoutY="11.0" prefHeight="18.0" prefWidth="20.0" ripplerFill="#289fd7" style="-fx-border-color: LightGray;" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="1.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="18.0" fitWidth="22.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@../properties/images/Icone_Cancelar2.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Cancelar">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                              </JFXButton>
+                              <JFXButton fx:id="BtnEditar" buttonType="RAISED" contentDisplay="CENTER" layoutX="178.0" layoutY="11.0" prefHeight="18.0" prefWidth="20.0" ripplerFill="#289fd7" style="-fx-border-color: LightGray;" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="1.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="18.0" fitWidth="22.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@../properties/images/Icone_Editar.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Editar">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                              </JFXButton>
+                              <JFXButton fx:id="BtnDuplicar" buttonType="RAISED" contentDisplay="CENTER" layoutX="214.0" layoutY="11.0" prefHeight="18.0" prefWidth="20.0" ripplerFill="#289fd7" style="-fx-border-color: LightGray;" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="1.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="18.0" fitWidth="22.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@../properties/images/Icone_Duplicar.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Duplicar">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                              </JFXButton>
+                              <JFXButton fx:id="BtnExcluir" buttonType="RAISED" contentDisplay="CENTER" layoutX="255.0" layoutY="11.0" prefHeight="18.0" prefWidth="20.0" ripplerFill="#289fd7" style="-fx-border-color: LightGray;" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="1.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="18.0" fitWidth="22.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@../properties/images/Icone_Excluir.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Excluir">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Tooltip>
+                                 </tooltip>
+                              </JFXButton>
+                              <Label fx:id="LblAcao" prefHeight="34.0" prefWidth="294.0" text="Parceiro excluído com sucesso!" visible="false" HBox.hgrow="ALWAYS">
+                                 <graphic>
+                                    <ImageView fitHeight="27.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../properties/images/Sucesso.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                        </HBox>
+                        <Separator prefHeight="13.0" prefWidth="925.0" style="-: ;" VBox.vgrow="ALWAYS">
+                           <effect>
+                              <ColorAdjust contrast="-0.76" />
+                           </effect>
+                        </Separator>
+                     </children>
+                  </VBox>
+                  <JFXTreeView fx:id="TreeGrupoProd" layoutX="9.0" layoutY="29.0" prefHeight="569.0" prefWidth="265.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="598.0" prefWidth="356.0" style="-fx-background-color: White;">
+               <children>
+                  <Label alignment="CENTER_RIGHT" layoutX="15.0" layoutY="15.0" prefHeight="17.0" prefWidth="115.0" text="Cód. Grupo Prod.:" AnchorPane.leftAnchor="15.0" />
+                  <JFXTextField fx:id="TxtCodGrupoProd" alignment="CENTER" layoutX="135.0" layoutY="7.0" prefHeight="25.0" prefWidth="115.0" />
+                  <ImageView fx:id="ImgCodGrupo" fitHeight="25.0" fitWidth="41.0" layoutX="255.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../properties/images/Icone_Pesquisa.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <CheckBox fx:id="CkbAnalitico" alignment="CENTER_RIGHT" layoutX="379.0" layoutY="15.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="22.0" prefWidth="73.0" selected="true" text="Analítico?" />
+                  <Label alignment="CENTER_RIGHT" layoutX="15.0" layoutY="49.0" prefHeight="17.0" prefWidth="115.0" text="Descr. Grupo Prod.:" AnchorPane.leftAnchor="15.0" />
+                  <JFXTextField fx:id="TxtDescrGrupoProd" alignment="CENTER" layoutX="135.0" layoutY="41.0" prefHeight="25.0" prefWidth="317.0" />
+                  <Label fx:id="LblFieldGrupoPai" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="78.0" prefHeight="17.0" prefWidth="115.0" text="Cód. Grupo Prod. Pai:" visible="false" />
+                  <JFXTextField fx:id="TxtCodGrupoPai" alignment="CENTER" layoutX="134.0" layoutY="70.0" prefHeight="25.0" prefWidth="73.0" visible="false" />
+                  <ImageView fx:id="ImgGrupoPai" fitHeight="25.0" fitWidth="41.0" layoutX="214.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../properties/images/Icone_Pesquisa.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <JFXTextField fx:id="TxtDescrGrupoPai" alignment="CENTER" editable="false" layoutX="247.0" layoutY="74.0" prefHeight="25.0" prefWidth="275.0" visible="false" />
+                  <Separator layoutX="3.0" layoutY="109.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <VBox layoutX="16.0" layoutY="124.0" prefHeight="162.0" prefWidth="369.0" style="-fx-border-color: GainsBoro;">
+                     <children>
+                        <VBox prefHeight="27.0" prefWidth="362.0" style="-fx-background-color: LightGray;">
+                           <children>
+                              <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Validação de Estoque" textAlignment="CENTER" wrappingWidth="366.826171875" VBox.vgrow="ALWAYS">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="130.0" prefWidth="367.0">
+                           <children>
+                              <RadioButton fx:id="RadNEstoque" mnemonicParsing="false" prefHeight="32.0" prefWidth="367.0" text="Não valida estoque">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                 </padding>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="GroupValEst" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="RadLEstoque" mnemonicParsing="false" prefHeight="32.0" prefWidth="368.0" text="Valida pelo Local" toggleGroup="$GroupValEst" VBox.vgrow="ALWAYS">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                 </padding>
+                              </RadioButton>
+                              <RadioButton fx:id="RadEEstoque" layoutX="10.0" layoutY="42.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="368.0" text="Valida pelo Empresa" toggleGroup="$GroupValEst">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                 </padding>
+                              </RadioButton>
+                              <RadioButton fx:id="RadAEstoque" layoutX="10.0" layoutY="74.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="368.0" text="Valida pelo Empresa/Local" toggleGroup="$GroupValEst">
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                                 </padding>
+                              </RadioButton>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

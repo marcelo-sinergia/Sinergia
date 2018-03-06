@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.sinergia.functions.modules.PreferenciasController">
+   <children>
+      <VBox fx:id="vBox" alignment="CENTER" layoutX="14.0" layoutY="86.0" prefHeight="475.0" prefWidth="191.0" style="-fx-border-color: lightgray; -fx-background-color: lightgray;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="609.0" AnchorPane.topAnchor="125.0">
+         <children>
+            <ListView fx:id="ListN" VBox.vgrow="ALWAYS" />
+         </children></VBox>
+      <TitledPane fx:id="ttpRoot" alignment="CENTER" collapsible="false" layoutX="190.0" layoutY="317.0" prefHeight="283.0" prefWidth="610.0" text="Menu escolhido" underline="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="317.0">
+         <content>
+            <BorderPane fx:id="borderPane" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: lightgray;">
+               <left>
+                  <JFXListView fx:id="ListFx" BorderPane.alignment="CENTER" />
+               </left></BorderPane>
+         </content>
+      </TitledPane>
+      <HBox alignment="CENTER" layoutX="332.0" layoutY="142.0" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" text="Button" />
+            <Button mnemonicParsing="false" text="Button" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

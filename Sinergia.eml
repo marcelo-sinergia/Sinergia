@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inheritJdk="true">
+	<output-test url="file://$MODULE_DIR$/out/test/Sinergia"/>
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="jfoenix.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/jfoenix.jar!/"/>
+	</lib>
+	<levels>
+		<level name="lib" value="project"/>
+		<level name="jfoenix" value="project"/>
+	</levels>
+</component>

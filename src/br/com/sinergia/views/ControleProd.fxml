@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.sinergia.controllers.fxml.ControleProdController">
+   <children>
+      <AnchorPane fx:id="PanelForm" layoutY="43.0" prefHeight="437.0" prefWidth="640.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" layoutX="15.0" layoutY="20.0" prefHeight="20.0" prefWidth="100.0" text="Controlado Por:" AnchorPane.leftAnchor="0.0" />
+            <ComboBox fx:id="CbbControle" layoutX="104.0" layoutY="15.0" prefHeight="25.0" prefWidth="200.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></ComboBox>
+            <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="60.0" prefHeight="20.0" prefWidth="100.0" text="Descr. Controle:" AnchorPane.leftAnchor="0.0" />
+            <TextField fx:id="TxtDescrControle" layoutX="104.0" layoutY="58.0" prefHeight="25.0" prefWidth="200.0" />
+            <Label alignment="CENTER_RIGHT" layoutX="10.0" layoutY="100.0" prefHeight="20.0" prefWidth="100.0" text="Lista Controle:" AnchorPane.leftAnchor="0.0" />
+            <ListView fx:id="ListaControle" layoutX="104.0" layoutY="100.0" prefHeight="370.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="104.0" AnchorPane.topAnchor="100.0" />
+            <VBox layoutX="56.0" layoutY="120.0" prefHeight="347.0" prefWidth="40.0" spacing="3.0">
+               <children>
+                  <JFXButton fx:id="BtnAtualizar" buttonType="RAISED" contentDisplay="CENTER" prefHeight="20.0" prefWidth="40.0" ripplerFill="#289fd7" style="-fx-border-color: LightGray;">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../properties/images/Icone_Refresh.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Atualizar">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </JFXButton>
+				  <JFXButton fx:id="BtnAdicionar" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" prefHeight="20.0" prefWidth="40.0" ripplerFill="#289fd7" style="-fx-border-color: LightGray;">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView cache="true" fitHeight="26.0" fitWidth="30.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../properties/images/Icone_Adicionar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Adicionar">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton fx:id="BtnSalvar" buttonType="RAISED" contentDisplay="CENTER" disable="true" prefHeight="20.0" prefWidth="40.0" ripplerFill="#289fd7" style="-fx-border-color: LightGray;">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="30.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../properties/images/Icone_Salvar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Salvar">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton fx:id="BtnCancelar" buttonType="RAISED" contentDisplay="CENTER" disable="true" prefHeight="20.0" prefWidth="40.0" ripplerFill="#289fd7" style="-fx-border-color: LightGray;">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="30.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../properties/images/Icone_Cancelar2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Cancelar">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton fx:id="BtnExcluir" buttonType="RAISED" contentDisplay="CENTER" prefHeight="20.0" prefWidth="40.0" ripplerFill="#289fd7" style="-fx-border-color: LightGray;">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="30.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../properties/images/Icone_Excluir.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Excluir">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

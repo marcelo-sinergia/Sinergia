@@ -1,0 +1,19 @@
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: white;
+    -fx-effect: null;
+    -fx-opacity: 0;
+}
+
+.tab {
+    -fx-background-color: -fx-background;
+    -fx-background: White;
+}
+
+.tab:hover {
+    -fx-background: LightGray;
+}
+
+.tab:selected {
+    -fx-background: LightSkyBlue;
+    -fx-underline: true;
+}

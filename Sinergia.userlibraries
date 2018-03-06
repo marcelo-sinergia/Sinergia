@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="jfoenix">
+    <archive path="E:/Projetos/Sinergia/lib/jfoenix.jar" />
+  </library>
+  <library name="lib">
+    <archive path="E:/Projetos/Sinergia/lib/ojdbc7.jar" />
+    <archive path="E:/Projetos/Sinergia/lib/log4j-1.2.17.jar" />
+    <archive path="E:/Projetos/Sinergia/lib/jfoenix.jar" />
+    <archive path="E:/Projetos/Sinergia/lib/datedFileAppender-1.0.2.jar" />
+  </library>
+</eclipse-userlibraries>
+

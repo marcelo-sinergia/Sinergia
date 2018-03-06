@@ -1,0 +1,23 @@
+29/12/2017-22:30:38,809 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT COUNT(1) FROM TSIUSU WHERE LOGIN = ? 
+29/12/2017-22:30:38,823 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): MARCELOEV 
+29/12/2017-22:30:38,832 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT ATIVO, CODUSU, NOME, LOGIN, SENHA, MD5(?) AS CRYPT, GET_TSIPAR_T(?, ?) AS VERSAOATUALDB FROM TSIUSU WHERE LOGIN = ? 
+29/12/2017-22:30:38,832 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): (Criptografado) 
+29/12/2017-22:30:38,832 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): VERSAOATUALDB 
+29/12/2017-22:30:38,833 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 0 
+29/12/2017-22:30:38,833 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): MARCELOEV 
+29/12/2017-22:30:38,891 | WARN [class br.com.sinergia.controllers.fxml.LoginController] : Senha digitada inválida 
+29/12/2017-22:30:48,062 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT COUNT(1) FROM TSIUSU WHERE LOGIN = ? 
+29/12/2017-22:30:48,063 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): MARCELOEV 
+29/12/2017-22:30:48,064 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT ATIVO, CODUSU, NOME, LOGIN, SENHA, MD5(?) AS CRYPT, GET_TSIPAR_T(?, ?) AS VERSAOATUALDB FROM TSIUSU WHERE LOGIN = ? 
+29/12/2017-22:30:48,064 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): (Criptografado) 
+29/12/2017-22:30:48,064 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): VERSAOATUALDB 
+29/12/2017-22:30:48,064 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 0 
+29/12/2017-22:30:48,064 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): MARCELOEV 
+29/12/2017-22:30:48,068 | WARN [class br.com.sinergia.controllers.fxml.LoginController] : Senha digitada inválida 
+29/12/2017-22:30:49,806 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT COUNT(1) FROM TSIUSU WHERE LOGIN = ? 
+29/12/2017-22:30:49,807 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): MARCELOEV 
+29/12/2017-22:30:49,807 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT ATIVO, CODUSU, NOME, LOGIN, SENHA, MD5(?) AS CRYPT, GET_TSIPAR_T(?, ?) AS VERSAOATUALDB FROM TSIUSU WHERE LOGIN = ? 
+29/12/2017-22:30:49,807 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): (Criptografado) 
+29/12/2017-22:30:49,808 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): VERSAOATUALDB 
+29/12/2017-22:30:49,808 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 0 
+29/12/2017-22:30:49,808 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): MARCELOEV 

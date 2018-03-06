@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="PanelFundo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: white;" stylesheets="@ViewsStyle/InternTabStyle.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.sinergia.controllers.fxml.CadProdutosController">
+    <children>
+      <VBox layoutX="30.0" layoutY="70.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="925.0" spacing="3.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <JFXButton fx:id="BtnFormGrade" buttonType="RAISED" contentDisplay="CENTER" prefHeight="30.0" prefWidth="40.0" ripplerFill="#289fd7" style="-fx-border-color: LightGray;" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../properties/images/Icone_Modo_Grade.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Modo Grade">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton fx:id="BtnAtualizar" buttonType="RAISED" contentDisplay="CENTER" layoutX="10.0" layoutY="13.0" prefHeight="30.0" prefWidth="40.0" ripplerFill="#289fd7" style="-fx-border-color: LightGray;" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../properties/images/Icone_Refresh.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Atualizar">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton fx:id="BtnAdicionar" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="52.0" layoutY="11.0" prefHeight="30.0" prefWidth="40.0" ripplerFill="#289fd7" style="-fx-border-color: LightGray;">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView cache="true" fitHeight="31.0" fitWidth="35.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../properties/images/Icone_Adicionar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Adicionar">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton fx:id="BtnSalvar" buttonType="RAISED" contentDisplay="CENTER" disable="true" layoutX="94.0" layoutY="11.0" prefHeight="30.0" prefWidth="40.0" ripplerFill="#289fd7" style="-fx-border-color: LightGray;">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../properties/images/Icone_Salvar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Salvar">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton fx:id="BtnCancelar" buttonType="RAISED" contentDisplay="CENTER" disable="true" layoutX="136.0" layoutY="11.0" prefHeight="30.0" prefWidth="40.0" ripplerFill="#289fd7" style="-fx-border-color: LightGray;">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../properties/images/Icone_Cancelar2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Cancelar">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton fx:id="BtnEditar" buttonType="RAISED" contentDisplay="CENTER" layoutX="178.0" layoutY="11.0" prefHeight="30.0" prefWidth="40.0" ripplerFill="#289fd7" style="-fx-border-color: LightGray;">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../properties/images/Icone_Editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Editar">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton fx:id="BtnDuplicar" buttonType="RAISED" contentDisplay="CENTER" layoutX="214.0" layoutY="11.0" prefHeight="30.0" prefWidth="40.0" ripplerFill="#289fd7" style="-fx-border-color: LightGray;">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../properties/images/Icone_Duplicar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Duplicar">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton fx:id="BtnExcluir" buttonType="RAISED" contentDisplay="CENTER" layoutX="255.0" layoutY="11.0" prefHeight="30.0" prefWidth="40.0" ripplerFill="#289fd7" style="-fx-border-color: LightGray;">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../properties/images/Icone_Excluir.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Excluir">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton fx:id="BtnPrimeiro" buttonType="RAISED" contentDisplay="CENTER" layoutX="296.0" layoutY="11.0" prefHeight="30.0" prefWidth="40.0" ripplerFill="#289fd7" style="-fx-border-color: LightGray;">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../properties/images/Icone_PrimeiraLinha.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Primeira Linha">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton fx:id="BtnAnterior" buttonType="RAISED" contentDisplay="CENTER" layoutX="337.0" layoutY="11.0" prefHeight="30.0" prefWidth="40.0" ripplerFill="#289fd7" style="-fx-border-color: LightGray;">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../properties/images/Icone_AnteriorLinha.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Linha Anterior">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton fx:id="BtnProximo" buttonType="RAISED" contentDisplay="CENTER" layoutX="378.0" layoutY="11.0" prefHeight="30.0" prefWidth="40.0" ripplerFill="#289fd7" style="-fx-border-color: LightGray;">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../properties/images/Icone_ProximaLinha.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Próxima Linha">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </JFXButton>
+                  <JFXButton fx:id="BtnUltimo" buttonType="RAISED" contentDisplay="CENTER" layoutX="419.0" layoutY="11.0" prefHeight="30.0" prefWidth="40.0" ripplerFill="#289fd7" style="-fx-border-color: LightGray;">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../properties/images/Icone_UltimaLinha.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Última Linha">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </JFXButton>
+                      <Label fx:id="LblAcao" prefHeight="34.0" prefWidth="294.0" text="Parceiro excluído com sucesso!" visible="false">
+                          <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                                  <image>
+                                      <Image url="@../properties/images/Sucesso.png" />
+                                  </image>
+                              </ImageView>
+                          </graphic>
+                      </Label>
+               </children>
+            </HBox>
+                <Separator prefHeight="13.0" prefWidth="925.0" style="-: ;" VBox.vgrow="ALWAYS">
+                    <effect>
+                        <ColorAdjust contrast="-0.76" />
+                    </effect>
+                </Separator>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="PanelGrade" layoutX="10.0" layoutY="67.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <TableView fx:id="TabelaProdutos" editable="true" prefHeight="676.0" prefWidth="935.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="PanelForm" layoutX="6.0" layoutY="50.0" prefHeight="680.0" prefWidth="943.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <Label layoutX="11.0" layoutY="12.0" prefHeight="25.0" prefWidth="67.0" text="Código :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="TxtCodigo" alignment="CENTER" layoutX="69.0" layoutY="10.0" prefHeight="27.0" prefWidth="92.0" />
+            <Label layoutX="11.0" layoutY="46.0" prefHeight="25.0" prefWidth="67.0" stylesheets="@ViewsStyle/RequiredFieldStyle.css" text="Descrição :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="TxtDescricao" alignment="CENTER" layoutX="84.0" layoutY="44.0" prefHeight="27.0" prefWidth="306.0" stylesheets="@ViewsStyle/InternTabStyle.css" />
+            <CheckBox fx:id="CkbAtivo" alignment="CENTER_RIGHT" contentDisplay="TOP" layoutX="316.0" layoutY="5.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="25.0" prefWidth="74.0" style="-: ;" text="Ativo?" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </CheckBox>
+            <TabPane fx:id="PanelTab" layoutY="76.0" prefHeight="599.0" prefWidth="925.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="76.0">
+               <tabs>
+                  <Tab closable="false" text="Geral">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" layoutX="3.0" layoutY="15.0" prefHeight="25.0" prefWidth="100.0" stylesheets="@ViewsStyle/RequiredFieldStyle.css" text="Complemento:" AnchorPane.leftAnchor="5.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="TxtComplemento" alignment="CENTER" layoutX="107.0" layoutY="15.0" prefHeight="27.0" prefWidth="364.0" />
+                              <TextField fx:id="TxtCodGrupo" alignment="CENTER" layoutX="107.0" layoutY="50.0" prefHeight="27.0" prefWidth="67.0" />
+                              <ImageView fx:id="ImgGrupoProd" fitHeight="25.0" fitWidth="21.0" layoutX="181.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../properties/images/Icone_Pesquisa.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                              <TextField fx:id="TxtDescrGrupo" alignment="CENTER" editable="false" layoutX="208.0" layoutY="50.0" prefHeight="27.0" prefWidth="263.0" />
+                              <Label alignment="CENTER_RIGHT" layoutX="3.0" layoutY="85.0" prefHeight="25.0" prefWidth="101.0" text="Marca:" AnchorPane.leftAnchor="5.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="CbbMarca" editable="true" layoutX="107.0" layoutY="85.0" prefHeight="25.0" prefWidth="197.0" />
+                              <Label alignment="CENTER_RIGHT" layoutX="3.0" layoutY="120.0" prefHeight="25.0" prefWidth="101.0" text="Unidade Prod.:" AnchorPane.leftAnchor="5.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="CbbUnidade" layoutX="107.0" layoutY="120.0" prefHeight="25.0" prefWidth="92.0" style="-fx-alignment: CENTER;" />
+                              <ImageView fx:id="ImgUnidade" fitHeight="25.0" fitWidth="21.0" layoutX="206.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../properties/images/Icone_Pesquisa.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                              <TextField fx:id="TxtDescrUnidade" alignment="CENTER" editable="false" layoutX="238.0" layoutY="120.0" prefHeight="25.0" prefWidth="233.0" />
+                              <Label alignment="CENTER_RIGHT" layoutX="4.0" layoutY="155.0" prefHeight="25.0" prefWidth="104.0" text="Referência: " AnchorPane.leftAnchor="5.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="TxtReferencia" alignment="CENTER" layoutX="107.0" layoutY="155.0" prefHeight="27.0" prefWidth="196.0" />
+                              <Label alignment="CENTER_RIGHT" layoutX="5.0" layoutY="190.0" prefHeight="25.0" prefWidth="101.0" text="NCM:" AnchorPane.leftAnchor="5.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="TxtNCM" alignment="CENTER" layoutX="107.0" layoutY="190.0" prefHeight="27.0" prefWidth="137.0" />
+                              <Label alignment="CENTER_RIGHT" layoutX="5.0" layoutY="225.0" prefHeight="25.0" prefWidth="101.0" text="Cód. de Barras:" AnchorPane.leftAnchor="5.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="TxtCodBarras" alignment="CENTER" layoutX="107.0" layoutY="225.0" prefHeight="27.0" prefWidth="137.0" />
+                              <Label alignment="CENTER_RIGHT" layoutX="5.0" layoutY="260.0" prefHeight="25.0" prefWidth="101.0" text="Usado para:" AnchorPane.leftAnchor="5.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="CbbUsoProd" layoutX="107.0" layoutY="260.0" prefHeight="27.0" prefWidth="196.0" />
+                              <Label alignment="CENTER_RIGHT" layoutX="5.0" layoutY="295.0" prefHeight="25.0" prefWidth="101.0" text="Local:" AnchorPane.leftAnchor="5.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="TxtCodLocal" alignment="CENTER" layoutX="107.0" layoutY="295.0" prefHeight="27.0" prefWidth="67.0" />
+                              <ImageView fx:id="ImgCodLocal" fitHeight="25.0" fitWidth="21.0" layoutX="181.0" layoutY="297.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../properties/images/Icone_Pesquisa.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                              <TextField fx:id="TxtDescrLocal" alignment="CENTER" editable="false" layoutX="205.0" layoutY="295.0" prefHeight="27.0" prefWidth="265.0" />
+                              <CheckBox fx:id="CkbPromocao" alignment="CENTER_RIGHT" contentDisplay="TOP" layoutX="107.0" layoutY="325.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="118.0" text="Em Promoção?" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CheckBox>
+                              <CheckBox fx:id="CkbPermCompra" alignment="CENTER_RIGHT" contentDisplay="TOP" layoutX="107.0" layoutY="355.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="138.0" text="Permite comprar?" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CheckBox>
+                              <CheckBox fx:id="CkbPermVenda" contentDisplay="TOP" layoutX="107.0" layoutY="385.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="131.0" text="Permite vender?" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CheckBox>
+                              <CheckBox fx:id="CkbPermConsumo" contentDisplay="TOP" layoutX="107.0" layoutY="415.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="153.0" text="Permite consumir?" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CheckBox>
+                              <Label fx:id="LblImagem" layoutX="547.0" layoutY="35.0" prefHeight="352.0" prefWidth="356.0" style="-fx-border-color: darkgray;" />
+                              <Button fx:id="BtnNovaImagem" layoutX="866.0" layoutY="2.0" mnemonicParsing="false">
+                                 <tooltip>
+                                    <Tooltip text="Carregar nova imagem" />
+                                 </tooltip>
+                                 <graphic>
+                                    <ImageView fitHeight="24.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../properties/images/Icone_Upload.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Label alignment="CENTER_RIGHT" layoutX="3.0" layoutY="50.0" prefHeight="25.0" prefWidth="101.0" text="Grupo:" AnchorPane.leftAnchor="5.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="BtnLimparImagem" layoutX="825.0" layoutY="2.0" mnemonicParsing="false" visible="false">
+                                 <tooltip>
+                                    <Tooltip text="Limpar imagem" />
+                                 </tooltip>
+                                 <graphic>
+                                    <ImageView fitHeight="24.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../properties/images/Icone_Limpar.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Características">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextArea fx:id="TxtCaracteristicas" layoutY="40.0" prefHeight="117.0" prefWidth="799.0" promptText="Produto sem características" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Propriedades">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="170.0" layoutY="15.0" prefHeight="25.0" prefWidth="115.0" text="Dec. Custo:" textAlignment="RIGHT" AnchorPane.leftAnchor="5.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Spinner fx:id="SpnDecCusto" editable="true" layoutX="122.0" layoutY="15.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="92.0" />
+                              <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="230.0" layoutY="15.0" prefHeight="25.0" prefWidth="112.0" text="Dec. Quantidade:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Spinner fx:id="SpnDecQtd" editable="true" layoutX="344.0" layoutY="15.0" prefHeight="27.0" prefWidth="92.0" />
+                              <Label alignment="CENTER_RIGHT" layoutX="449.0" layoutY="15.0" prefHeight="25.0" prefWidth="74.0" text="Dec. Valor:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Spinner fx:id="SpnDecVlr" editable="true" layoutX="528.0" layoutY="15.0" prefHeight="27.0" prefWidth="92.0" />
+                              <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="167.0" layoutY="45.0" prefHeight="25.0" prefWidth="115.0" text="\% Com. Gerente:" textAlignment="RIGHT" AnchorPane.leftAnchor="5.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Spinner fx:id="SpnPercComGer" editable="true" layoutX="122.0" layoutY="45.0" prefHeight="27.0" prefWidth="92.0" />
+                              <Label layoutX="223.0" layoutY="45.0" prefHeight="25.0" prefWidth="119.0" text="\% Com. Vendedor:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Spinner fx:id="SpnPercComVen" editable="true" layoutX="344.0" layoutY="45.0" prefHeight="27.0" prefWidth="92.0" />
+                              <Label alignment="CENTER_RIGHT" layoutX="259.0" layoutY="75.0" prefHeight="25.0" prefWidth="115.0" text="Venda Mín.: " textAlignment="RIGHT" AnchorPane.leftAnchor="5.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Spinner fx:id="SpnVendaMin" editable="true" layoutX="122.0" layoutY="75.0" prefHeight="27.0" prefWidth="92.0" />
+                              <Label alignment="CENTER_RIGHT" layoutX="223.0" layoutY="75.0" prefHeight="25.0" prefWidth="119.0" text="Venda Máx.:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Spinner fx:id="SpnVendaMax" editable="true" layoutX="344.0" layoutY="75.0" prefHeight="27.0" prefWidth="92.0" />
+                              <Label alignment="CENTER_RIGHT" layoutX="14.0" layoutY="135.0" prefHeight="25.0" prefWidth="106.0" text="Desconto Máx.:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Spinner fx:id="SpnDescMax" editable="true" layoutX="122.0" layoutY="135.0" prefHeight="27.0" prefWidth="92.0" />
+                              <Label alignment="CENTER_RIGHT" layoutX="5.0" layoutY="105.0" prefHeight="25.0" prefWidth="115.0" text="Estoque Mín.: " textAlignment="RIGHT">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Spinner fx:id="SpnEstMin" editable="true" layoutX="122.0" layoutY="105.0" prefHeight="27.0" prefWidth="92.0" />
+                              <Label alignment="CENTER_RIGHT" layoutX="223.0" layoutY="105.0" prefHeight="25.0" prefWidth="119.0" text="Estoque Máx.:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Spinner fx:id="SpnEstMax" editable="true" layoutX="344.0" layoutY="105.0" prefHeight="27.0" prefWidth="92.0" />
+                           </children></AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Controles">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Accordion layoutX="82.0" layoutY="29.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <panes>
+                                  <TitledPane fx:id="TtpUnidades" animated="false" text="Unidades Alternativas" />
+                                  <TitledPane fx:id="TtpControles" animated="false" text="Controles Adicionais do Produto" />
+                                </panes>
+                              </Accordion>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+            <VBox layoutX="470.0" layoutY="3.0" prefHeight="67.0" prefWidth="435.0" style="-fx-border-color: LightGray;">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="442.0" style="-fx-background-color: Silver;" text="Histórico do Produto:" underline="true" VBox.vgrow="ALWAYS" />
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane prefHeight="63.0" prefWidth="433.0">
+                           <children>
+                              <Label alignment="CENTER" layoutY="6.0" prefHeight="20.0" prefWidth="131.0" text="Data/Hora Criação :" underline="true" />
+                              <Label fx:id="LblDataHoraCriacao" alignment="CENTER" layoutY="26.0" prefHeight="17.0" prefWidth="131.0" text="Datahora" />
+                              <Label alignment="CENTER" layoutX="119.0" layoutY="6.0" prefHeight="20.0" prefWidth="156.0" text="Data/Hora Ult. Alteração :" underline="true" />
+                              <Label fx:id="LblDataHoraAlter" alignment="CENTER" layoutX="131.0" layoutY="27.0" prefHeight="17.0" prefWidth="132.0" text="Datahora" />
+                              <Label alignment="CENTER" layoutX="272.0" layoutY="6.0" prefHeight="20.0" prefWidth="156.0" text="Usuário Ult. Alteração :" underline="true" />
+                              <Label fx:id="LblUsuAlter" alignment="CENTER" layoutX="262.0" layoutY="27.0" prefHeight="17.0" prefWidth="171.0" text="Código-Login" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children></AnchorPane>
+    </children>
+</AnchorPane>

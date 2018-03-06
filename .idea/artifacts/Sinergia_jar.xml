@@ -1,0 +1,15 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Sinergia:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Sinergia_jar</output-path>
+    <root id="archive" name="Sinergia.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/out/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="Sinergia" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/ojdbc7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/log4j-1.2.17.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/jfoenix.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/datedFileAppender-1.0.2.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.HTMLEditor?>
+
+<SplitPane fx:id="SplitPanel" dividerPositions="0.5" nodeOrientation="LEFT_TO_RIGHT" prefHeight="800.0" prefWidth="1280.0" style="-fx-border-color: gray;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.sinergia.controllers.fxml.PrincipalController">
+      <items>
+          <AnchorPane fx:id="PaneMenu" maxWidth="170.0" minHeight="0.0" minWidth="0.0" prefHeight="796.0" prefWidth="0.0">
+              <children>
+                    <JFXTextField fx:id="TxtPesqTela" alignment="CENTER" layoutX="4.0" layoutY="25.0" prefHeight="25.0" prefWidth="133.0" promptText="Pesquisar tela" />
+                    <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="136.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../properties/images/Icone_Pesquisa.png" />
+                        </image>
+                    </ImageView>
+                  <Accordion fx:id="MenuAccordion" blendMode="SCREEN" layoutY="74.0" maxHeight="1.7976931348623157E308" maxWidth="170.0" minHeight="0.0" minWidth="0.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="170.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="74.0" SplitPane.resizableWithParent="false"> </Accordion>
+              </children>
+          </AnchorPane>
+          <AnchorPane fx:id="PanePrincipal">
+              <children>
+            <GridPane hgap="5.0" prefHeight="28.0" prefWidth="1062.0" style="-fx-border-color: black; -fx-background-color: lightgray;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="27.0" />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button fx:id="BtnHome" mnemonicParsing="false" text="Home" GridPane.valignment="TOP">
+                     <tooltip>
+                        <Tooltip text="Abrir tela principal" />
+                     </tooltip>
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../properties/images/Main.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label fx:id="LblInfoFaixa" text="&quot;CódUsu - LoginUsu ( CódEmp - NomeEmp )&quot;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowSpan="2147483647" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS" />
+                  <Button fx:id="BtnMensagens" layoutX="1077.0" layoutY="12.0" mnemonicParsing="false" prefHeight="25.0" textFill="RED" underline="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="TOP">
+                     <tooltip>
+                        <Tooltip text="Propriedades" />
+                     </tooltip>
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../properties/images/Icone_Mensagem.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Castellar" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="BtnPropriedades" mnemonicParsing="false" prefHeight="25.0" GridPane.columnIndex="2" GridPane.columnSpan="3" GridPane.halignment="RIGHT" GridPane.hgrow="NEVER" GridPane.valignment="TOP">
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../properties/images/Icone_Propriedades2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <tooltip>
+                        <Tooltip text="Propriedades" />
+                     </tooltip>
+                  </Button>
+               </children>
+            </GridPane>
+            <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0">
+               <children>
+                        <TabPane fx:id="AbaPane" prefHeight="794.0" prefWidth="1100.0" style="-fx-background-color: white;" stylesheets="@ViewsStyle/MainTabStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <tabs>
+                                <Tab closable="false" text="Tela Principal">
+                                    <content>
+                                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                            <children>
+                                                <Label fx:id="LblNomeLembrete" layoutX="14.0" layoutY="23.0" prefHeight="25.0" prefWidth="612.0" text="Bom dia, Nome do Usuário!" underline="true">
+                                                    <font>
+                                                        <Font size="16.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label layoutX="14.0" layoutY="48.0" prefHeight="20.0" prefWidth="175.0" text="Lembretes :">
+                                                    <font>
+                                                        <Font size="14.0" />
+                                                    </font>
+                                                </Label>
+                                                <Button fx:id="BtnSalvarLemb" layoutX="551.0" layoutY="54.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="20.0" style="-fx-background-color: white;">
+                                                    <graphic>
+                                                        <ImageView fitHeight="30.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                                                            <image>
+                                                                <Image url="@../properties/images/diskette.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                    </graphic>
+                                                    <tooltip>
+                                                        <Tooltip text="Salvar alteraçoes" />
+                                                    </tooltip>
+                                                </Button>
+                                                <Button fx:id="BtnCancelarLemb" layoutX="588.0" layoutY="53.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="0.0" style="-fx-background-color: white;">
+                                                    <graphic>
+                                                        <ImageView fitHeight="44.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+                                                            <image>
+                                                                <Image url="@../properties/images/Icone_Cancelar.png" />
+                                                            </image>
+                                             <viewport>
+                                                <Rectangle2D />
+                                             </viewport>
+                                                        </ImageView>
+                                                    </graphic>
+                                                    <tooltip>
+                                                        <Tooltip text="Cancelar alteraçoes" />
+                                                    </tooltip>
+                                                </Button>
+                                                <Label fx:id="LblAddRemFavorito" alignment="CENTER" layoutX="570.0" layoutY="27.0" prefHeight="33.0" prefWidth="355.0" text="Removido de favoritos com sucesso!" visible="false">
+                                                    <graphic>
+                                                        <ImageView fitHeight="27.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                                            <image>
+                                                                <Image url="@../properties/images/Sucesso.png" />
+                                                            </image>
+                                                        </ImageView>
+                                                    </graphic>
+                                                </Label>
+                                                <HTMLEditor fx:id="TxtLembrete" layoutX="15.0" layoutY="91.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="586.0" prefWidth="611.0" style="-fx-border-color: gray;" AnchorPane.bottomAnchor="10.0" AnchorPane.topAnchor="91.0" />
+                                                <Label alignment="CENTER" layoutX="632.0" layoutY="60.0" prefHeight="25.0" prefWidth="243.0" text="Telas Favoritas :" underline="true" />
+                                                <Label alignment="CENTER" layoutX="866.0" layoutY="60.0" prefHeight="25.0" prefWidth="230.0" text="Telas Recentes :" underline="true" />
+                                                <Label fx:id="LblDHLembrete" layoutX="15.0" layoutY="71.0" prefHeight="17.0" prefWidth="263.0" text="Data/Hora Alteração: " />
+                                                <VBox fx:id="VBoxFavoritos" alignment="TOP_CENTER" layoutX="632.0" layoutY="91.0" prefHeight="269.0" prefWidth="230.0" spacing="3.0" style="-fx-border-color: gray;" AnchorPane.bottomAnchor="10.0" AnchorPane.topAnchor="91.0">
+                                                    <padding>
+                                                        <Insets left="3.0" top="3.0" />
+                                                    </padding>
+                                    </VBox>
+                                                <VBox fx:id="VBoxRecentes" alignment="TOP_CENTER" layoutX="866.0" layoutY="91.0" prefHeight="269.0" prefWidth="230.0" spacing="3.0" style="-fx-border-color: gray;" AnchorPane.bottomAnchor="10.0" AnchorPane.topAnchor="91.0">
+                                                    <padding>
+                                                        <Insets left="3.0" top="3.0" />
+                                                    </padding>
+                                                </VBox>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </Tab>
+                            </tabs>
+                            <effect>
+                                <ColorAdjust brightness="0.34" />
+                            </effect>
+                        </TabPane>
+               </children>
+            </AnchorPane>
+            <TitledPane fx:id="TtpPropriedades" layoutX="1.0" minHeight="0.0" minWidth="0.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="280.0" prefWidth="202.0" text="Propriedades" visible="false" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="251.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="ImgUsu" fitHeight="90.0" fitWidth="90.0" layoutX="122.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="-6.0">
+                           <image>
+                              <Image url="@../properties/images/Icone_cracha.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="-3.0" layoutY="23.0" prefHeight="17.0" prefWidth="106.0" text="Logado ás:" underline="true" AnchorPane.leftAnchor="-3.0" />
+                        <Label fx:id="LblDataLogin" alignment="CENTER" layoutX="1.0" layoutY="40.0" prefHeight="17.0" prefWidth="102.0" text="LblDataLogin" AnchorPane.leftAnchor="1.0" />
+                        <Label fx:id="LblHoraLogin" alignment="CENTER" layoutX="1.0" layoutY="57.0" prefHeight="17.0" prefWidth="102.0" text="LblHoraLogin" AnchorPane.leftAnchor="1.0" />
+                        <Separator layoutX="14.0" layoutY="145.0" prefWidth="200.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-10.0" />
+                        <JFXButton fx:id="BtnAttSenha" layoutX="14.0" layoutY="145.0" prefHeight="28.0" prefWidth="202.0" ripplerFill="#7a7af2" text="Alterar senha" underline="true" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-10.0" />
+                        <Separator layoutX="7.0" layoutY="173.0" prefWidth="200.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-10.0" />
+                        <JFXButton fx:id="BtnPreferencias" layoutX="14.0" layoutY="173.0" prefHeight="28.0" prefWidth="202.0" ripplerFill="#7a7af2" text="Preferências" underline="true" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-10.0" />
+                        <Separator layoutX="14.0" layoutY="201.0" prefWidth="200.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-10.0" />
+                        <JFXButton fx:id="BtnDeslogar" layoutX="14.0" layoutY="201.0" prefHeight="28.0" prefWidth="202.0" ripplerFill="#7a7af2" text="Deslogar" underline="true" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-10.0" />
+                        <Separator layoutX="14.0" layoutY="229.0" prefWidth="200.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-10.0" />
+                        <JFXButton fx:id="BtnSair" layoutX="14.0" layoutY="229.0" prefHeight="25.0" prefWidth="202.0" ripplerFill="#7a7af2" text="Sair" underline="true" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-10.0" />
+                        <Separator layoutX="18.6" layoutY="93.0" prefHeight="11.0" prefWidth="182.0" AnchorPane.leftAnchor="-10.0" AnchorPane.rightAnchor="-10.0" />
+                        <Label fx:id="LblVersaoExec" alignment="CENTER" layoutX="80.0" layoutY="103.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="17.0" prefWidth="95.0" text="V. Sistema: 1.0.0" AnchorPane.leftAnchor="95.0" />
+                        <Label fx:id="LblVersaoBD" alignment="CENTER" contentDisplay="CENTER" layoutX="80.0" layoutY="125.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="17.0" prefWidth="95.0" text="V. Banco: 1.0.0" AnchorPane.leftAnchor="95.0" />
+                        <Separator layoutX="100.0" layoutY="98.0" orientation="VERTICAL" prefHeight="48.0" prefWidth="7.0" />
+                        <Label fx:id="LblCodSessao" alignment="CENTER" layoutX="54.0" layoutY="103.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="17.0" prefWidth="101.0" text="Cód. Sessão: 355" AnchorPane.leftAnchor="-10.0" />
+                        <Label fx:id="LblPerfil" alignment="CENTER" layoutX="10.0" layoutY="125.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="17.0" prefWidth="101.0" text="Perfil: 0" AnchorPane.leftAnchor="-10.0" />
+                     </children>
+                  </AnchorPane>
+              </content>
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../properties/images/Icone_Propriedades2.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </TitledPane>
+            <TitledPane fx:id="TtpMensagens" layoutX="1.0" minHeight="0.0" minWidth="0.0" prefHeight="280.0" prefWidth="242.0" text="Mensagens" visible="false" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../properties/images/Icone_Mensagem.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </TitledPane>
+              </children>
+          </AnchorPane>
+      </items>
+  </SplitPane>

@@ -1,0 +1,1171 @@
+11/02/2018-21:44:15,112 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT COUNT(1) FROM TSIUSU WHERE LOGIN = ? 
+11/02/2018-21:44:15,276 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): MARCELOEV 
+11/02/2018-21:44:15,362 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT USU.ATIVO, USU.CODUSU, USU.NOME, USU.LOGIN, USU.FOTO, USU.PERFIL, USU.SENHA, MD5(?) AS CRYPT,
+GET_TSIPAR_T(?, ?) AS VERSAOATUALDB, EMP.CODEMP, EMP.RAZAOSOCIAL, EMP.NOMEFANTASIA, EMP.CNPJ FROM TSIUSU USU
+INNER JOIN TSIEMP EMP
+ON (USU.CODEMP = EMP.CODEMP)WHERE USU.LOGIN = ? 
+11/02/2018-21:44:15,362 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): marcelo26 
+11/02/2018-21:44:15,362 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): VERSAOATUALDB 
+11/02/2018-21:44:15,363 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 0 
+11/02/2018-21:44:15,363 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): MARCELOEV 
+11/02/2018-21:44:15,426 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT GET_CODSESSAO(?) AS SESSAO FROM DUAL 
+11/02/2018-21:44:15,426 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+11/02/2018-21:44:15,428 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: INSERT INTO TSISES
+(CODSESSAO, CODUSU, DHLOGIN, IPMAQ, NOMEMAQ, VERSAOEXEC)
+VALUES
+(?, ?, ?, ?, ?, ?) 
+11/02/2018-21:44:15,428 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1773 
+11/02/2018-21:44:15,428 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 1 
+11/02/2018-21:44:15,428 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.sql.Timestamp): 2018-02-11 21:44:15.428 
+11/02/2018-21:44:15,428 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): 192.168.0.37 
+11/02/2018-21:44:15,428 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Marcelo-NTB 
+11/02/2018-21:44:15,428 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): 1.0.0 
+11/02/2018-21:44:15,870 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?)
+AND PERFIL = ? 
+11/02/2018-21:44:15,871 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.util.ArrayList): [Cadastro de Usuários, Controle de Acessos, Controle de Lembretes]
+11/02/2018-21:44:15,871 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.String): Cadastro de Usuários
+11/02/2018-21:44:15,871 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.String): Controle de Acessos
+11/02/2018-21:44:15,871 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 3º Parâmetro(java.lang.String): Controle de Lembretes
+11/02/2018-21:44:15,872 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 4º Parâmetro(java.lang.Integer): 0
+11/02/2018-21:44:15,886 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 3 milisegundo(s)
+11/02/2018-21:44:15,913 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?)
+AND PERFIL = ? 
+11/02/2018-21:44:15,913 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.util.ArrayList): [Empresas, Parceiros, Operações, Parâmetros, ConsultaDB]
+11/02/2018-21:44:15,913 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.String): Empresas
+11/02/2018-21:44:15,914 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.String): Parceiros
+11/02/2018-21:44:15,914 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 3º Parâmetro(java.lang.String): Operações
+11/02/2018-21:44:15,914 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 4º Parâmetro(java.lang.String): Parâmetros
+11/02/2018-21:44:15,914 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 5º Parâmetro(java.lang.String): ConsultaDB
+11/02/2018-21:44:15,914 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 6º Parâmetro(java.lang.Integer): 0
+11/02/2018-21:44:15,917 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:44:15,944 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?,?,?,?,?)
+AND PERFIL = ? 
+11/02/2018-21:44:15,944 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.util.ArrayList): [Produtos, Serviços, Grupo de Produtos, Unidades, Contas, Agências, Bancos, Transportes, Moedas]
+11/02/2018-21:44:15,945 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.String): Produtos
+11/02/2018-21:44:15,945 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.String): Serviços
+11/02/2018-21:44:15,945 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 3º Parâmetro(java.lang.String): Grupo de Produtos
+11/02/2018-21:44:15,945 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 4º Parâmetro(java.lang.String): Unidades
+11/02/2018-21:44:15,945 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 5º Parâmetro(java.lang.String): Contas
+11/02/2018-21:44:15,945 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 6º Parâmetro(java.lang.String): Agências
+11/02/2018-21:44:15,945 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 7º Parâmetro(java.lang.String): Bancos
+11/02/2018-21:44:15,945 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 8º Parâmetro(java.lang.String): Transportes
+11/02/2018-21:44:15,945 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 9º Parâmetro(java.lang.String): Moedas
+11/02/2018-21:44:15,946 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 10º Parâmetro(java.lang.Integer): 0
+11/02/2018-21:44:15,948 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:44:15,973 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?)
+AND PERFIL = ? 
+11/02/2018-21:44:15,973 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.util.ArrayList): [Países, Estados, Cidades, Bairros, Logradouros]
+11/02/2018-21:44:15,973 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.String): Países
+11/02/2018-21:44:15,973 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.String): Estados
+11/02/2018-21:44:15,973 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 3º Parâmetro(java.lang.String): Cidades
+11/02/2018-21:44:15,974 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 4º Parâmetro(java.lang.String): Bairros
+11/02/2018-21:44:15,974 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 5º Parâmetro(java.lang.String): Logradouros
+11/02/2018-21:44:15,974 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 6º Parâmetro(java.lang.Integer): 0
+11/02/2018-21:44:15,975 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 0 milisegundo(s)
+11/02/2018-21:44:16,003 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?,?)
+AND PERFIL = ? 
+11/02/2018-21:44:16,003 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.util.ArrayList): [Portal de Compras, Portal de Vendas, Mov. Internas, Tabela de Preços, Preços de Moedas, Controle de Estoque]
+11/02/2018-21:44:16,003 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.String): Portal de Compras
+11/02/2018-21:44:16,003 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.String): Portal de Vendas
+11/02/2018-21:44:16,003 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 3º Parâmetro(java.lang.String): Mov. Internas
+11/02/2018-21:44:16,003 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 4º Parâmetro(java.lang.String): Tabela de Preços
+11/02/2018-21:44:16,003 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 5º Parâmetro(java.lang.String): Preços de Moedas
+11/02/2018-21:44:16,003 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 6º Parâmetro(java.lang.String): Controle de Estoque
+11/02/2018-21:44:16,004 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 7º Parâmetro(java.lang.Integer): 0
+11/02/2018-21:44:16,005 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 0 milisegundo(s)
+11/02/2018-21:44:16,028 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?)
+AND PERFIL = ? 
+11/02/2018-21:44:16,029 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.util.ArrayList): [Mov. Financeira, Mov. Bancária, Saldo de Contas, Transferências]
+11/02/2018-21:44:16,029 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.String): Mov. Financeira
+11/02/2018-21:44:16,029 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.String): Mov. Bancária
+11/02/2018-21:44:16,029 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 3º Parâmetro(java.lang.String): Saldo de Contas
+11/02/2018-21:44:16,029 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 4º Parâmetro(java.lang.String): Transferências
+11/02/2018-21:44:16,029 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 5º Parâmetro(java.lang.Integer): 0
+11/02/2018-21:44:16,030 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 0 milisegundo(s)
+11/02/2018-21:44:16,050 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT LISTA FROM TSIARQ
+WHERE CODUSU = ?
+AND ARQUIVO = ? 
+11/02/2018-21:44:16,050 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:44:16,050 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.String): Lista de Telas(Favoritas)
+11/02/2018-21:44:16,051 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:44:16,073 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT TELA
+FROM (SELECT MAX(CODREG), TELA
+FROM TSIREG
+WHERE CODUSU = ?
+GROUP BY TELA
+ORDER BY 1 DESC)
+WHERE ROWNUM <= 10 
+11/02/2018-21:44:16,074 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:44:16,079 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 5 milisegundo(s)
+11/02/2018-21:44:16,122 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT DHALTER, LEMBRETE FROM TGFLEM WHERE CODUSU = ? 
+11/02/2018-21:44:16,123 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+11/02/2018-21:44:16,170 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT MSG.CODMSG, MSG.VISUALIZADA, MSG.PRIORIDADE, MSG.TITULO,
+ MSG.MENSAGEM, MSG.DHALTER,
+CASE WHEN MSG.CODUSUREM IS NULL THEN -1 ELSE MSG.CODUSUREM END AS CODUSUREM,
+CASE WHEN MSG.CODUSUREM IS NULL THEN 'Desconhecido' ELSE USU.LOGIN END AS LOGINREM
+FROM TRIMSG MSG
+LEFT JOIN TSIUSU USU
+ON MSG.CODUSUREM = USU.CODUSU
+WHERE MSG.CODUSU = ?
+AND ROWNUM <= 20
+ORDER BY MSG.CODMSG 
+11/02/2018-21:44:16,170 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+11/02/2018-21:44:16,221 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT FOTO FROM TSIUSU WHERE CODUSU = ?
+11/02/2018-21:44:16,221 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:44:16,224 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 3 milisegundo(s)
+11/02/2018-21:44:16,278 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT FOTO FROM TSIUSU WHERE CODUSU = ?
+11/02/2018-21:44:16,279 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 2
+11/02/2018-21:44:16,281 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:44:17,963 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT FOTO FROM TSIUSU WHERE CODUSU = ?
+11/02/2018-21:44:17,963 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 3
+11/02/2018-21:44:17,964 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:44:18,062 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT FOTO FROM TSIUSU WHERE CODUSU = ?
+11/02/2018-21:44:18,062 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 0
+11/02/2018-21:44:18,064 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:44:18,366 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CAMINHO, LOCALIZADOR
+FROM TSITEL
+WHERE TELA = ? 
+11/02/2018-21:44:18,366 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.String): Produtos
+11/02/2018-21:44:18,367 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:44:18,394 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: INSERT INTO TSIREG
+(CODREG, CODUSU, CODSESSAO, DHACESSO, TELA)
+VALUES
+(GET_CODREG(?), ?, ?, ?, ?) 
+11/02/2018-21:44:18,394 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:44:18,394 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:44:18,394 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 3º Parâmetro(java.lang.Integer): 1773
+11/02/2018-21:44:18,395 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 4º Parâmetro(java.sql.Timestamp): 2018-02-11 21:44:18.395
+11/02/2018-21:44:18,395 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 5º Parâmetro(java.lang.String): Produtos
+11/02/2018-21:44:18,400 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1 linha(s) afetadas!
+11/02/2018-21:44:18,400 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: Statement executado em 5 milisegundo(s)
+11/02/2018-21:44:18,427 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT TELA
+FROM (SELECT MAX(CODREG), TELA
+FROM TSIREG
+WHERE CODUSU = ?
+GROUP BY TELA
+ORDER BY 1 DESC)
+WHERE ROWNUM <= 10 
+11/02/2018-21:44:18,428 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:44:18,432 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 4 milisegundo(s)
+11/02/2018-21:44:18,745 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT PER.PERFIL, PER.VISUALIZA, PER.ALTERA, PER.INSERI, PER.EXCLUI, PER.ESPECIAL
+FROM TSIUSU USU
+INNER JOIN TSIPER PER
+ON (USU.PERFIL = PER.PERFIL)
+WHERE USU.CODUSU = ?
+AND PER.TELA = ? 
+11/02/2018-21:44:18,746 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:44:18,746 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.String): Produtos
+11/02/2018-21:44:18,749 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 3 milisegundo(s)
+11/02/2018-21:44:18,809 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT DISTINCT(MARCA) AS MARCA FROM TGFPRO ORDER BY 1
+11/02/2018-21:44:18,812 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:44:18,841 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:44:18,843 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:44:19,038 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT PRO.*, GRU.DESCRGRUPOPROD, USU.LOGIN, LOC.DESCRLOCAL
+FROM TGFPRO PRO
+INNER JOIN TGFGRU GRU
+ON (PRO.CODGRUPOPROD = GRU.CODGRUPOPROD)
+INNER JOIN TGFLOC LOC
+ON (PRO.CODLOCAL = LOC.CODLOCAL)
+LEFT JOIN TSIUSU USU
+ON (PRO.CODUSUALTER = USU.CODUSU)
+WHERE PRO.CODPROD <> 0
+ORDER BY PRO.CODPROD 
+11/02/2018-21:44:19,065 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 27 milisegundo(s)
+11/02/2018-21:44:19,175 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT DISTINCT(MARCA) AS MARCA FROM TGFPRO ORDER BY 1
+11/02/2018-21:44:19,177 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:44:19,198 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:44:19,199 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:44:21,266 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CAMINHO, LOCALIZADOR
+FROM TSITEL
+WHERE TELA = ? 
+11/02/2018-21:44:21,266 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.String): ConsultaDB
+11/02/2018-21:44:21,267 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:44:21,289 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: INSERT INTO TSIREG
+(CODREG, CODUSU, CODSESSAO, DHACESSO, TELA)
+VALUES
+(GET_CODREG(?), ?, ?, ?, ?) 
+11/02/2018-21:44:21,290 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:44:21,290 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:44:21,290 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 3º Parâmetro(java.lang.Integer): 1773
+11/02/2018-21:44:21,290 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 4º Parâmetro(java.sql.Timestamp): 2018-02-11 21:44:21.29
+11/02/2018-21:44:21,290 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 5º Parâmetro(java.lang.String): ConsultaDB
+11/02/2018-21:44:21,302 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1 linha(s) afetadas!
+11/02/2018-21:44:21,303 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: Statement executado em 13 milisegundo(s)
+11/02/2018-21:44:21,321 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT TELA
+FROM (SELECT MAX(CODREG), TELA
+FROM TSIREG
+WHERE CODUSU = ?
+GROUP BY TELA
+ORDER BY 1 DESC)
+WHERE ROWNUM <= 10 
+11/02/2018-21:44:21,321 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:44:21,325 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 4 milisegundo(s)
+11/02/2018-21:44:28,841 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT * FROM TGFCTRL
+11/02/2018-21:44:28,860 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT * FROM TGFCTRL
+11/02/2018-21:44:28,862 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:44:37,380 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: DELETE TGFCTRL WHERE CODCTRL = 2
+11/02/2018-21:44:37,399 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: DELETE TGFCTRL WHERE CODCTRL = 2
+11/02/2018-21:44:37,423 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 24 milisegundo(s)
+11/02/2018-21:44:37,441 | ERROR [class br.com.sinergia.controllers.fxml.ConsultaDBController] : Erro ao tentar criar tabela de pesquisa
+java.sql.SQLException: ORA-01002: extração fora de sequência
+ 
+11/02/2018-21:44:37,466 | ERROR [class br.com.sinergia.controllers.fxml.ConsultaDBController] : br.com.sinergia.controllers.dialog.ModelException
+	at br.com.sinergia.controllers.fxml.ConsultaDBController.refreshTabQuery(ConsultaDBController.java:108)
+	at br.com.sinergia.controllers.fxml.ConsultaDBController.execStatement(ConsultaDBController.java:64)
+	at br.com.sinergia.controllers.fxml.ConsultaDBController.lambda$null$0(ConsultaDBController.java:50)
+	at com.sun.javafx.scene.KeyboardShortcutsHandler.processAccelerators(KeyboardShortcutsHandler.java:347)
+	at com.sun.javafx.scene.KeyboardShortcutsHandler.dispatchBubblingEvent(KeyboardShortcutsHandler.java:163)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Scene$KeyHandler.process(Scene.java:3964)
+	at javafx.scene.Scene$KeyHandler.access$1800(Scene.java:3910)
+	at javafx.scene.Scene.impl_processKeyEvent(Scene.java:2040)
+	at javafx.scene.Scene$ScenePeerListener.keyEvent(Scene.java:2501)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$KeyEventNotification.run(GlassViewEventHandler.java:217)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$KeyEventNotification.run(GlassViewEventHandler.java:149)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleKeyEvent$353(GlassViewEventHandler.java:248)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:389)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleKeyEvent(GlassViewEventHandler.java:247)
+	at com.sun.glass.ui.View.handleKeyEvent(View.java:546)
+	at com.sun.glass.ui.View.notifyKey(View.java:966)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$148(WinApplication.java:191)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLException: ORA-01002: extração fora de sequência
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.fetch(T4CPreparedStatement.java:1022)
+	at oracle.jdbc.driver.OracleStatement.fetchMoreRows(OracleStatement.java:3590)
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.fetchMoreRows(InsensitiveScrollableResultSet.java:1008)
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.absoluteInternal(InsensitiveScrollableResultSet.java:972)
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.next(InsensitiveScrollableResultSet.java:572)
+	at br.com.sinergia.database.conect.DBParalelConex.countNumRows(DBPararelConex.java:100)
+	at br.com.sinergia.controllers.fxml.ConsultaDBController.refreshTabQuery(ConsultaDBController.java:83)
+	... 27 more
+ 
+11/02/2018-21:44:44,127 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: DELETE TGFCTRL WHERE CODCTRL = 2
+11/02/2018-21:44:44,148 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: DELETE TGFCTRL WHERE CODCTRL = 2
+11/02/2018-21:44:44,149 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 0 milisegundo(s)
+11/02/2018-21:44:44,150 | ERROR [class br.com.sinergia.controllers.fxml.ConsultaDBController] : Erro ao tentar criar tabela de pesquisa
+java.sql.SQLException: ORA-01002: extração fora de sequência
+ 
+11/02/2018-21:44:44,151 | ERROR [class br.com.sinergia.controllers.fxml.ConsultaDBController] : br.com.sinergia.controllers.dialog.ModelException
+	at br.com.sinergia.controllers.fxml.ConsultaDBController.refreshTabQuery(ConsultaDBController.java:108)
+	at br.com.sinergia.controllers.fxml.ConsultaDBController.execStatement(ConsultaDBController.java:64)
+	at br.com.sinergia.controllers.fxml.ConsultaDBController.lambda$null$0(ConsultaDBController.java:50)
+	at com.sun.javafx.scene.KeyboardShortcutsHandler.processAccelerators(KeyboardShortcutsHandler.java:347)
+	at com.sun.javafx.scene.KeyboardShortcutsHandler.dispatchBubblingEvent(KeyboardShortcutsHandler.java:163)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Scene$KeyHandler.process(Scene.java:3964)
+	at javafx.scene.Scene$KeyHandler.access$1800(Scene.java:3910)
+	at javafx.scene.Scene.impl_processKeyEvent(Scene.java:2040)
+	at javafx.scene.Scene$ScenePeerListener.keyEvent(Scene.java:2501)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$KeyEventNotification.run(GlassViewEventHandler.java:217)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$KeyEventNotification.run(GlassViewEventHandler.java:149)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleKeyEvent$353(GlassViewEventHandler.java:248)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:389)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleKeyEvent(GlassViewEventHandler.java:247)
+	at com.sun.glass.ui.View.handleKeyEvent(View.java:546)
+	at com.sun.glass.ui.View.notifyKey(View.java:966)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$148(WinApplication.java:191)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLException: ORA-01002: extração fora de sequência
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.fetch(T4CPreparedStatement.java:1022)
+	at oracle.jdbc.driver.OracleStatement.fetchMoreRows(OracleStatement.java:3590)
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.fetchMoreRows(InsensitiveScrollableResultSet.java:1008)
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.absoluteInternal(InsensitiveScrollableResultSet.java:972)
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.next(InsensitiveScrollableResultSet.java:572)
+	at br.com.sinergia.database.conect.DBParalelConex.countNumRows(DBPararelConex.java:100)
+	at br.com.sinergia.controllers.fxml.ConsultaDBController.refreshTabQuery(ConsultaDBController.java:83)
+	... 27 more
+ 
+11/02/2018-21:44:51,725 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT * FROM TGFCTRL
+11/02/2018-21:44:51,745 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT * FROM TGFCTRL
+11/02/2018-21:44:51,747 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:44:55,311 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CAMINHO, LOCALIZADOR
+FROM TSITEL
+WHERE TELA = ? 
+11/02/2018-21:44:55,311 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.String): Produtos
+11/02/2018-21:44:55,312 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:44:55,334 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: INSERT INTO TSIREG
+(CODREG, CODUSU, CODSESSAO, DHACESSO, TELA)
+VALUES
+(GET_CODREG(?), ?, ?, ?, ?) 
+11/02/2018-21:44:55,334 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:44:55,334 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:44:55,334 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 3º Parâmetro(java.lang.Integer): 1773
+11/02/2018-21:44:55,335 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 4º Parâmetro(java.sql.Timestamp): 2018-02-11 21:44:55.334
+11/02/2018-21:44:55,335 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 5º Parâmetro(java.lang.String): Produtos
+11/02/2018-21:44:55,337 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1 linha(s) afetadas!
+11/02/2018-21:44:55,337 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: Statement executado em 2 milisegundo(s)
+11/02/2018-21:44:55,355 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT TELA
+FROM (SELECT MAX(CODREG), TELA
+FROM TSIREG
+WHERE CODUSU = ?
+GROUP BY TELA
+ORDER BY 1 DESC)
+WHERE ROWNUM <= 10 
+11/02/2018-21:44:55,356 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:44:55,359 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 3 milisegundo(s)
+11/02/2018-21:44:55,510 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT PER.PERFIL, PER.VISUALIZA, PER.ALTERA, PER.INSERI, PER.EXCLUI, PER.ESPECIAL
+FROM TSIUSU USU
+INNER JOIN TSIPER PER
+ON (USU.PERFIL = PER.PERFIL)
+WHERE USU.CODUSU = ?
+AND PER.TELA = ? 
+11/02/2018-21:44:55,510 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:44:55,510 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.String): Produtos
+11/02/2018-21:44:55,513 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 3 milisegundo(s)
+11/02/2018-21:44:55,535 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT DISTINCT(MARCA) AS MARCA FROM TGFPRO ORDER BY 1
+11/02/2018-21:44:55,537 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:44:55,558 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:44:55,559 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:44:55,583 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT PRO.*, GRU.DESCRGRUPOPROD, USU.LOGIN, LOC.DESCRLOCAL
+FROM TGFPRO PRO
+INNER JOIN TGFGRU GRU
+ON (PRO.CODGRUPOPROD = GRU.CODGRUPOPROD)
+INNER JOIN TGFLOC LOC
+ON (PRO.CODLOCAL = LOC.CODLOCAL)
+LEFT JOIN TSIUSU USU
+ON (PRO.CODUSUALTER = USU.CODUSU)
+WHERE PRO.CODPROD <> 0
+ORDER BY PRO.CODPROD 
+11/02/2018-21:44:55,625 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 41 milisegundo(s)
+11/02/2018-21:44:55,742 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT DISTINCT(MARCA) AS MARCA FROM TGFPRO ORDER BY 1
+11/02/2018-21:44:55,747 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 4 milisegundo(s)
+11/02/2018-21:44:55,787 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:44:55,789 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:44:57,439 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT VOL.CODVOL, VOL.DESCRVOL, VOA.DHCRIACAO, VOA.CODBARRAS, VOA.MULTIDIVID, VOA.QTDMULTIDIVID,
+VOA.DHALTER, VOA.CODUSUALTER, USU.LOGIN, VOA.DHCRIACAO
+FROM TGFVOA VOA
+INNER JOIN TGFVOL VOL
+ON (VOA.CODVOL = VOL.CODVOL)
+INNER JOIN TSIUSU USU
+ON (VOA.CODUSUALTER = USU.CODUSU)
+WHERE VOA.CODPROD = ? 
+11/02/2018-21:44:57,440 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 9
+11/02/2018-21:44:57,442 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:44:57,465 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:44:57,466 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:44:57,516 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT PER.PERFIL, PER.VISUALIZA, PER.ALTERA, PER.INSERI, PER.EXCLUI, PER.ESPECIAL
+FROM TSIUSU USU
+INNER JOIN TSIPER PER
+ON (USU.PERFIL = PER.PERFIL)
+WHERE USU.CODUSU = ?
+AND PER.TELA = ? 
+11/02/2018-21:44:57,516 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:44:57,516 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.String): Controle Prod.
+11/02/2018-21:44:57,518 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:44:57,539 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT COUNT(1) AS COUNT
+FROM TGFCTRL
+WHERE CODPROD = ? 
+11/02/2018-21:44:57,539 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 9
+11/02/2018-21:44:57,541 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:44:57,704 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT PER.PERFIL, PER.VISUALIZA, PER.ALTERA, PER.INSERI, PER.EXCLUI, PER.ESPECIAL
+FROM TSIUSU USU
+INNER JOIN TSIPER PER
+ON (USU.PERFIL = PER.PERFIL)
+WHERE USU.CODUSU = ?
+AND PER.TELA = ? 
+11/02/2018-21:44:57,705 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:44:57,705 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.String): Unidades Alt.
+11/02/2018-21:44:57,708 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 3 milisegundo(s)
+11/02/2018-21:44:59,388 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:44:59,389 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:44:59,437 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT VOL.CODVOL, VOL.DESCRVOL, VOA.DHCRIACAO, VOA.CODBARRAS, VOA.MULTIDIVID, VOA.QTDMULTIDIVID,
+VOA.DHALTER, VOA.CODUSUALTER, USU.LOGIN, VOA.DHCRIACAO
+FROM TGFVOA VOA
+INNER JOIN TGFVOL VOL
+ON (VOA.CODVOL = VOL.CODVOL)
+INNER JOIN TSIUSU USU
+ON (VOA.CODUSUALTER = USU.CODUSU)
+WHERE VOA.CODPROD = ? 
+11/02/2018-21:44:59,437 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 8
+11/02/2018-21:44:59,453 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 16 milisegundo(s)
+11/02/2018-21:44:59,474 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:44:59,475 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:44:59,505 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT COUNT(1) AS COUNT
+FROM TGFCTRL
+WHERE CODPROD = ? 
+11/02/2018-21:44:59,506 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 8
+11/02/2018-21:44:59,508 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:45:00,127 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:45:00,129 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:45:00,173 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT VOL.CODVOL, VOL.DESCRVOL, VOA.DHCRIACAO, VOA.CODBARRAS, VOA.MULTIDIVID, VOA.QTDMULTIDIVID,
+VOA.DHALTER, VOA.CODUSUALTER, USU.LOGIN, VOA.DHCRIACAO
+FROM TGFVOA VOA
+INNER JOIN TGFVOL VOL
+ON (VOA.CODVOL = VOL.CODVOL)
+INNER JOIN TSIUSU USU
+ON (VOA.CODUSUALTER = USU.CODUSU)
+WHERE VOA.CODPROD = ? 
+11/02/2018-21:45:00,174 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 7
+11/02/2018-21:45:00,176 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:45:00,201 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:45:00,202 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:45:00,230 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT COUNT(1) AS COUNT
+FROM TGFCTRL
+WHERE CODPROD = ? 
+11/02/2018-21:45:00,230 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 7
+11/02/2018-21:45:00,233 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:45:00,803 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:45:00,804 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:45:00,838 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT VOL.CODVOL, VOL.DESCRVOL, VOA.DHCRIACAO, VOA.CODBARRAS, VOA.MULTIDIVID, VOA.QTDMULTIDIVID,
+VOA.DHALTER, VOA.CODUSUALTER, USU.LOGIN, VOA.DHCRIACAO
+FROM TGFVOA VOA
+INNER JOIN TGFVOL VOL
+ON (VOA.CODVOL = VOL.CODVOL)
+INNER JOIN TSIUSU USU
+ON (VOA.CODUSUALTER = USU.CODUSU)
+WHERE VOA.CODPROD = ? 
+11/02/2018-21:45:00,838 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 6
+11/02/2018-21:45:00,842 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 4 milisegundo(s)
+11/02/2018-21:45:00,861 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:45:00,862 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:45:00,880 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT COUNT(1) AS COUNT
+FROM TGFCTRL
+WHERE CODPROD = ? 
+11/02/2018-21:45:00,881 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 6
+11/02/2018-21:45:00,883 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:45:01,411 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:45:01,412 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:45:01,458 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT VOL.CODVOL, VOL.DESCRVOL, VOA.DHCRIACAO, VOA.CODBARRAS, VOA.MULTIDIVID, VOA.QTDMULTIDIVID,
+VOA.DHALTER, VOA.CODUSUALTER, USU.LOGIN, VOA.DHCRIACAO
+FROM TGFVOA VOA
+INNER JOIN TGFVOL VOL
+ON (VOA.CODVOL = VOL.CODVOL)
+INNER JOIN TSIUSU USU
+ON (VOA.CODUSUALTER = USU.CODUSU)
+WHERE VOA.CODPROD = ? 
+11/02/2018-21:45:01,458 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 7
+11/02/2018-21:45:01,461 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 3 milisegundo(s)
+11/02/2018-21:45:01,488 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:45:01,489 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:45:01,515 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT COUNT(1) AS COUNT
+FROM TGFCTRL
+WHERE CODPROD = ? 
+11/02/2018-21:45:01,515 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 7
+11/02/2018-21:45:01,517 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:45:02,673 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT VOL.CODVOL, VOL.DESCRVOL, VOA.DHCRIACAO, VOA.CODBARRAS, VOA.MULTIDIVID, VOA.QTDMULTIDIVID,
+VOA.DHALTER, VOA.CODUSUALTER, USU.LOGIN, VOA.DHCRIACAO
+FROM TGFVOA VOA
+INNER JOIN TGFVOL VOL
+ON (VOA.CODVOL = VOL.CODVOL)
+INNER JOIN TSIUSU USU
+ON (VOA.CODUSUALTER = USU.CODUSU)
+WHERE VOA.CODPROD = ? 
+11/02/2018-21:45:02,673 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 7
+11/02/2018-21:45:02,699 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 26 milisegundo(s)
+11/02/2018-21:45:02,716 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:45:02,717 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:45:03,878 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT COUNT(1) AS COUNT
+FROM TGFCTRL
+WHERE CODPROD = ? 
+11/02/2018-21:45:03,878 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 7
+11/02/2018-21:45:03,880 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:45:06,695 | WARN [class br.com.sinergia.controllers.fxml.ControleProdController] : Não é possível alterar o controle adicional
+Já existe lista de controles configurada 
+11/02/2018-21:45:21,290 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: INSERT INTO TGFCTRL
+(CODCTRL, CODPROD, TIPCTRL, DESCRCTRL, LISTACTRL, DHCRIACAO, DHALTER, CODUSU)
+VALUES
+(GET_COD('CODCTRL', 'TGFCTRL'), ?, ?, ?, ?, ?, ?, ?) 
+11/02/2018-21:45:21,290 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 7
+11/02/2018-21:45:21,291 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.Character): L
+11/02/2018-21:45:21,291 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 3º Parâmetro(java.lang.String): Tipo de Corte
+11/02/2018-21:45:21,291 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 4º Parâmetro(java.lang.NullParam): Null
+11/02/2018-21:45:21,292 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 5º Parâmetro(java.sql.Timestamp): 2018-02-11 21:45:21.292
+11/02/2018-21:45:21,292 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 6º Parâmetro(java.sql.Timestamp): 2018-02-11 21:45:21.292
+11/02/2018-21:45:21,293 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 7º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:45:21,363 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1 linha(s) afetadas!
+11/02/2018-21:45:21,363 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: Statement executado em 70 milisegundo(s)
+11/02/2018-21:45:26,482 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CAMINHO, LOCALIZADOR
+FROM TSITEL
+WHERE TELA = ? 
+11/02/2018-21:45:26,482 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.String): ConsultaDB
+11/02/2018-21:45:26,484 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:45:26,552 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: INSERT INTO TSIREG
+(CODREG, CODUSU, CODSESSAO, DHACESSO, TELA)
+VALUES
+(GET_CODREG(?), ?, ?, ?, ?) 
+11/02/2018-21:45:26,552 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:45:26,553 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:45:26,553 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 3º Parâmetro(java.lang.Integer): 1773
+11/02/2018-21:45:26,553 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 4º Parâmetro(java.sql.Timestamp): 2018-02-11 21:45:26.553
+11/02/2018-21:45:26,553 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 5º Parâmetro(java.lang.String): ConsultaDB
+11/02/2018-21:45:26,556 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1 linha(s) afetadas!
+11/02/2018-21:45:26,556 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: Statement executado em 3 milisegundo(s)
+11/02/2018-21:45:26,632 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT TELA
+FROM (SELECT MAX(CODREG), TELA
+FROM TSIREG
+WHERE CODUSU = ?
+GROUP BY TELA
+ORDER BY 1 DESC)
+WHERE ROWNUM <= 10 
+11/02/2018-21:45:26,633 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:45:26,637 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 4 milisegundo(s)
+11/02/2018-21:45:31,048 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT * FROM TGFCTRL
+11/02/2018-21:45:31,097 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT * FROM TGFCTRL
+11/02/2018-21:45:31,102 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 3 milisegundo(s)
+11/02/2018-21:46:12,657 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT LISTA FROM TSIARQ
+WHERE CODUSU = ?
+AND ARQUIVO = ? 
+11/02/2018-21:46:12,657 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:46:12,657 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.String): Finalizar com telas pendentes
+11/02/2018-21:46:12,658 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:46:12,699 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: UPDATE TSISES
+SET DHLOGOUT = ?
+WHERE CODSESSAO = ?
+AND CODUSU = ? 
+11/02/2018-21:46:12,699 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.sql.Timestamp): 2018-02-11 21:46:12.699 
+11/02/2018-21:46:12,699 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 1773 
+11/02/2018-21:46:12,699 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 1 
+11/02/2018-21:46:32,788 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT COUNT(1) FROM TSIUSU WHERE LOGIN = ? 
+11/02/2018-21:46:32,954 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): MARCELOEV 
+11/02/2018-21:46:33,044 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT USU.ATIVO, USU.CODUSU, USU.NOME, USU.LOGIN, USU.FOTO, USU.PERFIL, USU.SENHA, MD5(?) AS CRYPT,
+GET_TSIPAR_T(?, ?) AS VERSAOATUALDB, EMP.CODEMP, EMP.RAZAOSOCIAL, EMP.NOMEFANTASIA, EMP.CNPJ FROM TSIUSU USU
+INNER JOIN TSIEMP EMP
+ON (USU.CODEMP = EMP.CODEMP)WHERE USU.LOGIN = ? 
+11/02/2018-21:46:33,044 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): marcelo26 
+11/02/2018-21:46:33,044 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): VERSAOATUALDB 
+11/02/2018-21:46:33,045 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 0 
+11/02/2018-21:46:33,045 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): MARCELOEV 
+11/02/2018-21:46:33,119 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT GET_CODSESSAO(?) AS SESSAO FROM DUAL 
+11/02/2018-21:46:33,119 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+11/02/2018-21:46:33,120 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: INSERT INTO TSISES
+(CODSESSAO, CODUSU, DHLOGIN, IPMAQ, NOMEMAQ, VERSAOEXEC)
+VALUES
+(?, ?, ?, ?, ?, ?) 
+11/02/2018-21:46:33,120 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1774 
+11/02/2018-21:46:33,121 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 1 
+11/02/2018-21:46:33,121 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.sql.Timestamp): 2018-02-11 21:46:33.121 
+11/02/2018-21:46:33,121 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): 192.168.0.37 
+11/02/2018-21:46:33,121 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Marcelo-NTB 
+11/02/2018-21:46:33,121 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): 1.0.0 
+11/02/2018-21:46:33,569 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?)
+AND PERFIL = ? 
+11/02/2018-21:46:33,570 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.util.ArrayList): [Cadastro de Usuários, Controle de Acessos, Controle de Lembretes]
+11/02/2018-21:46:33,570 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.String): Cadastro de Usuários
+11/02/2018-21:46:33,570 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.String): Controle de Acessos
+11/02/2018-21:46:33,570 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 3º Parâmetro(java.lang.String): Controle de Lembretes
+11/02/2018-21:46:33,570 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 4º Parâmetro(java.lang.Integer): 0
+11/02/2018-21:46:33,590 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 5 milisegundo(s)
+11/02/2018-21:46:33,616 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?)
+AND PERFIL = ? 
+11/02/2018-21:46:33,616 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.util.ArrayList): [Empresas, Parceiros, Operações, Parâmetros, ConsultaDB]
+11/02/2018-21:46:33,616 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.String): Empresas
+11/02/2018-21:46:33,616 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.String): Parceiros
+11/02/2018-21:46:33,617 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 3º Parâmetro(java.lang.String): Operações
+11/02/2018-21:46:33,617 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 4º Parâmetro(java.lang.String): Parâmetros
+11/02/2018-21:46:33,617 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 5º Parâmetro(java.lang.String): ConsultaDB
+11/02/2018-21:46:33,617 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 6º Parâmetro(java.lang.Integer): 0
+11/02/2018-21:46:33,620 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 0 milisegundo(s)
+11/02/2018-21:46:33,646 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?,?,?,?,?)
+AND PERFIL = ? 
+11/02/2018-21:46:33,647 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.util.ArrayList): [Produtos, Serviços, Grupo de Produtos, Unidades, Contas, Agências, Bancos, Transportes, Moedas]
+11/02/2018-21:46:33,647 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.String): Produtos
+11/02/2018-21:46:33,647 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.String): Serviços
+11/02/2018-21:46:33,648 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 3º Parâmetro(java.lang.String): Grupo de Produtos
+11/02/2018-21:46:33,648 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 4º Parâmetro(java.lang.String): Unidades
+11/02/2018-21:46:33,648 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 5º Parâmetro(java.lang.String): Contas
+11/02/2018-21:46:33,648 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 6º Parâmetro(java.lang.String): Agências
+11/02/2018-21:46:33,648 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 7º Parâmetro(java.lang.String): Bancos
+11/02/2018-21:46:33,648 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 8º Parâmetro(java.lang.String): Transportes
+11/02/2018-21:46:33,648 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 9º Parâmetro(java.lang.String): Moedas
+11/02/2018-21:46:33,648 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 10º Parâmetro(java.lang.Integer): 0
+11/02/2018-21:46:33,651 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:46:33,679 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?)
+AND PERFIL = ? 
+11/02/2018-21:46:33,680 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.util.ArrayList): [Países, Estados, Cidades, Bairros, Logradouros]
+11/02/2018-21:46:33,680 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.String): Países
+11/02/2018-21:46:33,680 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.String): Estados
+11/02/2018-21:46:33,680 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 3º Parâmetro(java.lang.String): Cidades
+11/02/2018-21:46:33,680 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 4º Parâmetro(java.lang.String): Bairros
+11/02/2018-21:46:33,680 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 5º Parâmetro(java.lang.String): Logradouros
+11/02/2018-21:46:33,680 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 6º Parâmetro(java.lang.Integer): 0
+11/02/2018-21:46:33,682 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:46:33,776 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?,?)
+AND PERFIL = ? 
+11/02/2018-21:46:33,777 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.util.ArrayList): [Portal de Compras, Portal de Vendas, Mov. Internas, Tabela de Preços, Preços de Moedas, Controle de Estoque]
+11/02/2018-21:46:33,778 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.String): Portal de Compras
+11/02/2018-21:46:33,778 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.String): Portal de Vendas
+11/02/2018-21:46:33,778 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 3º Parâmetro(java.lang.String): Mov. Internas
+11/02/2018-21:46:33,779 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 4º Parâmetro(java.lang.String): Tabela de Preços
+11/02/2018-21:46:33,779 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 5º Parâmetro(java.lang.String): Preços de Moedas
+11/02/2018-21:46:33,779 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 6º Parâmetro(java.lang.String): Controle de Estoque
+11/02/2018-21:46:33,780 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 7º Parâmetro(java.lang.Integer): 0
+11/02/2018-21:46:33,787 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:46:33,841 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?)
+AND PERFIL = ? 
+11/02/2018-21:46:33,841 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.util.ArrayList): [Mov. Financeira, Mov. Bancária, Saldo de Contas, Transferências]
+11/02/2018-21:46:33,841 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.String): Mov. Financeira
+11/02/2018-21:46:33,841 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.String): Mov. Bancária
+11/02/2018-21:46:33,841 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 3º Parâmetro(java.lang.String): Saldo de Contas
+11/02/2018-21:46:33,841 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 4º Parâmetro(java.lang.String): Transferências
+11/02/2018-21:46:33,842 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 5º Parâmetro(java.lang.Integer): 0
+11/02/2018-21:46:33,843 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 0 milisegundo(s)
+11/02/2018-21:46:33,866 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT LISTA FROM TSIARQ
+WHERE CODUSU = ?
+AND ARQUIVO = ? 
+11/02/2018-21:46:33,867 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:46:33,867 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.String): Lista de Telas(Favoritas)
+11/02/2018-21:46:33,868 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:46:33,893 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT TELA
+FROM (SELECT MAX(CODREG), TELA
+FROM TSIREG
+WHERE CODUSU = ?
+GROUP BY TELA
+ORDER BY 1 DESC)
+WHERE ROWNUM <= 10 
+11/02/2018-21:46:33,893 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:46:33,899 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 6 milisegundo(s)
+11/02/2018-21:46:33,945 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT DHALTER, LEMBRETE FROM TGFLEM WHERE CODUSU = ? 
+11/02/2018-21:46:33,945 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+11/02/2018-21:46:33,997 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT MSG.CODMSG, MSG.VISUALIZADA, MSG.PRIORIDADE, MSG.TITULO,
+ MSG.MENSAGEM, MSG.DHALTER,
+CASE WHEN MSG.CODUSUREM IS NULL THEN -1 ELSE MSG.CODUSUREM END AS CODUSUREM,
+CASE WHEN MSG.CODUSUREM IS NULL THEN 'Desconhecido' ELSE USU.LOGIN END AS LOGINREM
+FROM TRIMSG MSG
+LEFT JOIN TSIUSU USU
+ON MSG.CODUSUREM = USU.CODUSU
+WHERE MSG.CODUSU = ?
+AND ROWNUM <= 20
+ORDER BY MSG.CODMSG 
+11/02/2018-21:46:33,998 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+11/02/2018-21:46:34,046 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT FOTO FROM TSIUSU WHERE CODUSU = ?
+11/02/2018-21:46:34,047 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:46:34,061 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 14 milisegundo(s)
+11/02/2018-21:46:34,137 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT FOTO FROM TSIUSU WHERE CODUSU = ?
+11/02/2018-21:46:34,138 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 2
+11/02/2018-21:46:34,141 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 3 milisegundo(s)
+11/02/2018-21:46:35,901 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT FOTO FROM TSIUSU WHERE CODUSU = ?
+11/02/2018-21:46:35,902 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 3
+11/02/2018-21:46:35,903 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:46:36,008 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT FOTO FROM TSIUSU WHERE CODUSU = ?
+11/02/2018-21:46:36,008 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 0
+11/02/2018-21:46:36,010 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:46:36,247 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CAMINHO, LOCALIZADOR
+FROM TSITEL
+WHERE TELA = ? 
+11/02/2018-21:46:36,248 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.String): Produtos
+11/02/2018-21:46:36,249 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:46:36,273 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: INSERT INTO TSIREG
+(CODREG, CODUSU, CODSESSAO, DHACESSO, TELA)
+VALUES
+(GET_CODREG(?), ?, ?, ?, ?) 
+11/02/2018-21:46:36,273 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:46:36,273 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:46:36,274 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 3º Parâmetro(java.lang.Integer): 1774
+11/02/2018-21:46:36,274 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 4º Parâmetro(java.sql.Timestamp): 2018-02-11 21:46:36.274
+11/02/2018-21:46:36,274 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 5º Parâmetro(java.lang.String): Produtos
+11/02/2018-21:46:36,279 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1 linha(s) afetadas!
+11/02/2018-21:46:36,279 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: Statement executado em 5 milisegundo(s)
+11/02/2018-21:46:36,305 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT TELA
+FROM (SELECT MAX(CODREG), TELA
+FROM TSIREG
+WHERE CODUSU = ?
+GROUP BY TELA
+ORDER BY 1 DESC)
+WHERE ROWNUM <= 10 
+11/02/2018-21:46:36,306 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:46:36,310 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 4 milisegundo(s)
+11/02/2018-21:46:36,599 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT PER.PERFIL, PER.VISUALIZA, PER.ALTERA, PER.INSERI, PER.EXCLUI, PER.ESPECIAL
+FROM TSIUSU USU
+INNER JOIN TSIPER PER
+ON (USU.PERFIL = PER.PERFIL)
+WHERE USU.CODUSU = ?
+AND PER.TELA = ? 
+11/02/2018-21:46:36,600 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:46:36,600 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.String): Produtos
+11/02/2018-21:46:36,603 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 3 milisegundo(s)
+11/02/2018-21:46:36,661 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT DISTINCT(MARCA) AS MARCA FROM TGFPRO ORDER BY 1
+11/02/2018-21:46:36,664 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 3 milisegundo(s)
+11/02/2018-21:46:36,691 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:46:36,692 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:46:36,946 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT PRO.*, GRU.DESCRGRUPOPROD, USU.LOGIN, LOC.DESCRLOCAL
+FROM TGFPRO PRO
+INNER JOIN TGFGRU GRU
+ON (PRO.CODGRUPOPROD = GRU.CODGRUPOPROD)
+INNER JOIN TGFLOC LOC
+ON (PRO.CODLOCAL = LOC.CODLOCAL)
+LEFT JOIN TSIUSU USU
+ON (PRO.CODUSUALTER = USU.CODUSU)
+WHERE PRO.CODPROD <> 0
+ORDER BY PRO.CODPROD 
+11/02/2018-21:46:37,000 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 53 milisegundo(s)
+11/02/2018-21:46:37,117 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT DISTINCT(MARCA) AS MARCA FROM TGFPRO ORDER BY 1
+11/02/2018-21:46:37,120 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:46:37,148 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:46:37,149 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:46:40,021 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CAMINHO, LOCALIZADOR
+FROM TSITEL
+WHERE TELA = ? 
+11/02/2018-21:46:40,021 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.String): ConsultaDB
+11/02/2018-21:46:40,022 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:46:40,044 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: INSERT INTO TSIREG
+(CODREG, CODUSU, CODSESSAO, DHACESSO, TELA)
+VALUES
+(GET_CODREG(?), ?, ?, ?, ?) 
+11/02/2018-21:46:40,044 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:46:40,044 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:46:40,044 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 3º Parâmetro(java.lang.Integer): 1774
+11/02/2018-21:46:40,044 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 4º Parâmetro(java.sql.Timestamp): 2018-02-11 21:46:40.044
+11/02/2018-21:46:40,044 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 5º Parâmetro(java.lang.String): ConsultaDB
+11/02/2018-21:46:40,046 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1 linha(s) afetadas!
+11/02/2018-21:46:40,046 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: Statement executado em 2 milisegundo(s)
+11/02/2018-21:46:40,065 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT TELA
+FROM (SELECT MAX(CODREG), TELA
+FROM TSIREG
+WHERE CODUSU = ?
+GROUP BY TELA
+ORDER BY 1 DESC)
+WHERE ROWNUM <= 10 
+11/02/2018-21:46:40,066 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:46:40,069 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 3 milisegundo(s)
+11/02/2018-21:47:54,879 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT * FROM TGFCTRL
+11/02/2018-21:47:54,897 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT * FROM TGFCTRL
+11/02/2018-21:47:54,899 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:48:05,926 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: DELETE TGFCTRL WHERE CODCTRL = 2
+11/02/2018-21:48:05,944 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: DELETE TGFCTRL WHERE CODCTRL = 2
+11/02/2018-21:48:05,946 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:48:05,947 | ERROR [class br.com.sinergia.controllers.fxml.ConsultaDBController] : Erro ao tentar criar tabela de pesquisa
+java.sql.SQLException: ORA-01002: extração fora de sequência
+ 
+11/02/2018-21:48:05,949 | ERROR [class br.com.sinergia.controllers.fxml.ConsultaDBController] : br.com.sinergia.controllers.dialog.ModelException
+	at br.com.sinergia.controllers.fxml.ConsultaDBController.refreshTabQuery(ConsultaDBController.java:108)
+	at br.com.sinergia.controllers.fxml.ConsultaDBController.execStatement(ConsultaDBController.java:64)
+	at br.com.sinergia.controllers.fxml.ConsultaDBController.lambda$null$0(ConsultaDBController.java:50)
+	at com.sun.javafx.scene.KeyboardShortcutsHandler.processAccelerators(KeyboardShortcutsHandler.java:347)
+	at com.sun.javafx.scene.KeyboardShortcutsHandler.dispatchBubblingEvent(KeyboardShortcutsHandler.java:163)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Scene$KeyHandler.process(Scene.java:3964)
+	at javafx.scene.Scene$KeyHandler.access$1800(Scene.java:3910)
+	at javafx.scene.Scene.impl_processKeyEvent(Scene.java:2040)
+	at javafx.scene.Scene$ScenePeerListener.keyEvent(Scene.java:2501)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$KeyEventNotification.run(GlassViewEventHandler.java:217)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$KeyEventNotification.run(GlassViewEventHandler.java:149)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleKeyEvent$353(GlassViewEventHandler.java:248)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:389)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleKeyEvent(GlassViewEventHandler.java:247)
+	at com.sun.glass.ui.View.handleKeyEvent(View.java:546)
+	at com.sun.glass.ui.View.notifyKey(View.java:966)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$148(WinApplication.java:191)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.sql.SQLException: ORA-01002: extração fora de sequência
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:450)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:399)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1017)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:655)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:249)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:566)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:215)
+	at oracle.jdbc.driver.T4CPreparedStatement.fetch(T4CPreparedStatement.java:1022)
+	at oracle.jdbc.driver.OracleStatement.fetchMoreRows(OracleStatement.java:3590)
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.fetchMoreRows(InsensitiveScrollableResultSet.java:1008)
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.absoluteInternal(InsensitiveScrollableResultSet.java:972)
+	at oracle.jdbc.driver.InsensitiveScrollableResultSet.next(InsensitiveScrollableResultSet.java:572)
+	at br.com.sinergia.database.conect.DBParalelConex.countNumRows(DBPararelConex.java:100)
+	at br.com.sinergia.controllers.fxml.ConsultaDBController.refreshTabQuery(ConsultaDBController.java:83)
+	... 27 more
+ 
+11/02/2018-21:48:10,068 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CAMINHO, LOCALIZADOR
+FROM TSITEL
+WHERE TELA = ? 
+11/02/2018-21:48:10,068 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.String): Produtos
+11/02/2018-21:48:10,069 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:48:10,088 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: INSERT INTO TSIREG
+(CODREG, CODUSU, CODSESSAO, DHACESSO, TELA)
+VALUES
+(GET_CODREG(?), ?, ?, ?, ?) 
+11/02/2018-21:48:10,088 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:48:10,088 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:48:10,088 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 3º Parâmetro(java.lang.Integer): 1774
+11/02/2018-21:48:10,088 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 4º Parâmetro(java.sql.Timestamp): 2018-02-11 21:48:10.088
+11/02/2018-21:48:10,088 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 5º Parâmetro(java.lang.String): Produtos
+11/02/2018-21:48:10,363 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1 linha(s) afetadas!
+11/02/2018-21:48:10,363 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: Statement executado em 275 milisegundo(s)
+11/02/2018-21:48:10,411 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT TELA
+FROM (SELECT MAX(CODREG), TELA
+FROM TSIREG
+WHERE CODUSU = ?
+GROUP BY TELA
+ORDER BY 1 DESC)
+WHERE ROWNUM <= 10 
+11/02/2018-21:48:10,411 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:48:10,419 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 8 milisegundo(s)
+11/02/2018-21:48:10,611 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT PER.PERFIL, PER.VISUALIZA, PER.ALTERA, PER.INSERI, PER.EXCLUI, PER.ESPECIAL
+FROM TSIUSU USU
+INNER JOIN TSIPER PER
+ON (USU.PERFIL = PER.PERFIL)
+WHERE USU.CODUSU = ?
+AND PER.TELA = ? 
+11/02/2018-21:48:10,611 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:48:10,611 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.String): Produtos
+11/02/2018-21:48:10,613 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:48:10,654 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT DISTINCT(MARCA) AS MARCA FROM TGFPRO ORDER BY 1
+11/02/2018-21:48:10,657 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 3 milisegundo(s)
+11/02/2018-21:48:10,678 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:48:10,679 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:48:10,703 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT PRO.*, GRU.DESCRGRUPOPROD, USU.LOGIN, LOC.DESCRLOCAL
+FROM TGFPRO PRO
+INNER JOIN TGFGRU GRU
+ON (PRO.CODGRUPOPROD = GRU.CODGRUPOPROD)
+INNER JOIN TGFLOC LOC
+ON (PRO.CODLOCAL = LOC.CODLOCAL)
+LEFT JOIN TSIUSU USU
+ON (PRO.CODUSUALTER = USU.CODUSU)
+WHERE PRO.CODPROD <> 0
+ORDER BY PRO.CODPROD 
+11/02/2018-21:48:10,748 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 45 milisegundo(s)
+11/02/2018-21:48:10,933 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT DISTINCT(MARCA) AS MARCA FROM TGFPRO ORDER BY 1
+11/02/2018-21:48:10,936 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 3 milisegundo(s)
+11/02/2018-21:48:10,969 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:48:10,971 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:48:23,967 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT VOL.CODVOL, VOL.DESCRVOL, VOA.DHCRIACAO, VOA.CODBARRAS, VOA.MULTIDIVID, VOA.QTDMULTIDIVID,
+VOA.DHALTER, VOA.CODUSUALTER, USU.LOGIN, VOA.DHCRIACAO
+FROM TGFVOA VOA
+INNER JOIN TGFVOL VOL
+ON (VOA.CODVOL = VOL.CODVOL)
+INNER JOIN TSIUSU USU
+ON (VOA.CODUSUALTER = USU.CODUSU)
+WHERE VOA.CODPROD = ? 
+11/02/2018-21:48:23,968 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 8
+11/02/2018-21:48:23,970 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:48:23,991 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:48:23,993 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:48:24,044 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT PER.PERFIL, PER.VISUALIZA, PER.ALTERA, PER.INSERI, PER.EXCLUI, PER.ESPECIAL
+FROM TSIUSU USU
+INNER JOIN TSIPER PER
+ON (USU.PERFIL = PER.PERFIL)
+WHERE USU.CODUSU = ?
+AND PER.TELA = ? 
+11/02/2018-21:48:24,044 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:48:24,044 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.String): Controle Prod.
+11/02/2018-21:48:24,046 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:48:24,067 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT COUNT(1) AS COUNT
+FROM TGFCTRL
+WHERE CODPROD = ? 
+11/02/2018-21:48:24,068 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 8
+11/02/2018-21:48:24,070 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:48:24,269 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT PER.PERFIL, PER.VISUALIZA, PER.ALTERA, PER.INSERI, PER.EXCLUI, PER.ESPECIAL
+FROM TSIUSU USU
+INNER JOIN TSIPER PER
+ON (USU.PERFIL = PER.PERFIL)
+WHERE USU.CODUSU = ?
+AND PER.TELA = ? 
+11/02/2018-21:48:24,269 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:48:24,269 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.String): Unidades Alt.
+11/02/2018-21:48:24,272 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 3 milisegundo(s)
+11/02/2018-21:48:24,702 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT VOL.CODVOL, VOL.DESCRVOL, VOA.DHCRIACAO, VOA.CODBARRAS, VOA.MULTIDIVID, VOA.QTDMULTIDIVID,
+VOA.DHALTER, VOA.CODUSUALTER, USU.LOGIN, VOA.DHCRIACAO
+FROM TGFVOA VOA
+INNER JOIN TGFVOL VOL
+ON (VOA.CODVOL = VOL.CODVOL)
+INNER JOIN TSIUSU USU
+ON (VOA.CODUSUALTER = USU.CODUSU)
+WHERE VOA.CODPROD = ? 
+11/02/2018-21:48:24,702 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 9
+11/02/2018-21:48:24,709 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 6 milisegundo(s)
+11/02/2018-21:48:24,746 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:48:24,746 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 0 milisegundo(s)
+11/02/2018-21:48:24,765 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT COUNT(1) AS COUNT
+FROM TGFCTRL
+WHERE CODPROD = ? 
+11/02/2018-21:48:24,765 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 9
+11/02/2018-21:48:24,767 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:48:29,754 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT COUNT(1) AS COUNT
+FROM TGFCTRL
+WHERE CODPROD = ? 
+11/02/2018-21:48:29,754 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 9
+11/02/2018-21:48:29,756 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:48:42,859 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:48:42,860 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:48:42,895 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT VOL.CODVOL, VOL.DESCRVOL, VOA.DHCRIACAO, VOA.CODBARRAS, VOA.MULTIDIVID, VOA.QTDMULTIDIVID,
+VOA.DHALTER, VOA.CODUSUALTER, USU.LOGIN, VOA.DHCRIACAO
+FROM TGFVOA VOA
+INNER JOIN TGFVOL VOL
+ON (VOA.CODVOL = VOL.CODVOL)
+INNER JOIN TSIUSU USU
+ON (VOA.CODUSUALTER = USU.CODUSU)
+WHERE VOA.CODPROD = ? 
+11/02/2018-21:48:42,895 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 10
+11/02/2018-21:48:42,898 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 3 milisegundo(s)
+11/02/2018-21:48:42,917 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:48:42,918 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:48:42,936 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT COUNT(1) AS COUNT
+FROM TGFCTRL
+WHERE CODPROD = ? 
+11/02/2018-21:48:42,936 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 10
+11/02/2018-21:48:42,938 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:48:42,958 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODCTRL, DESCRCTRL, TIPCTRL, LISTACTRL FROM TGFCTRL
+WHERE CODPROD = ? 
+11/02/2018-21:48:42,959 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 10
+11/02/2018-21:48:42,960 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 0 milisegundo(s)
+11/02/2018-21:48:55,371 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: UPDATE TGFCTRL
+SET LISTACTRL = ?
+WHERE CODCTRL = ? 
+11/02/2018-21:48:55,371 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.String): 1KG;5KG;10KG;20KG;7KG
+11/02/2018-21:48:55,371 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:48:55,373 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1 linha(s) afetadas!
+11/02/2018-21:48:55,373 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: Statement executado em 2 milisegundo(s)
+11/02/2018-21:48:55,402 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT COUNT(1) AS COUNT
+FROM TGFCTRL
+WHERE CODPROD = ? 
+11/02/2018-21:48:55,402 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 10
+11/02/2018-21:48:55,405 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 3 milisegundo(s)
+11/02/2018-21:48:55,429 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODCTRL, DESCRCTRL, TIPCTRL, LISTACTRL FROM TGFCTRL
+WHERE CODPROD = ? 
+11/02/2018-21:48:55,429 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 10
+11/02/2018-21:48:55,430 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:49:06,085 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: UPDATE TGFCTRL
+SET LISTACTRL = ?
+WHERE CODCTRL = ? 
+11/02/2018-21:49:06,085 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.String): 1KG;5KG;10KG;20KG
+11/02/2018-21:49:06,085 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:49:06,086 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1 linha(s) afetadas!
+11/02/2018-21:49:06,086 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: Statement executado em 1 milisegundo(s)
+11/02/2018-21:49:06,109 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT COUNT(1) AS COUNT
+FROM TGFCTRL
+WHERE CODPROD = ? 
+11/02/2018-21:49:06,109 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 10
+11/02/2018-21:49:06,111 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:49:06,129 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODCTRL, DESCRCTRL, TIPCTRL, LISTACTRL FROM TGFCTRL
+WHERE CODPROD = ? 
+11/02/2018-21:49:06,129 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 10
+11/02/2018-21:49:06,130 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:49:46,510 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:49:46,511 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:49:46,550 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT VOL.CODVOL, VOL.DESCRVOL, VOA.DHCRIACAO, VOA.CODBARRAS, VOA.MULTIDIVID, VOA.QTDMULTIDIVID,
+VOA.DHALTER, VOA.CODUSUALTER, USU.LOGIN, VOA.DHCRIACAO
+FROM TGFVOA VOA
+INNER JOIN TGFVOL VOL
+ON (VOA.CODVOL = VOL.CODVOL)
+INNER JOIN TSIUSU USU
+ON (VOA.CODUSUALTER = USU.CODUSU)
+WHERE VOA.CODPROD = ? 
+11/02/2018-21:49:46,551 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 9
+11/02/2018-21:49:46,553 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:49:46,574 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:49:46,575 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:49:46,592 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT COUNT(1) AS COUNT
+FROM TGFCTRL
+WHERE CODPROD = ? 
+11/02/2018-21:49:46,593 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 9
+11/02/2018-21:49:46,595 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:49:58,113 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:49:58,114 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:49:58,145 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT VOL.CODVOL, VOL.DESCRVOL, VOA.DHCRIACAO, VOA.CODBARRAS, VOA.MULTIDIVID, VOA.QTDMULTIDIVID,
+VOA.DHALTER, VOA.CODUSUALTER, USU.LOGIN, VOA.DHCRIACAO
+FROM TGFVOA VOA
+INNER JOIN TGFVOL VOL
+ON (VOA.CODVOL = VOL.CODVOL)
+INNER JOIN TSIUSU USU
+ON (VOA.CODUSUALTER = USU.CODUSU)
+WHERE VOA.CODPROD = ? 
+11/02/2018-21:49:58,146 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 10
+11/02/2018-21:49:58,148 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:49:58,169 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:49:58,170 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:49:58,187 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT COUNT(1) AS COUNT
+FROM TGFCTRL
+WHERE CODPROD = ? 
+11/02/2018-21:49:58,187 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 10
+11/02/2018-21:49:58,189 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:49:58,208 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODCTRL, DESCRCTRL, TIPCTRL, LISTACTRL FROM TGFCTRL
+WHERE CODPROD = ? 
+11/02/2018-21:49:58,208 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 10
+11/02/2018-21:49:58,209 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 0 milisegundo(s)
+11/02/2018-21:50:02,028 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:50:02,029 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:50:02,053 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT VOL.CODVOL, VOL.DESCRVOL, VOA.DHCRIACAO, VOA.CODBARRAS, VOA.MULTIDIVID, VOA.QTDMULTIDIVID,
+VOA.DHALTER, VOA.CODUSUALTER, USU.LOGIN, VOA.DHCRIACAO
+FROM TGFVOA VOA
+INNER JOIN TGFVOL VOL
+ON (VOA.CODVOL = VOL.CODVOL)
+INNER JOIN TSIUSU USU
+ON (VOA.CODUSUALTER = USU.CODUSU)
+WHERE VOA.CODPROD = ? 
+11/02/2018-21:50:02,053 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 9
+11/02/2018-21:50:02,056 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:50:02,169 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:50:02,171 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:50:02,230 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT COUNT(1) AS COUNT
+FROM TGFCTRL
+WHERE CODPROD = ? 
+11/02/2018-21:50:02,230 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 9
+11/02/2018-21:50:02,235 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 5 milisegundo(s)
+11/02/2018-21:50:05,560 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:50:05,562 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:50:05,588 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT VOL.CODVOL, VOL.DESCRVOL, VOA.DHCRIACAO, VOA.CODBARRAS, VOA.MULTIDIVID, VOA.QTDMULTIDIVID,
+VOA.DHALTER, VOA.CODUSUALTER, USU.LOGIN, VOA.DHCRIACAO
+FROM TGFVOA VOA
+INNER JOIN TGFVOL VOL
+ON (VOA.CODVOL = VOL.CODVOL)
+INNER JOIN TSIUSU USU
+ON (VOA.CODUSUALTER = USU.CODUSU)
+WHERE VOA.CODPROD = ? 
+11/02/2018-21:50:05,589 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 8
+11/02/2018-21:50:05,591 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:50:05,610 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:50:05,611 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 0 milisegundo(s)
+11/02/2018-21:50:05,634 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT COUNT(1) AS COUNT
+FROM TGFCTRL
+WHERE CODPROD = ? 
+11/02/2018-21:50:05,634 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 8
+11/02/2018-21:50:05,636 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:50:06,499 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:50:06,500 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:50:06,533 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT VOL.CODVOL, VOL.DESCRVOL, VOA.DHCRIACAO, VOA.CODBARRAS, VOA.MULTIDIVID, VOA.QTDMULTIDIVID,
+VOA.DHALTER, VOA.CODUSUALTER, USU.LOGIN, VOA.DHCRIACAO
+FROM TGFVOA VOA
+INNER JOIN TGFVOL VOL
+ON (VOA.CODVOL = VOL.CODVOL)
+INNER JOIN TSIUSU USU
+ON (VOA.CODUSUALTER = USU.CODUSU)
+WHERE VOA.CODPROD = ? 
+11/02/2018-21:50:06,533 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 7
+11/02/2018-21:50:06,536 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 3 milisegundo(s)
+11/02/2018-21:50:06,552 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:50:06,553 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 0 milisegundo(s)
+11/02/2018-21:50:06,572 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT COUNT(1) AS COUNT
+FROM TGFCTRL
+WHERE CODPROD = ? 
+11/02/2018-21:50:06,572 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 7
+11/02/2018-21:50:06,574 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:51:04,480 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT VOL.CODVOL, VOL.DESCRVOL, VOA.DHCRIACAO, VOA.CODBARRAS, VOA.MULTIDIVID, VOA.QTDMULTIDIVID,
+VOA.DHALTER, VOA.CODUSUALTER, USU.LOGIN, VOA.DHCRIACAO
+FROM TGFVOA VOA
+INNER JOIN TGFVOL VOL
+ON (VOA.CODVOL = VOL.CODVOL)
+INNER JOIN TSIUSU USU
+ON (VOA.CODUSUALTER = USU.CODUSU)
+WHERE VOA.CODPROD = ? 
+11/02/2018-21:51:04,480 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 7
+11/02/2018-21:51:04,482 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:51:04,500 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:51:04,500 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 0 milisegundo(s)
+11/02/2018-21:52:25,393 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT VOL.CODVOL, VOL.DESCRVOL, VOA.DHCRIACAO, VOA.CODBARRAS, VOA.MULTIDIVID, VOA.QTDMULTIDIVID,
+VOA.DHALTER, VOA.CODUSUALTER, USU.LOGIN, VOA.DHCRIACAO
+FROM TGFVOA VOA
+INNER JOIN TGFVOL VOL
+ON (VOA.CODVOL = VOL.CODVOL)
+INNER JOIN TSIUSU USU
+ON (VOA.CODUSUALTER = USU.CODUSU)
+WHERE VOA.CODPROD = ? 
+11/02/2018-21:52:25,393 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 7
+11/02/2018-21:52:25,396 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 3 milisegundo(s)
+11/02/2018-21:52:25,416 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODVOL FROM TGFVOL ORDER BY 1
+11/02/2018-21:52:25,417 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:52:26,977 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT COUNT(1) AS COUNT
+FROM TGFCTRL
+WHERE CODPROD = ? 
+11/02/2018-21:52:26,977 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 7
+11/02/2018-21:52:26,979 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:52:34,808 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: INSERT INTO TGFCTRL
+(CODCTRL, CODPROD, TIPCTRL, DESCRCTRL, LISTACTRL, DHCRIACAO, DHALTER, CODUSU)
+VALUES
+(GET_COD('CODCTRL', 'TGFCTRL'), ?, ?, ?, ?, ?, ?, ?) 
+11/02/2018-21:52:34,809 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 7
+11/02/2018-21:52:34,809 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.Character): L
+11/02/2018-21:52:34,809 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 3º Parâmetro(java.lang.String): Tipo de corte
+11/02/2018-21:52:34,809 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 4º Parâmetro(java.lang.NullParam): Null
+11/02/2018-21:52:34,809 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 5º Parâmetro(java.sql.Timestamp): 2018-02-11 21:52:34.809
+11/02/2018-21:52:34,809 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 6º Parâmetro(java.sql.Timestamp): 2018-02-11 21:52:34.809
+11/02/2018-21:52:34,809 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 7º Parâmetro(java.lang.Integer): 1
+11/02/2018-21:52:34,833 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1 linha(s) afetadas!
+11/02/2018-21:52:34,833 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: Statement executado em 24 milisegundo(s)
+11/02/2018-21:52:45,615 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: UPDATE TGFCTRL
+SET LISTACTRL = ?
+WHERE CODCTRL = ? 
+11/02/2018-21:52:45,615 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.String): Com osso
+11/02/2018-21:52:45,615 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.Integer): 0
+11/02/2018-21:52:45,616 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 0 linha(s) afetadas!
+11/02/2018-21:52:45,616 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: Statement executado em 1 milisegundo(s)
+11/02/2018-21:52:45,635 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT COUNT(1) AS COUNT
+FROM TGFCTRL
+WHERE CODPROD = ? 
+11/02/2018-21:52:45,636 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 7
+11/02/2018-21:52:45,638 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:52:45,655 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODCTRL, DESCRCTRL, TIPCTRL, LISTACTRL FROM TGFCTRL
+WHERE CODPROD = ? 
+11/02/2018-21:52:45,655 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 7
+11/02/2018-21:52:45,656 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)
+11/02/2018-21:52:51,117 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: UPDATE TGFCTRL
+SET LISTACTRL = ?
+WHERE CODCTRL = ? 
+11/02/2018-21:52:51,117 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.String): ;Sem Osso
+11/02/2018-21:52:51,117 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 2º Parâmetro(java.lang.Integer): 2
+11/02/2018-21:52:51,118 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1 linha(s) afetadas!
+11/02/2018-21:52:51,118 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: Statement executado em 1 milisegundo(s)
+11/02/2018-21:52:51,137 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT COUNT(1) AS COUNT
+FROM TGFCTRL
+WHERE CODPROD = ? 
+11/02/2018-21:52:51,137 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 7
+11/02/2018-21:52:51,139 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 2 milisegundo(s)
+11/02/2018-21:52:51,156 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT CODCTRL, DESCRCTRL, TIPCTRL, LISTACTRL FROM TGFCTRL
+WHERE CODPROD = ? 
+11/02/2018-21:52:51,156 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 7
+11/02/2018-21:52:51,157 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : DB SourceConnection: ResulSet criado em 1 milisegundo(s)

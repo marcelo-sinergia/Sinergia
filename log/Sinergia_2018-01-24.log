@@ -1,0 +1,1995 @@
+24/01/2018-13:26:27,224 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT COUNT(1) FROM TSIUSU WHERE LOGIN = ? 
+24/01/2018-13:26:27,535 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): MARCELOEV 
+24/01/2018-13:26:27,764 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT USU.ATIVO, USU.CODUSU, USU.NOME, USU.LOGIN, USU.FOTO, USU.PERFIL, USU.SENHA, MD5(?) AS CRYPT,
+GET_TSIPAR_T(?, ?) AS VERSAOATUALDB, EMP.CODEMP, EMP.RAZAOSOCIAL, EMP.NOMEFANTASIA, EMP.CNPJ FROM TSIUSU USU
+INNER JOIN TSIEMP EMP
+ON (USU.CODEMP = EMP.CODEMP)WHERE USU.LOGIN = ? 
+24/01/2018-13:26:27,765 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): marcelo26 
+24/01/2018-13:26:27,765 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): VERSAOATUALDB 
+24/01/2018-13:26:27,765 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:26:27,766 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): MARCELOEV 
+24/01/2018-13:26:27,929 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT GET_CODSESSAO(?) AS SESSAO FROM DUAL 
+24/01/2018-13:26:27,929 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:26:27,932 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: INSERT INTO TSISES
+(CODSESSAO, CODUSU, DHLOGIN, IPMAQ, NOMEMAQ, VERSAOEXEC)
+VALUES
+(?, ?, ?, ?, ?, ?) 
+24/01/2018-13:26:27,933 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 972 
+24/01/2018-13:26:27,933 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:26:27,933 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.sql.Timestamp): 2018-01-24 13:26:27.933 
+24/01/2018-13:26:27,934 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): 192.168.12.191 
+24/01/2018-13:26:27,934 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Marcelo-NTB 
+24/01/2018-13:26:27,934 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): 1.0.0 
+24/01/2018-13:26:33,983 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:26:33,984 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Cadastro de Usuários, Controle de Acessos, Controle de Lembretes] 
+24/01/2018-13:26:33,984 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Cadastro de Usuários 
+24/01/2018-13:26:33,985 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Controle de Acessos 
+24/01/2018-13:26:33,985 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Controle de Lembretes 
+24/01/2018-13:26:33,986 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:26:34,032 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:26:34,032 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Empresas, Parceiros, Operações, Parâmetros, ConsultaDB] 
+24/01/2018-13:26:34,033 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Empresas 
+24/01/2018-13:26:34,033 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Parceiros 
+24/01/2018-13:26:34,033 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Operações 
+24/01/2018-13:26:34,033 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Parâmetros 
+24/01/2018-13:26:34,034 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): ConsultaDB 
+24/01/2018-13:26:34,034 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:26:34,068 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:26:34,068 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Produtos, Serviços, Grupo de Produtos, Unidades, Contas, Agências, Bancos, Transportes, Moedas] 
+24/01/2018-13:26:34,069 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:26:34,069 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Serviços 
+24/01/2018-13:26:34,069 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Grupo de Produtos 
+24/01/2018-13:26:34,069 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Unidades 
+24/01/2018-13:26:34,069 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Contas 
+24/01/2018-13:26:34,069 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): Agências 
+24/01/2018-13:26:34,069 | INFO [class br.com.sinergia.database.conect.Statement] : 7º Parâmetro(java.lang.String): Bancos 
+24/01/2018-13:26:34,069 | INFO [class br.com.sinergia.database.conect.Statement] : 8º Parâmetro(java.lang.String): Transportes 
+24/01/2018-13:26:34,069 | INFO [class br.com.sinergia.database.conect.Statement] : 9º Parâmetro(java.lang.String): Moedas 
+24/01/2018-13:26:34,070 | INFO [class br.com.sinergia.database.conect.Statement] : 10º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:26:34,094 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:26:34,094 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Países, Estados, Cidades, Bairros, Logradouros] 
+24/01/2018-13:26:34,094 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Países 
+24/01/2018-13:26:34,095 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Estados 
+24/01/2018-13:26:34,095 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Cidades 
+24/01/2018-13:26:34,095 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Bairros 
+24/01/2018-13:26:34,095 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Logradouros 
+24/01/2018-13:26:34,095 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:26:34,122 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:26:34,122 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Portal de Compras, Portal de Vendas, Mov. Internas, Tabela de Preços, Preços de Moedas, Controle de Estoque] 
+24/01/2018-13:26:34,122 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Portal de Compras 
+24/01/2018-13:26:34,122 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Portal de Vendas 
+24/01/2018-13:26:34,122 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Mov. Internas 
+24/01/2018-13:26:34,123 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Tabela de Preços 
+24/01/2018-13:26:34,123 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Preços de Moedas 
+24/01/2018-13:26:34,123 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): Controle de Estoque 
+24/01/2018-13:26:34,123 | INFO [class br.com.sinergia.database.conect.Statement] : 7º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:26:34,150 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:26:34,150 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Mov. Financeira, Mov. Bancária, Saldo de Contas, Transferências] 
+24/01/2018-13:26:34,150 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Mov. Financeira 
+24/01/2018-13:26:34,150 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Mov. Bancária 
+24/01/2018-13:26:34,150 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Saldo de Contas 
+24/01/2018-13:26:34,151 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Transferências 
+24/01/2018-13:26:34,151 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:26:34,174 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT LISTA FROM TSIARQ
+WHERE CODUSU = ?
+AND ARQUIVO = ? 
+24/01/2018-13:26:34,174 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:26:34,174 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Lista de Telas(Favoritas) 
+24/01/2018-13:26:34,227 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA
+FROM (SELECT MAX(CODREG), TELA
+FROM TSIREG
+WHERE CODUSU = ?
+GROUP BY TELA
+ORDER BY 1 DESC)
+WHERE ROWNUM <= 10 
+24/01/2018-13:26:34,227 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:26:34,330 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT DHALTER, LEMBRETE FROM TGFLEM WHERE CODUSU = ? 
+24/01/2018-13:26:34,331 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:26:34,702 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT MSG.CODMSG, MSG.VISUALIZADA, MSG.PRIORIDADE, MSG.TITULO,
+ MSG.MENSAGEM, MSG.DHALTER,
+CASE WHEN MSG.CODUSUREM IS NULL THEN -1 ELSE MSG.CODUSUREM END AS CODUSUREM,
+CASE WHEN MSG.CODUSUREM IS NULL THEN 'Desconhecido' ELSE USU.LOGIN END AS LOGINREM
+FROM TRIMSG MSG
+LEFT JOIN TSIUSU USU
+ON MSG.CODUSUREM = USU.CODUSU
+WHERE MSG.CODUSU = ?
+AND ROWNUM <= 20
+ORDER BY MSG.CODMSG 
+24/01/2018-13:26:34,703 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:26:34,873 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT FOTO FROM TSIUSU WHERE CODUSU = ?
+24/01/2018-13:26:34,873 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+24/01/2018-13:26:34,965 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT FOTO FROM TSIUSU WHERE CODUSU = ?
+24/01/2018-13:26:34,966 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 0
+24/01/2018-13:26:38,545 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT CAMINHO, LOCALIZADOR
+FROM TSITEL
+WHERE TELA = ? 
+24/01/2018-13:26:38,545 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:26:38,548 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: INSERT INTO TSIREG
+(CODREG, CODUSU, CODSESSAO, DHACESSO, TELA)
+VALUES
+(GET_CODREG(?), ?, ?, ?, ?) 
+24/01/2018-13:26:38,548 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:26:38,548 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:26:38,548 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 972 
+24/01/2018-13:26:38,548 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.sql.Timestamp): 2018-01-24 13:26:38.548 
+24/01/2018-13:26:38,548 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:26:38,590 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA
+FROM (SELECT MAX(CODREG), TELA
+FROM TSIREG
+WHERE CODUSU = ?
+GROUP BY TELA
+ORDER BY 1 DESC)
+WHERE ROWNUM <= 10 
+24/01/2018-13:26:38,590 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:26:39,094 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT PRO.*, GRU.DESCRGRUPOPROD, USU.LOGIN, LOC.DESCRLOCAL
+FROM TGFPRO PRO
+INNER JOIN TGFGRU GRU
+ON (PRO.CODGRUPOPROD = GRU.CODGRUPOPROD)
+INNER JOIN TGFLOC LOC
+ON (PRO.CODLOCAL = LOC.CODLOCAL)
+LEFT JOIN TSIUSU USU
+ON (PRO.CODUSUALTER = USU.CODUSU)
+WHERE PRO.CODPROD <> 0
+ORDER BY PRO.CODPROD 
+24/01/2018-13:26:39,365 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Descrição 
+24/01/2018-13:26:39,412 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Características 
+24/01/2018-13:26:39,657 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Descrição 
+24/01/2018-13:26:42,499 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT LISTA FROM TSIARQ
+WHERE CODUSU = ?
+AND ARQUIVO = ? 
+24/01/2018-13:26:42,499 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:26:42,499 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Finalizar com telas pendentes 
+24/01/2018-13:26:42,532 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: UPDATE TSISES
+SET DHLOGOUT = ?
+WHERE CODSESSAO = ?
+AND CODUSU = ? 
+24/01/2018-13:26:42,533 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.sql.Timestamp): 2018-01-24 13:26:42.532 
+24/01/2018-13:26:42,533 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 972 
+24/01/2018-13:26:42,533 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:28:09,729 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT COUNT(1) FROM TSIUSU WHERE LOGIN = ? 
+24/01/2018-13:28:09,896 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): MARCELOEV 
+24/01/2018-13:28:09,976 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT USU.ATIVO, USU.CODUSU, USU.NOME, USU.LOGIN, USU.FOTO, USU.PERFIL, USU.SENHA, MD5(?) AS CRYPT,
+GET_TSIPAR_T(?, ?) AS VERSAOATUALDB, EMP.CODEMP, EMP.RAZAOSOCIAL, EMP.NOMEFANTASIA, EMP.CNPJ FROM TSIUSU USU
+INNER JOIN TSIEMP EMP
+ON (USU.CODEMP = EMP.CODEMP)WHERE USU.LOGIN = ? 
+24/01/2018-13:28:09,976 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): marcelo26 
+24/01/2018-13:28:09,976 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): VERSAOATUALDB 
+24/01/2018-13:28:09,976 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:28:09,977 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): MARCELOEV 
+24/01/2018-13:28:10,067 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT GET_CODSESSAO(?) AS SESSAO FROM DUAL 
+24/01/2018-13:28:10,068 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:28:10,069 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: INSERT INTO TSISES
+(CODSESSAO, CODUSU, DHLOGIN, IPMAQ, NOMEMAQ, VERSAOEXEC)
+VALUES
+(?, ?, ?, ?, ?, ?) 
+24/01/2018-13:28:10,069 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 973 
+24/01/2018-13:28:10,069 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:28:10,070 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.sql.Timestamp): 2018-01-24 13:28:10.07 
+24/01/2018-13:28:10,070 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): 192.168.12.191 
+24/01/2018-13:28:10,070 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Marcelo-NTB 
+24/01/2018-13:28:10,070 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): 1.0.0 
+24/01/2018-13:28:10,511 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:28:10,511 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Cadastro de Usuários, Controle de Acessos, Controle de Lembretes] 
+24/01/2018-13:28:10,511 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Cadastro de Usuários 
+24/01/2018-13:28:10,511 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Controle de Acessos 
+24/01/2018-13:28:10,511 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Controle de Lembretes 
+24/01/2018-13:28:10,512 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:28:10,563 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:28:10,564 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Empresas, Parceiros, Operações, Parâmetros, ConsultaDB] 
+24/01/2018-13:28:10,564 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Empresas 
+24/01/2018-13:28:10,564 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Parceiros 
+24/01/2018-13:28:10,564 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Operações 
+24/01/2018-13:28:10,564 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Parâmetros 
+24/01/2018-13:28:10,564 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): ConsultaDB 
+24/01/2018-13:28:10,564 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:28:10,604 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:28:10,604 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Produtos, Serviços, Grupo de Produtos, Unidades, Contas, Agências, Bancos, Transportes, Moedas] 
+24/01/2018-13:28:10,604 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:28:10,604 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Serviços 
+24/01/2018-13:28:10,605 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Grupo de Produtos 
+24/01/2018-13:28:10,605 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Unidades 
+24/01/2018-13:28:10,605 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Contas 
+24/01/2018-13:28:10,605 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): Agências 
+24/01/2018-13:28:10,605 | INFO [class br.com.sinergia.database.conect.Statement] : 7º Parâmetro(java.lang.String): Bancos 
+24/01/2018-13:28:10,605 | INFO [class br.com.sinergia.database.conect.Statement] : 8º Parâmetro(java.lang.String): Transportes 
+24/01/2018-13:28:10,605 | INFO [class br.com.sinergia.database.conect.Statement] : 9º Parâmetro(java.lang.String): Moedas 
+24/01/2018-13:28:10,605 | INFO [class br.com.sinergia.database.conect.Statement] : 10º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:28:10,643 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:28:10,644 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Países, Estados, Cidades, Bairros, Logradouros] 
+24/01/2018-13:28:10,644 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Países 
+24/01/2018-13:28:10,644 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Estados 
+24/01/2018-13:28:10,644 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Cidades 
+24/01/2018-13:28:10,644 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Bairros 
+24/01/2018-13:28:10,644 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Logradouros 
+24/01/2018-13:28:10,644 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:28:10,686 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:28:10,687 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Portal de Compras, Portal de Vendas, Mov. Internas, Tabela de Preços, Preços de Moedas, Controle de Estoque] 
+24/01/2018-13:28:10,687 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Portal de Compras 
+24/01/2018-13:28:10,687 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Portal de Vendas 
+24/01/2018-13:28:10,687 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Mov. Internas 
+24/01/2018-13:28:10,687 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Tabela de Preços 
+24/01/2018-13:28:10,687 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Preços de Moedas 
+24/01/2018-13:28:10,688 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): Controle de Estoque 
+24/01/2018-13:28:10,688 | INFO [class br.com.sinergia.database.conect.Statement] : 7º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:28:10,716 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:28:10,716 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Mov. Financeira, Mov. Bancária, Saldo de Contas, Transferências] 
+24/01/2018-13:28:10,717 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Mov. Financeira 
+24/01/2018-13:28:10,717 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Mov. Bancária 
+24/01/2018-13:28:10,717 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Saldo de Contas 
+24/01/2018-13:28:10,717 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Transferências 
+24/01/2018-13:28:10,717 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:28:10,739 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT LISTA FROM TSIARQ
+WHERE CODUSU = ?
+AND ARQUIVO = ? 
+24/01/2018-13:28:10,739 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:28:10,739 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Lista de Telas(Favoritas) 
+24/01/2018-13:28:10,767 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA
+FROM (SELECT MAX(CODREG), TELA
+FROM TSIREG
+WHERE CODUSU = ?
+GROUP BY TELA
+ORDER BY 1 DESC)
+WHERE ROWNUM <= 10 
+24/01/2018-13:28:10,768 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:28:10,792 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT DHALTER, LEMBRETE FROM TGFLEM WHERE CODUSU = ? 
+24/01/2018-13:28:10,793 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:28:10,839 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT MSG.CODMSG, MSG.VISUALIZADA, MSG.PRIORIDADE, MSG.TITULO,
+ MSG.MENSAGEM, MSG.DHALTER,
+CASE WHEN MSG.CODUSUREM IS NULL THEN -1 ELSE MSG.CODUSUREM END AS CODUSUREM,
+CASE WHEN MSG.CODUSUREM IS NULL THEN 'Desconhecido' ELSE USU.LOGIN END AS LOGINREM
+FROM TRIMSG MSG
+LEFT JOIN TSIUSU USU
+ON MSG.CODUSUREM = USU.CODUSU
+WHERE MSG.CODUSU = ?
+AND ROWNUM <= 20
+ORDER BY MSG.CODMSG 
+24/01/2018-13:28:10,839 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:28:10,899 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT FOTO FROM TSIUSU WHERE CODUSU = ?
+24/01/2018-13:28:10,899 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+24/01/2018-13:28:10,981 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT FOTO FROM TSIUSU WHERE CODUSU = ?
+24/01/2018-13:28:10,981 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 0
+24/01/2018-13:28:14,164 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT CAMINHO, LOCALIZADOR
+FROM TSITEL
+WHERE TELA = ? 
+24/01/2018-13:28:14,164 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:28:14,166 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: INSERT INTO TSIREG
+(CODREG, CODUSU, CODSESSAO, DHACESSO, TELA)
+VALUES
+(GET_CODREG(?), ?, ?, ?, ?) 
+24/01/2018-13:28:14,166 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:28:14,166 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:28:14,166 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 973 
+24/01/2018-13:28:14,166 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.sql.Timestamp): 2018-01-24 13:28:14.166 
+24/01/2018-13:28:14,166 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:28:14,190 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA
+FROM (SELECT MAX(CODREG), TELA
+FROM TSIREG
+WHERE CODUSU = ?
+GROUP BY TELA
+ORDER BY 1 DESC)
+WHERE ROWNUM <= 10 
+24/01/2018-13:28:14,190 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:28:14,372 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT PRO.*, GRU.DESCRGRUPOPROD, USU.LOGIN, LOC.DESCRLOCAL
+FROM TGFPRO PRO
+INNER JOIN TGFGRU GRU
+ON (PRO.CODGRUPOPROD = GRU.CODGRUPOPROD)
+INNER JOIN TGFLOC LOC
+ON (PRO.CODLOCAL = LOC.CODLOCAL)
+LEFT JOIN TSIUSU USU
+ON (PRO.CODUSUALTER = USU.CODUSU)
+WHERE PRO.CODPROD <> 0
+ORDER BY PRO.CODPROD 
+24/01/2018-13:28:15,168 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Descrição 
+24/01/2018-13:28:15,494 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Descrição 
+24/01/2018-13:28:15,541 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Características 
+24/01/2018-13:28:15,609 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Características 
+24/01/2018-13:28:15,750 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Descrição 
+24/01/2018-13:28:15,798 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Características 
+24/01/2018-13:28:15,883 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Descrição 
+24/01/2018-13:28:15,974 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Características 
+24/01/2018-13:28:16,017 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Descrição 
+24/01/2018-13:28:16,081 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Características 
+24/01/2018-13:28:28,601 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT LISTA FROM TSIARQ
+WHERE CODUSU = ?
+AND ARQUIVO = ? 
+24/01/2018-13:28:28,602 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:28:28,602 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Finalizar com telas pendentes 
+24/01/2018-13:28:28,626 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: UPDATE TSISES
+SET DHLOGOUT = ?
+WHERE CODSESSAO = ?
+AND CODUSU = ? 
+24/01/2018-13:28:28,627 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.sql.Timestamp): 2018-01-24 13:28:28.627 
+24/01/2018-13:28:28,627 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 973 
+24/01/2018-13:28:28,627 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:29:09,185 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT COUNT(1) FROM TSIUSU WHERE LOGIN = ? 
+24/01/2018-13:29:09,359 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): MARCELOEV 
+24/01/2018-13:29:09,440 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT USU.ATIVO, USU.CODUSU, USU.NOME, USU.LOGIN, USU.FOTO, USU.PERFIL, USU.SENHA, MD5(?) AS CRYPT,
+GET_TSIPAR_T(?, ?) AS VERSAOATUALDB, EMP.CODEMP, EMP.RAZAOSOCIAL, EMP.NOMEFANTASIA, EMP.CNPJ FROM TSIUSU USU
+INNER JOIN TSIEMP EMP
+ON (USU.CODEMP = EMP.CODEMP)WHERE USU.LOGIN = ? 
+24/01/2018-13:29:09,440 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): marcelo26 
+24/01/2018-13:29:09,440 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): VERSAOATUALDB 
+24/01/2018-13:29:09,441 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:29:09,441 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): MARCELOEV 
+24/01/2018-13:29:09,530 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT GET_CODSESSAO(?) AS SESSAO FROM DUAL 
+24/01/2018-13:29:09,530 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:29:09,532 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: INSERT INTO TSISES
+(CODSESSAO, CODUSU, DHLOGIN, IPMAQ, NOMEMAQ, VERSAOEXEC)
+VALUES
+(?, ?, ?, ?, ?, ?) 
+24/01/2018-13:29:09,532 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 974 
+24/01/2018-13:29:09,532 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:29:09,532 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.sql.Timestamp): 2018-01-24 13:29:09.532 
+24/01/2018-13:29:09,532 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): 192.168.12.191 
+24/01/2018-13:29:09,532 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Marcelo-NTB 
+24/01/2018-13:29:09,532 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): 1.0.0 
+24/01/2018-13:29:10,013 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:29:10,013 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Cadastro de Usuários, Controle de Acessos, Controle de Lembretes] 
+24/01/2018-13:29:10,013 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Cadastro de Usuários 
+24/01/2018-13:29:10,014 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Controle de Acessos 
+24/01/2018-13:29:10,014 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Controle de Lembretes 
+24/01/2018-13:29:10,014 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:29:10,047 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:29:10,048 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Empresas, Parceiros, Operações, Parâmetros, ConsultaDB] 
+24/01/2018-13:29:10,048 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Empresas 
+24/01/2018-13:29:10,048 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Parceiros 
+24/01/2018-13:29:10,048 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Operações 
+24/01/2018-13:29:10,048 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Parâmetros 
+24/01/2018-13:29:10,048 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): ConsultaDB 
+24/01/2018-13:29:10,049 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:29:10,085 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:29:10,086 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Produtos, Serviços, Grupo de Produtos, Unidades, Contas, Agências, Bancos, Transportes, Moedas] 
+24/01/2018-13:29:10,086 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:29:10,086 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Serviços 
+24/01/2018-13:29:10,086 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Grupo de Produtos 
+24/01/2018-13:29:10,086 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Unidades 
+24/01/2018-13:29:10,086 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Contas 
+24/01/2018-13:29:10,087 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): Agências 
+24/01/2018-13:29:10,087 | INFO [class br.com.sinergia.database.conect.Statement] : 7º Parâmetro(java.lang.String): Bancos 
+24/01/2018-13:29:10,087 | INFO [class br.com.sinergia.database.conect.Statement] : 8º Parâmetro(java.lang.String): Transportes 
+24/01/2018-13:29:10,087 | INFO [class br.com.sinergia.database.conect.Statement] : 9º Parâmetro(java.lang.String): Moedas 
+24/01/2018-13:29:10,087 | INFO [class br.com.sinergia.database.conect.Statement] : 10º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:29:10,119 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:29:10,119 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Países, Estados, Cidades, Bairros, Logradouros] 
+24/01/2018-13:29:10,119 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Países 
+24/01/2018-13:29:10,119 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Estados 
+24/01/2018-13:29:10,119 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Cidades 
+24/01/2018-13:29:10,119 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Bairros 
+24/01/2018-13:29:10,120 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Logradouros 
+24/01/2018-13:29:10,120 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:29:10,149 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:29:10,149 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Portal de Compras, Portal de Vendas, Mov. Internas, Tabela de Preços, Preços de Moedas, Controle de Estoque] 
+24/01/2018-13:29:10,150 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Portal de Compras 
+24/01/2018-13:29:10,150 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Portal de Vendas 
+24/01/2018-13:29:10,150 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Mov. Internas 
+24/01/2018-13:29:10,150 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Tabela de Preços 
+24/01/2018-13:29:10,150 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Preços de Moedas 
+24/01/2018-13:29:10,150 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): Controle de Estoque 
+24/01/2018-13:29:10,150 | INFO [class br.com.sinergia.database.conect.Statement] : 7º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:29:10,177 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:29:10,177 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Mov. Financeira, Mov. Bancária, Saldo de Contas, Transferências] 
+24/01/2018-13:29:10,177 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Mov. Financeira 
+24/01/2018-13:29:10,177 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Mov. Bancária 
+24/01/2018-13:29:10,177 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Saldo de Contas 
+24/01/2018-13:29:10,177 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Transferências 
+24/01/2018-13:29:10,177 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:29:10,202 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT LISTA FROM TSIARQ
+WHERE CODUSU = ?
+AND ARQUIVO = ? 
+24/01/2018-13:29:10,202 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:29:10,202 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Lista de Telas(Favoritas) 
+24/01/2018-13:29:10,232 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA
+FROM (SELECT MAX(CODREG), TELA
+FROM TSIREG
+WHERE CODUSU = ?
+GROUP BY TELA
+ORDER BY 1 DESC)
+WHERE ROWNUM <= 10 
+24/01/2018-13:29:10,233 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:29:10,258 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT DHALTER, LEMBRETE FROM TGFLEM WHERE CODUSU = ? 
+24/01/2018-13:29:10,259 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:29:10,303 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT MSG.CODMSG, MSG.VISUALIZADA, MSG.PRIORIDADE, MSG.TITULO,
+ MSG.MENSAGEM, MSG.DHALTER,
+CASE WHEN MSG.CODUSUREM IS NULL THEN -1 ELSE MSG.CODUSUREM END AS CODUSUREM,
+CASE WHEN MSG.CODUSUREM IS NULL THEN 'Desconhecido' ELSE USU.LOGIN END AS LOGINREM
+FROM TRIMSG MSG
+LEFT JOIN TSIUSU USU
+ON MSG.CODUSUREM = USU.CODUSU
+WHERE MSG.CODUSU = ?
+AND ROWNUM <= 20
+ORDER BY MSG.CODMSG 
+24/01/2018-13:29:10,303 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:29:10,359 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT FOTO FROM TSIUSU WHERE CODUSU = ?
+24/01/2018-13:29:10,360 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+24/01/2018-13:29:10,448 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT FOTO FROM TSIUSU WHERE CODUSU = ?
+24/01/2018-13:29:10,449 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 0
+24/01/2018-13:29:12,734 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT CAMINHO, LOCALIZADOR
+FROM TSITEL
+WHERE TELA = ? 
+24/01/2018-13:29:12,735 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:29:12,736 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: INSERT INTO TSIREG
+(CODREG, CODUSU, CODSESSAO, DHACESSO, TELA)
+VALUES
+(GET_CODREG(?), ?, ?, ?, ?) 
+24/01/2018-13:29:12,737 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:29:12,737 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:29:12,737 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 974 
+24/01/2018-13:29:12,737 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.sql.Timestamp): 2018-01-24 13:29:12.737 
+24/01/2018-13:29:12,737 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:29:12,760 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA
+FROM (SELECT MAX(CODREG), TELA
+FROM TSIREG
+WHERE CODUSU = ?
+GROUP BY TELA
+ORDER BY 1 DESC)
+WHERE ROWNUM <= 10 
+24/01/2018-13:29:12,760 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:29:12,957 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT PRO.*, GRU.DESCRGRUPOPROD, USU.LOGIN, LOC.DESCRLOCAL
+FROM TGFPRO PRO
+INNER JOIN TGFGRU GRU
+ON (PRO.CODGRUPOPROD = GRU.CODGRUPOPROD)
+INNER JOIN TGFLOC LOC
+ON (PRO.CODLOCAL = LOC.CODLOCAL)
+LEFT JOIN TSIUSU USU
+ON (PRO.CODUSUALTER = USU.CODUSU)
+WHERE PRO.CODPROD <> 0
+ORDER BY PRO.CODPROD 
+24/01/2018-13:29:13,705 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Descrição 
+24/01/2018-13:29:13,966 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Descrição 
+24/01/2018-13:29:14,007 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Características 
+24/01/2018-13:29:14,049 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Características 
+24/01/2018-13:29:14,113 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Descrição 
+24/01/2018-13:29:14,151 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Características 
+24/01/2018-13:29:14,193 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Descrição 
+24/01/2018-13:29:14,258 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Características 
+24/01/2018-13:29:14,306 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Descrição 
+24/01/2018-13:29:14,382 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Características 
+24/01/2018-13:29:20,364 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT LISTA FROM TSIARQ
+WHERE CODUSU = ?
+AND ARQUIVO = ? 
+24/01/2018-13:29:20,364 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:29:20,364 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Finalizar com telas pendentes 
+24/01/2018-13:29:20,401 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: UPDATE TSISES
+SET DHLOGOUT = ?
+WHERE CODSESSAO = ?
+AND CODUSU = ? 
+24/01/2018-13:29:20,401 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.sql.Timestamp): 2018-01-24 13:29:20.401 
+24/01/2018-13:29:20,402 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 974 
+24/01/2018-13:29:20,402 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:30:31,753 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT COUNT(1) FROM TSIUSU WHERE LOGIN = ? 
+24/01/2018-13:30:31,980 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): MARCELOEV 
+24/01/2018-13:30:32,086 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT USU.ATIVO, USU.CODUSU, USU.NOME, USU.LOGIN, USU.FOTO, USU.PERFIL, USU.SENHA, MD5(?) AS CRYPT,
+GET_TSIPAR_T(?, ?) AS VERSAOATUALDB, EMP.CODEMP, EMP.RAZAOSOCIAL, EMP.NOMEFANTASIA, EMP.CNPJ FROM TSIUSU USU
+INNER JOIN TSIEMP EMP
+ON (USU.CODEMP = EMP.CODEMP)WHERE USU.LOGIN = ? 
+24/01/2018-13:30:32,087 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): marcelo26 
+24/01/2018-13:30:32,087 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): VERSAOATUALDB 
+24/01/2018-13:30:32,087 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:30:32,087 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): MARCELOEV 
+24/01/2018-13:30:32,187 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT GET_CODSESSAO(?) AS SESSAO FROM DUAL 
+24/01/2018-13:30:32,187 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:30:32,188 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: INSERT INTO TSISES
+(CODSESSAO, CODUSU, DHLOGIN, IPMAQ, NOMEMAQ, VERSAOEXEC)
+VALUES
+(?, ?, ?, ?, ?, ?) 
+24/01/2018-13:30:32,188 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 975 
+24/01/2018-13:30:32,188 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:30:32,189 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.sql.Timestamp): 2018-01-24 13:30:32.189 
+24/01/2018-13:30:32,189 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): 192.168.12.191 
+24/01/2018-13:30:32,189 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Marcelo-NTB 
+24/01/2018-13:30:32,189 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): 1.0.0 
+24/01/2018-13:30:32,681 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:30:32,681 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Cadastro de Usuários, Controle de Acessos, Controle de Lembretes] 
+24/01/2018-13:30:32,681 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Cadastro de Usuários 
+24/01/2018-13:30:32,681 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Controle de Acessos 
+24/01/2018-13:30:32,681 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Controle de Lembretes 
+24/01/2018-13:30:32,682 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:30:32,712 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:30:32,712 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Empresas, Parceiros, Operações, Parâmetros, ConsultaDB] 
+24/01/2018-13:30:32,712 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Empresas 
+24/01/2018-13:30:32,713 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Parceiros 
+24/01/2018-13:30:32,713 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Operações 
+24/01/2018-13:30:32,713 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Parâmetros 
+24/01/2018-13:30:32,713 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): ConsultaDB 
+24/01/2018-13:30:32,713 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:30:32,745 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:30:32,745 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Produtos, Serviços, Grupo de Produtos, Unidades, Contas, Agências, Bancos, Transportes, Moedas] 
+24/01/2018-13:30:32,745 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:30:32,745 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Serviços 
+24/01/2018-13:30:32,745 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Grupo de Produtos 
+24/01/2018-13:30:32,746 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Unidades 
+24/01/2018-13:30:32,746 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Contas 
+24/01/2018-13:30:32,746 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): Agências 
+24/01/2018-13:30:32,746 | INFO [class br.com.sinergia.database.conect.Statement] : 7º Parâmetro(java.lang.String): Bancos 
+24/01/2018-13:30:32,746 | INFO [class br.com.sinergia.database.conect.Statement] : 8º Parâmetro(java.lang.String): Transportes 
+24/01/2018-13:30:32,746 | INFO [class br.com.sinergia.database.conect.Statement] : 9º Parâmetro(java.lang.String): Moedas 
+24/01/2018-13:30:32,746 | INFO [class br.com.sinergia.database.conect.Statement] : 10º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:30:32,779 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:30:32,779 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Países, Estados, Cidades, Bairros, Logradouros] 
+24/01/2018-13:30:32,779 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Países 
+24/01/2018-13:30:32,779 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Estados 
+24/01/2018-13:30:32,779 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Cidades 
+24/01/2018-13:30:32,780 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Bairros 
+24/01/2018-13:30:32,780 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Logradouros 
+24/01/2018-13:30:32,780 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:30:32,821 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:30:32,821 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Portal de Compras, Portal de Vendas, Mov. Internas, Tabela de Preços, Preços de Moedas, Controle de Estoque] 
+24/01/2018-13:30:32,821 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Portal de Compras 
+24/01/2018-13:30:32,821 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Portal de Vendas 
+24/01/2018-13:30:32,821 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Mov. Internas 
+24/01/2018-13:30:32,821 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Tabela de Preços 
+24/01/2018-13:30:32,821 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Preços de Moedas 
+24/01/2018-13:30:32,821 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): Controle de Estoque 
+24/01/2018-13:30:32,821 | INFO [class br.com.sinergia.database.conect.Statement] : 7º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:30:32,845 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:30:32,845 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Mov. Financeira, Mov. Bancária, Saldo de Contas, Transferências] 
+24/01/2018-13:30:32,845 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Mov. Financeira 
+24/01/2018-13:30:32,845 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Mov. Bancária 
+24/01/2018-13:30:32,845 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Saldo de Contas 
+24/01/2018-13:30:32,846 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Transferências 
+24/01/2018-13:30:32,846 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:30:32,867 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT LISTA FROM TSIARQ
+WHERE CODUSU = ?
+AND ARQUIVO = ? 
+24/01/2018-13:30:32,867 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:30:32,867 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Lista de Telas(Favoritas) 
+24/01/2018-13:30:32,895 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA
+FROM (SELECT MAX(CODREG), TELA
+FROM TSIREG
+WHERE CODUSU = ?
+GROUP BY TELA
+ORDER BY 1 DESC)
+WHERE ROWNUM <= 10 
+24/01/2018-13:30:32,895 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:30:32,921 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT DHALTER, LEMBRETE FROM TGFLEM WHERE CODUSU = ? 
+24/01/2018-13:30:32,922 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:30:32,966 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT MSG.CODMSG, MSG.VISUALIZADA, MSG.PRIORIDADE, MSG.TITULO,
+ MSG.MENSAGEM, MSG.DHALTER,
+CASE WHEN MSG.CODUSUREM IS NULL THEN -1 ELSE MSG.CODUSUREM END AS CODUSUREM,
+CASE WHEN MSG.CODUSUREM IS NULL THEN 'Desconhecido' ELSE USU.LOGIN END AS LOGINREM
+FROM TRIMSG MSG
+LEFT JOIN TSIUSU USU
+ON MSG.CODUSUREM = USU.CODUSU
+WHERE MSG.CODUSU = ?
+AND ROWNUM <= 20
+ORDER BY MSG.CODMSG 
+24/01/2018-13:30:32,966 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:30:33,025 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT FOTO FROM TSIUSU WHERE CODUSU = ?
+24/01/2018-13:30:33,025 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+24/01/2018-13:30:33,169 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT FOTO FROM TSIUSU WHERE CODUSU = ?
+24/01/2018-13:30:33,169 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 0
+24/01/2018-13:30:35,211 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT CAMINHO, LOCALIZADOR
+FROM TSITEL
+WHERE TELA = ? 
+24/01/2018-13:30:35,211 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:30:35,213 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: INSERT INTO TSIREG
+(CODREG, CODUSU, CODSESSAO, DHACESSO, TELA)
+VALUES
+(GET_CODREG(?), ?, ?, ?, ?) 
+24/01/2018-13:30:35,213 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:30:35,213 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:30:35,213 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 975 
+24/01/2018-13:30:35,214 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.sql.Timestamp): 2018-01-24 13:30:35.213 
+24/01/2018-13:30:35,214 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:30:35,237 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA
+FROM (SELECT MAX(CODREG), TELA
+FROM TSIREG
+WHERE CODUSU = ?
+GROUP BY TELA
+ORDER BY 1 DESC)
+WHERE ROWNUM <= 10 
+24/01/2018-13:30:35,237 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:30:35,423 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT PRO.*, GRU.DESCRGRUPOPROD, USU.LOGIN, LOC.DESCRLOCAL
+FROM TGFPRO PRO
+INNER JOIN TGFGRU GRU
+ON (PRO.CODGRUPOPROD = GRU.CODGRUPOPROD)
+INNER JOIN TGFLOC LOC
+ON (PRO.CODLOCAL = LOC.CODLOCAL)
+LEFT JOIN TSIUSU USU
+ON (PRO.CODUSUALTER = USU.CODUSU)
+WHERE PRO.CODPROD <> 0
+ORDER BY PRO.CODPROD 
+24/01/2018-13:30:36,216 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Descrição 
+24/01/2018-13:30:36,609 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Descrição 
+24/01/2018-13:30:36,882 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Características 
+24/01/2018-13:30:36,954 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Características 
+24/01/2018-13:30:36,996 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Descrição 
+24/01/2018-13:30:37,064 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Características 
+24/01/2018-13:30:37,146 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Descrição 
+24/01/2018-13:30:37,194 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Características 
+24/01/2018-13:30:37,240 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Descrição 
+24/01/2018-13:30:37,315 | ERROR [class br.com.sinergia.functions.extendeds.tableProperties.TextFieldTbCell] : Erro ao tentar atualizar valores da tabela
+Favor verifique, operação cancelada para coluna: Características 
+24/01/2018-13:30:40,878 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT LISTA FROM TSIARQ
+WHERE CODUSU = ?
+AND ARQUIVO = ? 
+24/01/2018-13:30:40,878 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:30:40,878 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Finalizar com telas pendentes 
+24/01/2018-13:30:40,916 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: UPDATE TSISES
+SET DHLOGOUT = ?
+WHERE CODSESSAO = ?
+AND CODUSU = ? 
+24/01/2018-13:30:40,916 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.sql.Timestamp): 2018-01-24 13:30:40.916 
+24/01/2018-13:30:40,917 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 975 
+24/01/2018-13:30:40,917 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:32:51,612 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT COUNT(1) FROM TSIUSU WHERE LOGIN = ? 
+24/01/2018-13:32:51,792 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): MARCELOEV 
+24/01/2018-13:32:51,905 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT USU.ATIVO, USU.CODUSU, USU.NOME, USU.LOGIN, USU.FOTO, USU.PERFIL, USU.SENHA, MD5(?) AS CRYPT,
+GET_TSIPAR_T(?, ?) AS VERSAOATUALDB, EMP.CODEMP, EMP.RAZAOSOCIAL, EMP.NOMEFANTASIA, EMP.CNPJ FROM TSIUSU USU
+INNER JOIN TSIEMP EMP
+ON (USU.CODEMP = EMP.CODEMP)WHERE USU.LOGIN = ? 
+24/01/2018-13:32:51,906 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): marcelo26 
+24/01/2018-13:32:51,906 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): VERSAOATUALDB 
+24/01/2018-13:32:51,906 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:32:51,906 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): MARCELOEV 
+24/01/2018-13:32:52,024 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT GET_CODSESSAO(?) AS SESSAO FROM DUAL 
+24/01/2018-13:32:52,024 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:32:52,025 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: INSERT INTO TSISES
+(CODSESSAO, CODUSU, DHLOGIN, IPMAQ, NOMEMAQ, VERSAOEXEC)
+VALUES
+(?, ?, ?, ?, ?, ?) 
+24/01/2018-13:32:52,026 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 976 
+24/01/2018-13:32:52,026 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:32:52,026 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.sql.Timestamp): 2018-01-24 13:32:52.026 
+24/01/2018-13:32:52,026 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): 192.168.12.191 
+24/01/2018-13:32:52,026 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Marcelo-NTB 
+24/01/2018-13:32:52,026 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): 1.0.0 
+24/01/2018-13:32:52,584 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:32:52,585 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Cadastro de Usuários, Controle de Acessos, Controle de Lembretes] 
+24/01/2018-13:32:52,585 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Cadastro de Usuários 
+24/01/2018-13:32:52,585 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Controle de Acessos 
+24/01/2018-13:32:52,585 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Controle de Lembretes 
+24/01/2018-13:32:52,586 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:32:52,668 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:32:52,669 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Empresas, Parceiros, Operações, Parâmetros, ConsultaDB] 
+24/01/2018-13:32:52,669 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Empresas 
+24/01/2018-13:32:52,669 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Parceiros 
+24/01/2018-13:32:52,669 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Operações 
+24/01/2018-13:32:52,670 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Parâmetros 
+24/01/2018-13:32:52,670 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): ConsultaDB 
+24/01/2018-13:32:52,670 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:32:52,720 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:32:52,720 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Produtos, Serviços, Grupo de Produtos, Unidades, Contas, Agências, Bancos, Transportes, Moedas] 
+24/01/2018-13:32:52,720 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:32:52,720 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Serviços 
+24/01/2018-13:32:52,720 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Grupo de Produtos 
+24/01/2018-13:32:52,720 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Unidades 
+24/01/2018-13:32:52,721 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Contas 
+24/01/2018-13:32:52,721 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): Agências 
+24/01/2018-13:32:52,721 | INFO [class br.com.sinergia.database.conect.Statement] : 7º Parâmetro(java.lang.String): Bancos 
+24/01/2018-13:32:52,721 | INFO [class br.com.sinergia.database.conect.Statement] : 8º Parâmetro(java.lang.String): Transportes 
+24/01/2018-13:32:52,721 | INFO [class br.com.sinergia.database.conect.Statement] : 9º Parâmetro(java.lang.String): Moedas 
+24/01/2018-13:32:52,721 | INFO [class br.com.sinergia.database.conect.Statement] : 10º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:32:52,759 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:32:52,760 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Países, Estados, Cidades, Bairros, Logradouros] 
+24/01/2018-13:32:52,760 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Países 
+24/01/2018-13:32:52,760 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Estados 
+24/01/2018-13:32:52,760 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Cidades 
+24/01/2018-13:32:52,760 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Bairros 
+24/01/2018-13:32:52,760 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Logradouros 
+24/01/2018-13:32:52,760 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:32:52,791 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:32:52,791 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Portal de Compras, Portal de Vendas, Mov. Internas, Tabela de Preços, Preços de Moedas, Controle de Estoque] 
+24/01/2018-13:32:52,791 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Portal de Compras 
+24/01/2018-13:32:52,791 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Portal de Vendas 
+24/01/2018-13:32:52,791 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Mov. Internas 
+24/01/2018-13:32:52,792 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Tabela de Preços 
+24/01/2018-13:32:52,792 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Preços de Moedas 
+24/01/2018-13:32:52,792 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): Controle de Estoque 
+24/01/2018-13:32:52,792 | INFO [class br.com.sinergia.database.conect.Statement] : 7º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:32:52,819 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:32:52,819 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Mov. Financeira, Mov. Bancária, Saldo de Contas, Transferências] 
+24/01/2018-13:32:52,819 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Mov. Financeira 
+24/01/2018-13:32:52,819 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Mov. Bancária 
+24/01/2018-13:32:52,819 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Saldo de Contas 
+24/01/2018-13:32:52,820 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Transferências 
+24/01/2018-13:32:52,820 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:32:52,849 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT LISTA FROM TSIARQ
+WHERE CODUSU = ?
+AND ARQUIVO = ? 
+24/01/2018-13:32:52,850 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:32:52,850 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Lista de Telas(Favoritas) 
+24/01/2018-13:32:52,889 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA
+FROM (SELECT MAX(CODREG), TELA
+FROM TSIREG
+WHERE CODUSU = ?
+GROUP BY TELA
+ORDER BY 1 DESC)
+WHERE ROWNUM <= 10 
+24/01/2018-13:32:52,890 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:32:52,915 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT DHALTER, LEMBRETE FROM TGFLEM WHERE CODUSU = ? 
+24/01/2018-13:32:52,915 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:32:52,965 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT MSG.CODMSG, MSG.VISUALIZADA, MSG.PRIORIDADE, MSG.TITULO,
+ MSG.MENSAGEM, MSG.DHALTER,
+CASE WHEN MSG.CODUSUREM IS NULL THEN -1 ELSE MSG.CODUSUREM END AS CODUSUREM,
+CASE WHEN MSG.CODUSUREM IS NULL THEN 'Desconhecido' ELSE USU.LOGIN END AS LOGINREM
+FROM TRIMSG MSG
+LEFT JOIN TSIUSU USU
+ON MSG.CODUSUREM = USU.CODUSU
+WHERE MSG.CODUSU = ?
+AND ROWNUM <= 20
+ORDER BY MSG.CODMSG 
+24/01/2018-13:32:52,966 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:32:53,036 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT FOTO FROM TSIUSU WHERE CODUSU = ?
+24/01/2018-13:32:53,036 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+24/01/2018-13:32:53,187 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT FOTO FROM TSIUSU WHERE CODUSU = ?
+24/01/2018-13:32:53,188 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 0
+24/01/2018-13:32:58,328 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT CAMINHO, LOCALIZADOR
+FROM TSITEL
+WHERE TELA = ? 
+24/01/2018-13:32:58,328 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:32:58,330 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: INSERT INTO TSIREG
+(CODREG, CODUSU, CODSESSAO, DHACESSO, TELA)
+VALUES
+(GET_CODREG(?), ?, ?, ?, ?) 
+24/01/2018-13:32:58,331 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:32:58,331 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:32:58,331 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 976 
+24/01/2018-13:32:58,331 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.sql.Timestamp): 2018-01-24 13:32:58.331 
+24/01/2018-13:32:58,331 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:32:58,358 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA
+FROM (SELECT MAX(CODREG), TELA
+FROM TSIREG
+WHERE CODUSU = ?
+GROUP BY TELA
+ORDER BY 1 DESC)
+WHERE ROWNUM <= 10 
+24/01/2018-13:32:58,358 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:32:58,544 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT PRO.*, GRU.DESCRGRUPOPROD, USU.LOGIN, LOC.DESCRLOCAL
+FROM TGFPRO PRO
+INNER JOIN TGFGRU GRU
+ON (PRO.CODGRUPOPROD = GRU.CODGRUPOPROD)
+INNER JOIN TGFLOC LOC
+ON (PRO.CODLOCAL = LOC.CODLOCAL)
+LEFT JOIN TSIUSU USU
+ON (PRO.CODUSUALTER = USU.CODUSU)
+WHERE PRO.CODPROD <> 0
+ORDER BY PRO.CODPROD 
+24/01/2018-13:33:57,809 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT LISTA FROM TSIARQ
+WHERE CODUSU = ?
+AND ARQUIVO = ? 
+24/01/2018-13:33:57,809 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:33:57,809 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Finalizar com telas pendentes 
+24/01/2018-13:33:57,832 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: UPDATE TSISES
+SET DHLOGOUT = ?
+WHERE CODSESSAO = ?
+AND CODUSU = ? 
+24/01/2018-13:33:57,833 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.sql.Timestamp): 2018-01-24 13:33:57.833 
+24/01/2018-13:33:57,833 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 976 
+24/01/2018-13:33:57,833 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:34:27,901 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT COUNT(1) FROM TSIUSU WHERE LOGIN = ? 
+24/01/2018-13:34:28,066 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): MARCELOEV 
+24/01/2018-13:34:28,158 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT USU.ATIVO, USU.CODUSU, USU.NOME, USU.LOGIN, USU.FOTO, USU.PERFIL, USU.SENHA, MD5(?) AS CRYPT,
+GET_TSIPAR_T(?, ?) AS VERSAOATUALDB, EMP.CODEMP, EMP.RAZAOSOCIAL, EMP.NOMEFANTASIA, EMP.CNPJ FROM TSIUSU USU
+INNER JOIN TSIEMP EMP
+ON (USU.CODEMP = EMP.CODEMP)WHERE USU.LOGIN = ? 
+24/01/2018-13:34:28,159 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): marcelo26 
+24/01/2018-13:34:28,159 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): VERSAOATUALDB 
+24/01/2018-13:34:28,159 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:34:28,159 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): MARCELOEV 
+24/01/2018-13:34:28,241 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT GET_CODSESSAO(?) AS SESSAO FROM DUAL 
+24/01/2018-13:34:28,241 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:34:28,243 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: INSERT INTO TSISES
+(CODSESSAO, CODUSU, DHLOGIN, IPMAQ, NOMEMAQ, VERSAOEXEC)
+VALUES
+(?, ?, ?, ?, ?, ?) 
+24/01/2018-13:34:28,243 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 977 
+24/01/2018-13:34:28,243 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:34:28,243 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.sql.Timestamp): 2018-01-24 13:34:28.243 
+24/01/2018-13:34:28,243 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): 192.168.12.191 
+24/01/2018-13:34:28,244 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Marcelo-NTB 
+24/01/2018-13:34:28,244 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): 1.0.0 
+24/01/2018-13:34:28,746 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:34:28,747 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Cadastro de Usuários, Controle de Acessos, Controle de Lembretes] 
+24/01/2018-13:34:28,747 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Cadastro de Usuários 
+24/01/2018-13:34:28,747 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Controle de Acessos 
+24/01/2018-13:34:28,748 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Controle de Lembretes 
+24/01/2018-13:34:28,748 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:34:28,784 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:34:28,784 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Empresas, Parceiros, Operações, Parâmetros, ConsultaDB] 
+24/01/2018-13:34:28,785 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Empresas 
+24/01/2018-13:34:28,785 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Parceiros 
+24/01/2018-13:34:28,785 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Operações 
+24/01/2018-13:34:28,785 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Parâmetros 
+24/01/2018-13:34:28,785 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): ConsultaDB 
+24/01/2018-13:34:28,785 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:34:28,824 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:34:28,824 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Produtos, Serviços, Grupo de Produtos, Unidades, Contas, Agências, Bancos, Transportes, Moedas] 
+24/01/2018-13:34:28,824 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:34:28,825 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Serviços 
+24/01/2018-13:34:28,825 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Grupo de Produtos 
+24/01/2018-13:34:28,825 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Unidades 
+24/01/2018-13:34:28,825 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Contas 
+24/01/2018-13:34:28,825 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): Agências 
+24/01/2018-13:34:28,825 | INFO [class br.com.sinergia.database.conect.Statement] : 7º Parâmetro(java.lang.String): Bancos 
+24/01/2018-13:34:28,825 | INFO [class br.com.sinergia.database.conect.Statement] : 8º Parâmetro(java.lang.String): Transportes 
+24/01/2018-13:34:28,825 | INFO [class br.com.sinergia.database.conect.Statement] : 9º Parâmetro(java.lang.String): Moedas 
+24/01/2018-13:34:28,825 | INFO [class br.com.sinergia.database.conect.Statement] : 10º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:34:28,862 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:34:28,863 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Países, Estados, Cidades, Bairros, Logradouros] 
+24/01/2018-13:34:28,863 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Países 
+24/01/2018-13:34:28,863 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Estados 
+24/01/2018-13:34:28,863 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Cidades 
+24/01/2018-13:34:28,863 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Bairros 
+24/01/2018-13:34:28,863 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Logradouros 
+24/01/2018-13:34:28,864 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:34:28,917 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:34:28,917 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Portal de Compras, Portal de Vendas, Mov. Internas, Tabela de Preços, Preços de Moedas, Controle de Estoque] 
+24/01/2018-13:34:28,917 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Portal de Compras 
+24/01/2018-13:34:28,917 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Portal de Vendas 
+24/01/2018-13:34:28,918 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Mov. Internas 
+24/01/2018-13:34:28,918 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Tabela de Preços 
+24/01/2018-13:34:28,918 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Preços de Moedas 
+24/01/2018-13:34:28,918 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): Controle de Estoque 
+24/01/2018-13:34:28,918 | INFO [class br.com.sinergia.database.conect.Statement] : 7º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:34:28,954 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:34:28,955 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Mov. Financeira, Mov. Bancária, Saldo de Contas, Transferências] 
+24/01/2018-13:34:28,955 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Mov. Financeira 
+24/01/2018-13:34:28,955 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Mov. Bancária 
+24/01/2018-13:34:28,955 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Saldo de Contas 
+24/01/2018-13:34:28,955 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Transferências 
+24/01/2018-13:34:28,955 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:34:28,987 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT LISTA FROM TSIARQ
+WHERE CODUSU = ?
+AND ARQUIVO = ? 
+24/01/2018-13:34:28,987 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:34:28,987 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Lista de Telas(Favoritas) 
+24/01/2018-13:34:29,025 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA
+FROM (SELECT MAX(CODREG), TELA
+FROM TSIREG
+WHERE CODUSU = ?
+GROUP BY TELA
+ORDER BY 1 DESC)
+WHERE ROWNUM <= 10 
+24/01/2018-13:34:29,026 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:34:29,058 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT DHALTER, LEMBRETE FROM TGFLEM WHERE CODUSU = ? 
+24/01/2018-13:34:29,058 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:34:29,110 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT MSG.CODMSG, MSG.VISUALIZADA, MSG.PRIORIDADE, MSG.TITULO,
+ MSG.MENSAGEM, MSG.DHALTER,
+CASE WHEN MSG.CODUSUREM IS NULL THEN -1 ELSE MSG.CODUSUREM END AS CODUSUREM,
+CASE WHEN MSG.CODUSUREM IS NULL THEN 'Desconhecido' ELSE USU.LOGIN END AS LOGINREM
+FROM TRIMSG MSG
+LEFT JOIN TSIUSU USU
+ON MSG.CODUSUREM = USU.CODUSU
+WHERE MSG.CODUSU = ?
+AND ROWNUM <= 20
+ORDER BY MSG.CODMSG 
+24/01/2018-13:34:29,110 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:34:29,181 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT FOTO FROM TSIUSU WHERE CODUSU = ?
+24/01/2018-13:34:29,181 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+24/01/2018-13:34:29,321 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT FOTO FROM TSIUSU WHERE CODUSU = ?
+24/01/2018-13:34:29,321 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 0
+24/01/2018-13:34:31,119 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT CAMINHO, LOCALIZADOR
+FROM TSITEL
+WHERE TELA = ? 
+24/01/2018-13:34:31,119 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:34:31,121 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: INSERT INTO TSIREG
+(CODREG, CODUSU, CODSESSAO, DHACESSO, TELA)
+VALUES
+(GET_CODREG(?), ?, ?, ?, ?) 
+24/01/2018-13:34:31,122 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:34:31,122 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:34:31,122 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 977 
+24/01/2018-13:34:31,122 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.sql.Timestamp): 2018-01-24 13:34:31.122 
+24/01/2018-13:34:31,122 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:34:31,145 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA
+FROM (SELECT MAX(CODREG), TELA
+FROM TSIREG
+WHERE CODUSU = ?
+GROUP BY TELA
+ORDER BY 1 DESC)
+WHERE ROWNUM <= 10 
+24/01/2018-13:34:31,145 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:34:31,349 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT PRO.*, GRU.DESCRGRUPOPROD, USU.LOGIN, LOC.DESCRLOCAL
+FROM TGFPRO PRO
+INNER JOIN TGFGRU GRU
+ON (PRO.CODGRUPOPROD = GRU.CODGRUPOPROD)
+INNER JOIN TGFLOC LOC
+ON (PRO.CODLOCAL = LOC.CODLOCAL)
+LEFT JOIN TSIUSU USU
+ON (PRO.CODUSUALTER = USU.CODUSU)
+WHERE PRO.CODPROD <> 0
+ORDER BY PRO.CODPROD 
+24/01/2018-13:34:41,947 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: UPDATE TGFPRO
+SET DESCRPROD = ?, ATIVO = ?, CARACTERISTICAS = ?, COMPLEMENTO = ?, MARCA = ?, CODGRUPOPROD = ?, CODLOCAL = ?
+WHERE CODPROD = ? 
+24/01/2018-13:34:41,950 | ERROR [class br.com.sinergia.controllers.fxml.CadProdutosController] : Erro ao tentar gravar alterações do produto
+java.lang.NullPointerExceptionA operação foi cancelada, revertendo alterações. 
+24/01/2018-13:34:41,952 | ERROR [class br.com.sinergia.controllers.fxml.CadProdutosController] : br.com.sinergia.controllers.dialog.ModelException
+	at br.com.sinergia.controllers.fxml.CadProdutosController.Altera(CadProdutosController.java:140)
+	at br.com.sinergia.controllers.fxml.CadProdutosController.CtrlBtns(CadProdutosController.java:290)
+	at br.com.sinergia.controllers.fxml.CadProdutosController.lambda$loadClass$2(CadProdutosController.java:69)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Node.fireEvent(Node.java:8413)
+	at javafx.scene.control.Button.fire(Button.java:185)
+	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:182)
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:96)
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:89)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:218)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3757)
+	at javafx.scene.Scene$MouseHandler.access$1500(Scene.java:3485)
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1762)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2494)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:381)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$354(GlassViewEventHandler.java:417)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:389)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:416)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:555)
+	at com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$148(WinApplication.java:191)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException
+	at br.com.sinergia.controllers.fxml.CadProdutosController.Altera(CadProdutosController.java:122)
+	... 57 more
+ 
+24/01/2018-13:34:49,013 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT LISTA FROM TSIARQ
+WHERE CODUSU = ?
+AND ARQUIVO = ? 
+24/01/2018-13:34:49,013 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:34:49,013 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Finalizar com telas pendentes 
+24/01/2018-13:34:49,038 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: UPDATE TSISES
+SET DHLOGOUT = ?
+WHERE CODSESSAO = ?
+AND CODUSU = ? 
+24/01/2018-13:34:49,038 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.sql.Timestamp): 2018-01-24 13:34:49.038 
+24/01/2018-13:34:49,039 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 977 
+24/01/2018-13:34:49,039 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:35:33,401 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT COUNT(1) FROM TSIUSU WHERE LOGIN = ? 
+24/01/2018-13:35:33,567 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): MARCELOEV 
+24/01/2018-13:35:33,652 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT USU.ATIVO, USU.CODUSU, USU.NOME, USU.LOGIN, USU.FOTO, USU.PERFIL, USU.SENHA, MD5(?) AS CRYPT,
+GET_TSIPAR_T(?, ?) AS VERSAOATUALDB, EMP.CODEMP, EMP.RAZAOSOCIAL, EMP.NOMEFANTASIA, EMP.CNPJ FROM TSIUSU USU
+INNER JOIN TSIEMP EMP
+ON (USU.CODEMP = EMP.CODEMP)WHERE USU.LOGIN = ? 
+24/01/2018-13:35:33,652 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): marcelo26 
+24/01/2018-13:35:33,652 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): VERSAOATUALDB 
+24/01/2018-13:35:33,652 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:35:33,652 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): MARCELOEV 
+24/01/2018-13:35:33,742 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT GET_CODSESSAO(?) AS SESSAO FROM DUAL 
+24/01/2018-13:35:33,743 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:35:33,744 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: INSERT INTO TSISES
+(CODSESSAO, CODUSU, DHLOGIN, IPMAQ, NOMEMAQ, VERSAOEXEC)
+VALUES
+(?, ?, ?, ?, ?, ?) 
+24/01/2018-13:35:33,744 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 978 
+24/01/2018-13:35:33,744 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:35:33,744 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.sql.Timestamp): 2018-01-24 13:35:33.744 
+24/01/2018-13:35:33,744 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): 192.168.12.191 
+24/01/2018-13:35:33,745 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Marcelo-NTB 
+24/01/2018-13:35:33,745 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): 1.0.0 
+24/01/2018-13:35:34,197 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:35:34,197 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Cadastro de Usuários, Controle de Acessos, Controle de Lembretes] 
+24/01/2018-13:35:34,197 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Cadastro de Usuários 
+24/01/2018-13:35:34,197 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Controle de Acessos 
+24/01/2018-13:35:34,198 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Controle de Lembretes 
+24/01/2018-13:35:34,198 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:35:34,242 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:35:34,242 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Empresas, Parceiros, Operações, Parâmetros, ConsultaDB] 
+24/01/2018-13:35:34,242 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Empresas 
+24/01/2018-13:35:34,242 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Parceiros 
+24/01/2018-13:35:34,243 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Operações 
+24/01/2018-13:35:34,243 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Parâmetros 
+24/01/2018-13:35:34,243 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): ConsultaDB 
+24/01/2018-13:35:34,243 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:35:34,302 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:35:34,303 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Produtos, Serviços, Grupo de Produtos, Unidades, Contas, Agências, Bancos, Transportes, Moedas] 
+24/01/2018-13:35:34,303 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:35:34,303 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Serviços 
+24/01/2018-13:35:34,303 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Grupo de Produtos 
+24/01/2018-13:35:34,303 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Unidades 
+24/01/2018-13:35:34,303 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Contas 
+24/01/2018-13:35:34,309 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): Agências 
+24/01/2018-13:35:34,310 | INFO [class br.com.sinergia.database.conect.Statement] : 7º Parâmetro(java.lang.String): Bancos 
+24/01/2018-13:35:34,310 | INFO [class br.com.sinergia.database.conect.Statement] : 8º Parâmetro(java.lang.String): Transportes 
+24/01/2018-13:35:34,310 | INFO [class br.com.sinergia.database.conect.Statement] : 9º Parâmetro(java.lang.String): Moedas 
+24/01/2018-13:35:34,310 | INFO [class br.com.sinergia.database.conect.Statement] : 10º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:35:34,349 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:35:34,350 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Países, Estados, Cidades, Bairros, Logradouros] 
+24/01/2018-13:35:34,350 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Países 
+24/01/2018-13:35:34,350 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Estados 
+24/01/2018-13:35:34,350 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Cidades 
+24/01/2018-13:35:34,350 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Bairros 
+24/01/2018-13:35:34,350 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Logradouros 
+24/01/2018-13:35:34,350 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:35:34,391 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:35:34,391 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Portal de Compras, Portal de Vendas, Mov. Internas, Tabela de Preços, Preços de Moedas, Controle de Estoque] 
+24/01/2018-13:35:34,391 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Portal de Compras 
+24/01/2018-13:35:34,391 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Portal de Vendas 
+24/01/2018-13:35:34,391 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Mov. Internas 
+24/01/2018-13:35:34,392 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Tabela de Preços 
+24/01/2018-13:35:34,392 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Preços de Moedas 
+24/01/2018-13:35:34,392 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): Controle de Estoque 
+24/01/2018-13:35:34,392 | INFO [class br.com.sinergia.database.conect.Statement] : 7º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:35:34,425 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:35:34,426 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Mov. Financeira, Mov. Bancária, Saldo de Contas, Transferências] 
+24/01/2018-13:35:34,426 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Mov. Financeira 
+24/01/2018-13:35:34,426 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Mov. Bancária 
+24/01/2018-13:35:34,426 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Saldo de Contas 
+24/01/2018-13:35:34,426 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Transferências 
+24/01/2018-13:35:34,426 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:35:34,462 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT LISTA FROM TSIARQ
+WHERE CODUSU = ?
+AND ARQUIVO = ? 
+24/01/2018-13:35:34,462 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:35:34,462 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Lista de Telas(Favoritas) 
+24/01/2018-13:35:34,505 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA
+FROM (SELECT MAX(CODREG), TELA
+FROM TSIREG
+WHERE CODUSU = ?
+GROUP BY TELA
+ORDER BY 1 DESC)
+WHERE ROWNUM <= 10 
+24/01/2018-13:35:34,506 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:35:34,542 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT DHALTER, LEMBRETE FROM TGFLEM WHERE CODUSU = ? 
+24/01/2018-13:35:34,543 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:35:34,614 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT MSG.CODMSG, MSG.VISUALIZADA, MSG.PRIORIDADE, MSG.TITULO,
+ MSG.MENSAGEM, MSG.DHALTER,
+CASE WHEN MSG.CODUSUREM IS NULL THEN -1 ELSE MSG.CODUSUREM END AS CODUSUREM,
+CASE WHEN MSG.CODUSUREM IS NULL THEN 'Desconhecido' ELSE USU.LOGIN END AS LOGINREM
+FROM TRIMSG MSG
+LEFT JOIN TSIUSU USU
+ON MSG.CODUSUREM = USU.CODUSU
+WHERE MSG.CODUSU = ?
+AND ROWNUM <= 20
+ORDER BY MSG.CODMSG 
+24/01/2018-13:35:34,614 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:35:34,675 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT FOTO FROM TSIUSU WHERE CODUSU = ?
+24/01/2018-13:35:34,675 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+24/01/2018-13:35:34,844 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT FOTO FROM TSIUSU WHERE CODUSU = ?
+24/01/2018-13:35:34,845 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 0
+24/01/2018-13:35:37,130 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT CAMINHO, LOCALIZADOR
+FROM TSITEL
+WHERE TELA = ? 
+24/01/2018-13:35:37,130 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:35:37,132 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: INSERT INTO TSIREG
+(CODREG, CODUSU, CODSESSAO, DHACESSO, TELA)
+VALUES
+(GET_CODREG(?), ?, ?, ?, ?) 
+24/01/2018-13:35:37,132 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:35:37,133 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:35:37,133 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 978 
+24/01/2018-13:35:37,133 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.sql.Timestamp): 2018-01-24 13:35:37.133 
+24/01/2018-13:35:37,133 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:35:37,155 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA
+FROM (SELECT MAX(CODREG), TELA
+FROM TSIREG
+WHERE CODUSU = ?
+GROUP BY TELA
+ORDER BY 1 DESC)
+WHERE ROWNUM <= 10 
+24/01/2018-13:35:37,156 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:35:37,347 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT PRO.*, GRU.DESCRGRUPOPROD, USU.LOGIN, LOC.DESCRLOCAL
+FROM TGFPRO PRO
+INNER JOIN TGFGRU GRU
+ON (PRO.CODGRUPOPROD = GRU.CODGRUPOPROD)
+INNER JOIN TGFLOC LOC
+ON (PRO.CODLOCAL = LOC.CODLOCAL)
+LEFT JOIN TSIUSU USU
+ON (PRO.CODUSUALTER = USU.CODUSU)
+WHERE PRO.CODPROD <> 0
+ORDER BY PRO.CODPROD 
+24/01/2018-13:36:03,123 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT LISTA FROM TSIARQ
+WHERE CODUSU = ?
+AND ARQUIVO = ? 
+24/01/2018-13:36:03,124 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:36:03,124 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Finalizar com telas pendentes 
+24/01/2018-13:36:03,158 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: UPDATE TSISES
+SET DHLOGOUT = ?
+WHERE CODSESSAO = ?
+AND CODUSU = ? 
+24/01/2018-13:36:03,159 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.sql.Timestamp): 2018-01-24 13:36:03.159 
+24/01/2018-13:36:03,159 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 978 
+24/01/2018-13:36:03,159 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:36:18,041 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT COUNT(1) FROM TSIUSU WHERE LOGIN = ? 
+24/01/2018-13:36:18,223 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): MARCELOEV 
+24/01/2018-13:36:18,316 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT USU.ATIVO, USU.CODUSU, USU.NOME, USU.LOGIN, USU.FOTO, USU.PERFIL, USU.SENHA, MD5(?) AS CRYPT,
+GET_TSIPAR_T(?, ?) AS VERSAOATUALDB, EMP.CODEMP, EMP.RAZAOSOCIAL, EMP.NOMEFANTASIA, EMP.CNPJ FROM TSIUSU USU
+INNER JOIN TSIEMP EMP
+ON (USU.CODEMP = EMP.CODEMP)WHERE USU.LOGIN = ? 
+24/01/2018-13:36:18,317 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): marcelo26 
+24/01/2018-13:36:18,317 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): VERSAOATUALDB 
+24/01/2018-13:36:18,317 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:36:18,317 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): MARCELOEV 
+24/01/2018-13:36:18,410 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT GET_CODSESSAO(?) AS SESSAO FROM DUAL 
+24/01/2018-13:36:18,410 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:36:18,412 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: INSERT INTO TSISES
+(CODSESSAO, CODUSU, DHLOGIN, IPMAQ, NOMEMAQ, VERSAOEXEC)
+VALUES
+(?, ?, ?, ?, ?, ?) 
+24/01/2018-13:36:18,412 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 979 
+24/01/2018-13:36:18,412 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:36:18,412 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.sql.Timestamp): 2018-01-24 13:36:18.412 
+24/01/2018-13:36:18,412 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): 192.168.12.191 
+24/01/2018-13:36:18,412 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Marcelo-NTB 
+24/01/2018-13:36:18,413 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): 1.0.0 
+24/01/2018-13:36:18,870 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:36:18,870 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Cadastro de Usuários, Controle de Acessos, Controle de Lembretes] 
+24/01/2018-13:36:18,871 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Cadastro de Usuários 
+24/01/2018-13:36:18,871 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Controle de Acessos 
+24/01/2018-13:36:18,871 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Controle de Lembretes 
+24/01/2018-13:36:18,871 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:36:18,911 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:36:18,911 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Empresas, Parceiros, Operações, Parâmetros, ConsultaDB] 
+24/01/2018-13:36:18,911 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Empresas 
+24/01/2018-13:36:18,911 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Parceiros 
+24/01/2018-13:36:18,911 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Operações 
+24/01/2018-13:36:18,912 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Parâmetros 
+24/01/2018-13:36:18,912 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): ConsultaDB 
+24/01/2018-13:36:18,912 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:36:18,947 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:36:18,948 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Produtos, Serviços, Grupo de Produtos, Unidades, Contas, Agências, Bancos, Transportes, Moedas] 
+24/01/2018-13:36:18,948 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:36:18,948 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Serviços 
+24/01/2018-13:36:18,948 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Grupo de Produtos 
+24/01/2018-13:36:18,948 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Unidades 
+24/01/2018-13:36:18,948 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Contas 
+24/01/2018-13:36:18,954 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): Agências 
+24/01/2018-13:36:18,954 | INFO [class br.com.sinergia.database.conect.Statement] : 7º Parâmetro(java.lang.String): Bancos 
+24/01/2018-13:36:18,954 | INFO [class br.com.sinergia.database.conect.Statement] : 8º Parâmetro(java.lang.String): Transportes 
+24/01/2018-13:36:18,954 | INFO [class br.com.sinergia.database.conect.Statement] : 9º Parâmetro(java.lang.String): Moedas 
+24/01/2018-13:36:18,954 | INFO [class br.com.sinergia.database.conect.Statement] : 10º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:36:18,997 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:36:18,997 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Países, Estados, Cidades, Bairros, Logradouros] 
+24/01/2018-13:36:18,998 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Países 
+24/01/2018-13:36:18,998 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Estados 
+24/01/2018-13:36:18,998 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Cidades 
+24/01/2018-13:36:18,998 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Bairros 
+24/01/2018-13:36:18,998 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Logradouros 
+24/01/2018-13:36:18,998 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:36:19,038 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:36:19,038 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Portal de Compras, Portal de Vendas, Mov. Internas, Tabela de Preços, Preços de Moedas, Controle de Estoque] 
+24/01/2018-13:36:19,038 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Portal de Compras 
+24/01/2018-13:36:19,038 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Portal de Vendas 
+24/01/2018-13:36:19,038 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Mov. Internas 
+24/01/2018-13:36:19,039 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Tabela de Preços 
+24/01/2018-13:36:19,039 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Preços de Moedas 
+24/01/2018-13:36:19,039 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): Controle de Estoque 
+24/01/2018-13:36:19,039 | INFO [class br.com.sinergia.database.conect.Statement] : 7º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:36:19,073 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:36:19,073 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Mov. Financeira, Mov. Bancária, Saldo de Contas, Transferências] 
+24/01/2018-13:36:19,074 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Mov. Financeira 
+24/01/2018-13:36:19,074 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Mov. Bancária 
+24/01/2018-13:36:19,074 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Saldo de Contas 
+24/01/2018-13:36:19,074 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Transferências 
+24/01/2018-13:36:19,074 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:36:19,098 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT LISTA FROM TSIARQ
+WHERE CODUSU = ?
+AND ARQUIVO = ? 
+24/01/2018-13:36:19,098 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:36:19,098 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Lista de Telas(Favoritas) 
+24/01/2018-13:36:19,126 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA
+FROM (SELECT MAX(CODREG), TELA
+FROM TSIREG
+WHERE CODUSU = ?
+GROUP BY TELA
+ORDER BY 1 DESC)
+WHERE ROWNUM <= 10 
+24/01/2018-13:36:19,126 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:36:19,150 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT DHALTER, LEMBRETE FROM TGFLEM WHERE CODUSU = ? 
+24/01/2018-13:36:19,151 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:36:19,197 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT MSG.CODMSG, MSG.VISUALIZADA, MSG.PRIORIDADE, MSG.TITULO,
+ MSG.MENSAGEM, MSG.DHALTER,
+CASE WHEN MSG.CODUSUREM IS NULL THEN -1 ELSE MSG.CODUSUREM END AS CODUSUREM,
+CASE WHEN MSG.CODUSUREM IS NULL THEN 'Desconhecido' ELSE USU.LOGIN END AS LOGINREM
+FROM TRIMSG MSG
+LEFT JOIN TSIUSU USU
+ON MSG.CODUSUREM = USU.CODUSU
+WHERE MSG.CODUSU = ?
+AND ROWNUM <= 20
+ORDER BY MSG.CODMSG 
+24/01/2018-13:36:19,197 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:36:19,253 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT FOTO FROM TSIUSU WHERE CODUSU = ?
+24/01/2018-13:36:19,254 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+24/01/2018-13:36:19,427 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT FOTO FROM TSIUSU WHERE CODUSU = ?
+24/01/2018-13:36:19,427 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 0
+24/01/2018-13:36:21,373 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT CAMINHO, LOCALIZADOR
+FROM TSITEL
+WHERE TELA = ? 
+24/01/2018-13:36:21,373 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:36:21,375 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: INSERT INTO TSIREG
+(CODREG, CODUSU, CODSESSAO, DHACESSO, TELA)
+VALUES
+(GET_CODREG(?), ?, ?, ?, ?) 
+24/01/2018-13:36:21,376 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:36:21,376 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:36:21,376 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 979 
+24/01/2018-13:36:21,376 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.sql.Timestamp): 2018-01-24 13:36:21.376 
+24/01/2018-13:36:21,376 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:36:21,398 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA
+FROM (SELECT MAX(CODREG), TELA
+FROM TSIREG
+WHERE CODUSU = ?
+GROUP BY TELA
+ORDER BY 1 DESC)
+WHERE ROWNUM <= 10 
+24/01/2018-13:36:21,399 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:36:21,590 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT PRO.*, GRU.DESCRGRUPOPROD, USU.LOGIN, LOC.DESCRLOCAL
+FROM TGFPRO PRO
+INNER JOIN TGFGRU GRU
+ON (PRO.CODGRUPOPROD = GRU.CODGRUPOPROD)
+INNER JOIN TGFLOC LOC
+ON (PRO.CODLOCAL = LOC.CODLOCAL)
+LEFT JOIN TSIUSU USU
+ON (PRO.CODUSUALTER = USU.CODUSU)
+WHERE PRO.CODPROD <> 0
+ORDER BY PRO.CODPROD 
+24/01/2018-13:36:36,101 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT LISTA FROM TSIARQ
+WHERE CODUSU = ?
+AND ARQUIVO = ? 
+24/01/2018-13:36:36,101 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:36:36,102 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Finalizar com telas pendentes 
+24/01/2018-13:36:36,131 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: UPDATE TSISES
+SET DHLOGOUT = ?
+WHERE CODSESSAO = ?
+AND CODUSU = ? 
+24/01/2018-13:36:36,131 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.sql.Timestamp): 2018-01-24 13:36:36.131 
+24/01/2018-13:36:36,131 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 979 
+24/01/2018-13:36:36,131 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:39:50,858 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT COUNT(1) FROM TSIUSU WHERE LOGIN = ? 
+24/01/2018-13:39:51,032 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): MARCELOEV 
+24/01/2018-13:39:51,116 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT USU.ATIVO, USU.CODUSU, USU.NOME, USU.LOGIN, USU.FOTO, USU.PERFIL, USU.SENHA, MD5(?) AS CRYPT,
+GET_TSIPAR_T(?, ?) AS VERSAOATUALDB, EMP.CODEMP, EMP.RAZAOSOCIAL, EMP.NOMEFANTASIA, EMP.CNPJ FROM TSIUSU USU
+INNER JOIN TSIEMP EMP
+ON (USU.CODEMP = EMP.CODEMP)WHERE USU.LOGIN = ? 
+24/01/2018-13:39:51,117 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): marcelo26 
+24/01/2018-13:39:51,117 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): VERSAOATUALDB 
+24/01/2018-13:39:51,117 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:39:51,117 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): MARCELOEV 
+24/01/2018-13:39:51,201 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT GET_CODSESSAO(?) AS SESSAO FROM DUAL 
+24/01/2018-13:39:51,201 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:39:51,202 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: INSERT INTO TSISES
+(CODSESSAO, CODUSU, DHLOGIN, IPMAQ, NOMEMAQ, VERSAOEXEC)
+VALUES
+(?, ?, ?, ?, ?, ?) 
+24/01/2018-13:39:51,203 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 980 
+24/01/2018-13:39:51,203 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:39:51,203 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.sql.Timestamp): 2018-01-24 13:39:51.203 
+24/01/2018-13:39:51,203 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): 192.168.12.191 
+24/01/2018-13:39:51,203 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Marcelo-NTB 
+24/01/2018-13:39:51,204 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): 1.0.0 
+24/01/2018-13:39:51,717 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:39:51,717 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Cadastro de Usuários, Controle de Acessos, Controle de Lembretes] 
+24/01/2018-13:39:51,717 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Cadastro de Usuários 
+24/01/2018-13:39:51,718 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Controle de Acessos 
+24/01/2018-13:39:51,718 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Controle de Lembretes 
+24/01/2018-13:39:51,718 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:39:51,750 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:39:51,750 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Empresas, Parceiros, Operações, Parâmetros, ConsultaDB] 
+24/01/2018-13:39:51,750 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Empresas 
+24/01/2018-13:39:51,750 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Parceiros 
+24/01/2018-13:39:51,750 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Operações 
+24/01/2018-13:39:51,751 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Parâmetros 
+24/01/2018-13:39:51,751 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): ConsultaDB 
+24/01/2018-13:39:51,751 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:39:51,780 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:39:51,780 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Produtos, Serviços, Grupo de Produtos, Unidades, Contas, Agências, Bancos, Transportes, Moedas] 
+24/01/2018-13:39:51,780 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:39:51,780 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Serviços 
+24/01/2018-13:39:51,780 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Grupo de Produtos 
+24/01/2018-13:39:51,781 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Unidades 
+24/01/2018-13:39:51,781 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Contas 
+24/01/2018-13:39:51,781 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): Agências 
+24/01/2018-13:39:51,781 | INFO [class br.com.sinergia.database.conect.Statement] : 7º Parâmetro(java.lang.String): Bancos 
+24/01/2018-13:39:51,781 | INFO [class br.com.sinergia.database.conect.Statement] : 8º Parâmetro(java.lang.String): Transportes 
+24/01/2018-13:39:51,781 | INFO [class br.com.sinergia.database.conect.Statement] : 9º Parâmetro(java.lang.String): Moedas 
+24/01/2018-13:39:51,781 | INFO [class br.com.sinergia.database.conect.Statement] : 10º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:39:51,804 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:39:51,805 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Países, Estados, Cidades, Bairros, Logradouros] 
+24/01/2018-13:39:51,805 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Países 
+24/01/2018-13:39:51,805 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Estados 
+24/01/2018-13:39:51,805 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Cidades 
+24/01/2018-13:39:51,805 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Bairros 
+24/01/2018-13:39:51,805 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Logradouros 
+24/01/2018-13:39:51,805 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:39:51,830 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:39:51,830 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Portal de Compras, Portal de Vendas, Mov. Internas, Tabela de Preços, Preços de Moedas, Controle de Estoque] 
+24/01/2018-13:39:51,831 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Portal de Compras 
+24/01/2018-13:39:51,831 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Portal de Vendas 
+24/01/2018-13:39:51,831 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Mov. Internas 
+24/01/2018-13:39:51,831 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Tabela de Preços 
+24/01/2018-13:39:51,831 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Preços de Moedas 
+24/01/2018-13:39:51,831 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): Controle de Estoque 
+24/01/2018-13:39:51,831 | INFO [class br.com.sinergia.database.conect.Statement] : 7º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:39:51,858 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:39:51,858 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Mov. Financeira, Mov. Bancária, Saldo de Contas, Transferências] 
+24/01/2018-13:39:51,858 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Mov. Financeira 
+24/01/2018-13:39:51,858 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Mov. Bancária 
+24/01/2018-13:39:51,859 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Saldo de Contas 
+24/01/2018-13:39:51,859 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Transferências 
+24/01/2018-13:39:51,859 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:39:51,881 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT LISTA FROM TSIARQ
+WHERE CODUSU = ?
+AND ARQUIVO = ? 
+24/01/2018-13:39:51,881 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:39:51,881 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Lista de Telas(Favoritas) 
+24/01/2018-13:39:51,908 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA
+FROM (SELECT MAX(CODREG), TELA
+FROM TSIREG
+WHERE CODUSU = ?
+GROUP BY TELA
+ORDER BY 1 DESC)
+WHERE ROWNUM <= 10 
+24/01/2018-13:39:51,908 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:39:51,929 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT DHALTER, LEMBRETE FROM TGFLEM WHERE CODUSU = ? 
+24/01/2018-13:39:51,930 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:39:51,980 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT MSG.CODMSG, MSG.VISUALIZADA, MSG.PRIORIDADE, MSG.TITULO,
+ MSG.MENSAGEM, MSG.DHALTER,
+CASE WHEN MSG.CODUSUREM IS NULL THEN -1 ELSE MSG.CODUSUREM END AS CODUSUREM,
+CASE WHEN MSG.CODUSUREM IS NULL THEN 'Desconhecido' ELSE USU.LOGIN END AS LOGINREM
+FROM TRIMSG MSG
+LEFT JOIN TSIUSU USU
+ON MSG.CODUSUREM = USU.CODUSU
+WHERE MSG.CODUSU = ?
+AND ROWNUM <= 20
+ORDER BY MSG.CODMSG 
+24/01/2018-13:39:51,981 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:39:52,037 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT FOTO FROM TSIUSU WHERE CODUSU = ?
+24/01/2018-13:39:52,037 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+24/01/2018-13:39:52,126 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT FOTO FROM TSIUSU WHERE CODUSU = ?
+24/01/2018-13:39:52,126 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 0
+24/01/2018-13:39:54,498 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT CAMINHO, LOCALIZADOR
+FROM TSITEL
+WHERE TELA = ? 
+24/01/2018-13:39:54,498 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:39:54,501 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: INSERT INTO TSIREG
+(CODREG, CODUSU, CODSESSAO, DHACESSO, TELA)
+VALUES
+(GET_CODREG(?), ?, ?, ?, ?) 
+24/01/2018-13:39:54,501 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:39:54,501 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:39:54,501 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 980 
+24/01/2018-13:39:54,501 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.sql.Timestamp): 2018-01-24 13:39:54.501 
+24/01/2018-13:39:54,501 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:39:54,527 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA
+FROM (SELECT MAX(CODREG), TELA
+FROM TSIREG
+WHERE CODUSU = ?
+GROUP BY TELA
+ORDER BY 1 DESC)
+WHERE ROWNUM <= 10 
+24/01/2018-13:39:54,527 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:39:54,716 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT PRO.*, GRU.DESCRGRUPOPROD, USU.LOGIN, LOC.DESCRLOCAL
+FROM TGFPRO PRO
+INNER JOIN TGFGRU GRU
+ON (PRO.CODGRUPOPROD = GRU.CODGRUPOPROD)
+INNER JOIN TGFLOC LOC
+ON (PRO.CODLOCAL = LOC.CODLOCAL)
+LEFT JOIN TSIUSU USU
+ON (PRO.CODUSUALTER = USU.CODUSU)
+WHERE PRO.CODPROD <> 0
+ORDER BY PRO.CODPROD 
+24/01/2018-13:40:04,364 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: UPDATE TGFPRO
+SET DESCRPROD = ?, ATIVO = ?, CARACTERISTICAS = ?, COMPLEMENTO = ?, MARCA = ?, CODGRUPOPROD = ?, CODLOCAL = ?
+WHERE CODPROD = ? 
+24/01/2018-13:40:04,368 | ERROR [class br.com.sinergia.controllers.fxml.CadProdutosController] : Erro ao tentar gravar alterações do produto
+java.lang.NullPointerExceptionA operação foi cancelada, revertendo alterações. 
+24/01/2018-13:40:04,369 | ERROR [class br.com.sinergia.controllers.fxml.CadProdutosController] : br.com.sinergia.controllers.dialog.ModelException
+	at br.com.sinergia.controllers.fxml.CadProdutosController.Altera(CadProdutosController.java:137)
+	at br.com.sinergia.controllers.fxml.CadProdutosController.CtrlBtns(CadProdutosController.java:279)
+	at br.com.sinergia.controllers.fxml.CadProdutosController.lambda$loadClass$2(CadProdutosController.java:66)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Node.fireEvent(Node.java:8413)
+	at javafx.scene.control.Button.fire(Button.java:185)
+	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:182)
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:96)
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:89)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:218)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3757)
+	at javafx.scene.Scene$MouseHandler.access$1500(Scene.java:3485)
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1762)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2494)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:381)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$354(GlassViewEventHandler.java:417)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:389)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:416)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:555)
+	at com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
+	at com.sun.glass.ui.win.WinApplication.lambda$null$148(WinApplication.java:191)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException
+	at br.com.sinergia.controllers.fxml.CadProdutosController.Altera(CadProdutosController.java:119)
+	... 57 more
+ 
+24/01/2018-13:41:31,901 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT LISTA FROM TSIARQ
+WHERE CODUSU = ?
+AND ARQUIVO = ? 
+24/01/2018-13:41:31,901 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:41:31,901 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Finalizar com telas pendentes 
+24/01/2018-13:41:31,923 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: UPDATE TSISES
+SET DHLOGOUT = ?
+WHERE CODSESSAO = ?
+AND CODUSU = ? 
+24/01/2018-13:41:31,924 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.sql.Timestamp): 2018-01-24 13:41:31.924 
+24/01/2018-13:41:31,924 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 980 
+24/01/2018-13:41:31,924 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:48:48,867 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT COUNT(1) FROM TSIUSU WHERE LOGIN = ? 
+24/01/2018-13:48:49,024 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): MARCELOEV 
+24/01/2018-13:48:49,111 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT USU.ATIVO, USU.CODUSU, USU.NOME, USU.LOGIN, USU.FOTO, USU.PERFIL, USU.SENHA, MD5(?) AS CRYPT,
+GET_TSIPAR_T(?, ?) AS VERSAOATUALDB, EMP.CODEMP, EMP.RAZAOSOCIAL, EMP.NOMEFANTASIA, EMP.CNPJ FROM TSIUSU USU
+INNER JOIN TSIEMP EMP
+ON (USU.CODEMP = EMP.CODEMP)WHERE USU.LOGIN = ? 
+24/01/2018-13:48:49,112 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): marcelo26 
+24/01/2018-13:48:49,112 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): VERSAOATUALDB 
+24/01/2018-13:48:49,112 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:48:49,112 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): MARCELOEV 
+24/01/2018-13:48:49,211 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT GET_CODSESSAO(?) AS SESSAO FROM DUAL 
+24/01/2018-13:48:49,211 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:48:49,212 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: INSERT INTO TSISES
+(CODSESSAO, CODUSU, DHLOGIN, IPMAQ, NOMEMAQ, VERSAOEXEC)
+VALUES
+(?, ?, ?, ?, ?, ?) 
+24/01/2018-13:48:49,213 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 981 
+24/01/2018-13:48:49,213 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:48:49,213 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.sql.Timestamp): 2018-01-24 13:48:49.213 
+24/01/2018-13:48:49,213 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): 192.168.12.191 
+24/01/2018-13:48:49,213 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Marcelo-NTB 
+24/01/2018-13:48:49,214 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): 1.0.0 
+24/01/2018-13:48:49,678 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:48:49,678 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Cadastro de Usuários, Controle de Acessos, Controle de Lembretes] 
+24/01/2018-13:48:49,678 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Cadastro de Usuários 
+24/01/2018-13:48:49,679 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Controle de Acessos 
+24/01/2018-13:48:49,679 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Controle de Lembretes 
+24/01/2018-13:48:49,679 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:48:49,710 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:48:49,711 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Empresas, Parceiros, Operações, Parâmetros, ConsultaDB] 
+24/01/2018-13:48:49,711 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Empresas 
+24/01/2018-13:48:49,711 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Parceiros 
+24/01/2018-13:48:49,711 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Operações 
+24/01/2018-13:48:49,711 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Parâmetros 
+24/01/2018-13:48:49,711 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): ConsultaDB 
+24/01/2018-13:48:49,712 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:48:49,746 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:48:49,747 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Produtos, Serviços, Grupo de Produtos, Unidades, Contas, Agências, Bancos, Transportes, Moedas] 
+24/01/2018-13:48:49,747 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:48:49,747 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Serviços 
+24/01/2018-13:48:49,748 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Grupo de Produtos 
+24/01/2018-13:48:49,748 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Unidades 
+24/01/2018-13:48:49,748 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Contas 
+24/01/2018-13:48:49,748 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): Agências 
+24/01/2018-13:48:49,748 | INFO [class br.com.sinergia.database.conect.Statement] : 7º Parâmetro(java.lang.String): Bancos 
+24/01/2018-13:48:49,748 | INFO [class br.com.sinergia.database.conect.Statement] : 8º Parâmetro(java.lang.String): Transportes 
+24/01/2018-13:48:49,748 | INFO [class br.com.sinergia.database.conect.Statement] : 9º Parâmetro(java.lang.String): Moedas 
+24/01/2018-13:48:49,749 | INFO [class br.com.sinergia.database.conect.Statement] : 10º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:48:49,781 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:48:49,781 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Países, Estados, Cidades, Bairros, Logradouros] 
+24/01/2018-13:48:49,782 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Países 
+24/01/2018-13:48:49,782 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Estados 
+24/01/2018-13:48:49,782 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Cidades 
+24/01/2018-13:48:49,782 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Bairros 
+24/01/2018-13:48:49,782 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Logradouros 
+24/01/2018-13:48:49,782 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:48:49,821 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:48:49,821 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Portal de Compras, Portal de Vendas, Mov. Internas, Tabela de Preços, Preços de Moedas, Controle de Estoque] 
+24/01/2018-13:48:49,821 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Portal de Compras 
+24/01/2018-13:48:49,821 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Portal de Vendas 
+24/01/2018-13:48:49,821 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Mov. Internas 
+24/01/2018-13:48:49,822 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Tabela de Preços 
+24/01/2018-13:48:49,822 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Preços de Moedas 
+24/01/2018-13:48:49,822 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): Controle de Estoque 
+24/01/2018-13:48:49,822 | INFO [class br.com.sinergia.database.conect.Statement] : 7º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:48:49,854 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:48:49,854 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Mov. Financeira, Mov. Bancária, Saldo de Contas, Transferências] 
+24/01/2018-13:48:49,854 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Mov. Financeira 
+24/01/2018-13:48:49,854 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Mov. Bancária 
+24/01/2018-13:48:49,854 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Saldo de Contas 
+24/01/2018-13:48:49,854 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Transferências 
+24/01/2018-13:48:49,855 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:48:49,880 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT LISTA FROM TSIARQ
+WHERE CODUSU = ?
+AND ARQUIVO = ? 
+24/01/2018-13:48:49,880 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:48:49,880 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Lista de Telas(Favoritas) 
+24/01/2018-13:48:49,909 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA
+FROM (SELECT MAX(CODREG), TELA
+FROM TSIREG
+WHERE CODUSU = ?
+GROUP BY TELA
+ORDER BY 1 DESC)
+WHERE ROWNUM <= 10 
+24/01/2018-13:48:49,909 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:48:49,934 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT DHALTER, LEMBRETE FROM TGFLEM WHERE CODUSU = ? 
+24/01/2018-13:48:49,934 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:48:49,981 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT MSG.CODMSG, MSG.VISUALIZADA, MSG.PRIORIDADE, MSG.TITULO,
+ MSG.MENSAGEM, MSG.DHALTER,
+CASE WHEN MSG.CODUSUREM IS NULL THEN -1 ELSE MSG.CODUSUREM END AS CODUSUREM,
+CASE WHEN MSG.CODUSUREM IS NULL THEN 'Desconhecido' ELSE USU.LOGIN END AS LOGINREM
+FROM TRIMSG MSG
+LEFT JOIN TSIUSU USU
+ON MSG.CODUSUREM = USU.CODUSU
+WHERE MSG.CODUSU = ?
+AND ROWNUM <= 20
+ORDER BY MSG.CODMSG 
+24/01/2018-13:48:49,982 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:48:50,038 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT FOTO FROM TSIUSU WHERE CODUSU = ?
+24/01/2018-13:48:50,038 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+24/01/2018-13:48:50,129 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT FOTO FROM TSIUSU WHERE CODUSU = ?
+24/01/2018-13:48:50,130 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 0
+24/01/2018-13:48:53,216 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT CAMINHO, LOCALIZADOR
+FROM TSITEL
+WHERE TELA = ? 
+24/01/2018-13:48:53,216 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:48:53,218 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: INSERT INTO TSIREG
+(CODREG, CODUSU, CODSESSAO, DHACESSO, TELA)
+VALUES
+(GET_CODREG(?), ?, ?, ?, ?) 
+24/01/2018-13:48:53,218 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:48:53,218 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:48:53,218 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 981 
+24/01/2018-13:48:53,219 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.sql.Timestamp): 2018-01-24 13:48:53.219 
+24/01/2018-13:48:53,219 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:48:53,250 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA
+FROM (SELECT MAX(CODREG), TELA
+FROM TSIREG
+WHERE CODUSU = ?
+GROUP BY TELA
+ORDER BY 1 DESC)
+WHERE ROWNUM <= 10 
+24/01/2018-13:48:53,250 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:48:53,459 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT PRO.*, GRU.DESCRGRUPOPROD, USU.LOGIN, LOC.DESCRLOCAL
+FROM TGFPRO PRO
+INNER JOIN TGFGRU GRU
+ON (PRO.CODGRUPOPROD = GRU.CODGRUPOPROD)
+INNER JOIN TGFLOC LOC
+ON (PRO.CODLOCAL = LOC.CODLOCAL)
+LEFT JOIN TSIUSU USU
+ON (PRO.CODUSUALTER = USU.CODUSU)
+WHERE PRO.CODPROD <> 0
+ORDER BY PRO.CODPROD 
+24/01/2018-13:49:13,553 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT LISTA FROM TSIARQ
+WHERE CODUSU = ?
+AND ARQUIVO = ? 
+24/01/2018-13:49:13,553 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:49:13,553 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Finalizar com telas pendentes 
+24/01/2018-13:49:13,591 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: UPDATE TSISES
+SET DHLOGOUT = ?
+WHERE CODSESSAO = ?
+AND CODUSU = ? 
+24/01/2018-13:49:13,591 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.sql.Timestamp): 2018-01-24 13:49:13.591 
+24/01/2018-13:49:13,592 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 981 
+24/01/2018-13:49:13,592 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:50:39,085 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT COUNT(1) FROM TSIUSU WHERE LOGIN = ? 
+24/01/2018-13:50:39,253 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): MARCELOEV 
+24/01/2018-13:50:39,341 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT USU.ATIVO, USU.CODUSU, USU.NOME, USU.LOGIN, USU.FOTO, USU.PERFIL, USU.SENHA, MD5(?) AS CRYPT,
+GET_TSIPAR_T(?, ?) AS VERSAOATUALDB, EMP.CODEMP, EMP.RAZAOSOCIAL, EMP.NOMEFANTASIA, EMP.CNPJ FROM TSIUSU USU
+INNER JOIN TSIEMP EMP
+ON (USU.CODEMP = EMP.CODEMP)WHERE USU.LOGIN = ? 
+24/01/2018-13:50:39,341 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): marcelo26 
+24/01/2018-13:50:39,341 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): VERSAOATUALDB 
+24/01/2018-13:50:39,341 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:50:39,341 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): MARCELOEV 
+24/01/2018-13:50:39,478 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT GET_CODSESSAO(?) AS SESSAO FROM DUAL 
+24/01/2018-13:50:39,479 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:50:39,480 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: INSERT INTO TSISES
+(CODSESSAO, CODUSU, DHLOGIN, IPMAQ, NOMEMAQ, VERSAOEXEC)
+VALUES
+(?, ?, ?, ?, ?, ?) 
+24/01/2018-13:50:39,481 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 982 
+24/01/2018-13:50:39,481 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:50:39,481 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.sql.Timestamp): 2018-01-24 13:50:39.481 
+24/01/2018-13:50:39,481 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): 192.168.12.191 
+24/01/2018-13:50:39,481 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Marcelo-NTB 
+24/01/2018-13:50:39,482 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): 1.0.0 
+24/01/2018-13:50:40,051 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:50:40,051 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Cadastro de Usuários, Controle de Acessos, Controle de Lembretes] 
+24/01/2018-13:50:40,051 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Cadastro de Usuários 
+24/01/2018-13:50:40,051 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Controle de Acessos 
+24/01/2018-13:50:40,051 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Controle de Lembretes 
+24/01/2018-13:50:40,051 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:50:40,085 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:50:40,085 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Empresas, Parceiros, Operações, Parâmetros, ConsultaDB] 
+24/01/2018-13:50:40,085 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Empresas 
+24/01/2018-13:50:40,085 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Parceiros 
+24/01/2018-13:50:40,085 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Operações 
+24/01/2018-13:50:40,086 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Parâmetros 
+24/01/2018-13:50:40,086 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): ConsultaDB 
+24/01/2018-13:50:40,086 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:50:40,123 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:50:40,123 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Produtos, Serviços, Grupo de Produtos, Unidades, Contas, Agências, Bancos, Transportes, Moedas] 
+24/01/2018-13:50:40,123 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:50:40,123 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Serviços 
+24/01/2018-13:50:40,124 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Grupo de Produtos 
+24/01/2018-13:50:40,124 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Unidades 
+24/01/2018-13:50:40,124 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Contas 
+24/01/2018-13:50:40,124 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): Agências 
+24/01/2018-13:50:40,124 | INFO [class br.com.sinergia.database.conect.Statement] : 7º Parâmetro(java.lang.String): Bancos 
+24/01/2018-13:50:40,124 | INFO [class br.com.sinergia.database.conect.Statement] : 8º Parâmetro(java.lang.String): Transportes 
+24/01/2018-13:50:40,124 | INFO [class br.com.sinergia.database.conect.Statement] : 9º Parâmetro(java.lang.String): Moedas 
+24/01/2018-13:50:40,124 | INFO [class br.com.sinergia.database.conect.Statement] : 10º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:50:40,167 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:50:40,167 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Países, Estados, Cidades, Bairros, Logradouros] 
+24/01/2018-13:50:40,167 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Países 
+24/01/2018-13:50:40,168 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Estados 
+24/01/2018-13:50:40,168 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Cidades 
+24/01/2018-13:50:40,168 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Bairros 
+24/01/2018-13:50:40,168 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Logradouros 
+24/01/2018-13:50:40,168 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:50:40,201 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:50:40,201 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Portal de Compras, Portal de Vendas, Mov. Internas, Tabela de Preços, Preços de Moedas, Controle de Estoque] 
+24/01/2018-13:50:40,201 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Portal de Compras 
+24/01/2018-13:50:40,201 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Portal de Vendas 
+24/01/2018-13:50:40,201 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Mov. Internas 
+24/01/2018-13:50:40,202 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Tabela de Preços 
+24/01/2018-13:50:40,202 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Preços de Moedas 
+24/01/2018-13:50:40,202 | INFO [class br.com.sinergia.database.conect.Statement] : 6º Parâmetro(java.lang.String): Controle de Estoque 
+24/01/2018-13:50:40,202 | INFO [class br.com.sinergia.database.conect.Statement] : 7º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:50:40,228 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA, CASE WHEN VISUALIZA = 'S' THEN 'S' ELSE 'N' END AS ACESSO
+FROM TSIPER
+WHERE TELA IN (?,?,?,?)
+AND PERFIL = ? 
+24/01/2018-13:50:40,229 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.util.ArrayList): [Mov. Financeira, Mov. Bancária, Saldo de Contas, Transferências] 
+24/01/2018-13:50:40,229 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Mov. Financeira 
+24/01/2018-13:50:40,229 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Mov. Bancária 
+24/01/2018-13:50:40,229 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.String): Saldo de Contas 
+24/01/2018-13:50:40,229 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.lang.String): Transferências 
+24/01/2018-13:50:40,229 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.Integer): 0 
+24/01/2018-13:50:40,253 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT LISTA FROM TSIARQ
+WHERE CODUSU = ?
+AND ARQUIVO = ? 
+24/01/2018-13:50:40,253 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:50:40,253 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Lista de Telas(Favoritas) 
+24/01/2018-13:50:40,280 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA
+FROM (SELECT MAX(CODREG), TELA
+FROM TSIREG
+WHERE CODUSU = ?
+GROUP BY TELA
+ORDER BY 1 DESC)
+WHERE ROWNUM <= 10 
+24/01/2018-13:50:40,281 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:50:40,304 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT DHALTER, LEMBRETE FROM TGFLEM WHERE CODUSU = ? 
+24/01/2018-13:50:40,304 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:50:40,352 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT MSG.CODMSG, MSG.VISUALIZADA, MSG.PRIORIDADE, MSG.TITULO,
+ MSG.MENSAGEM, MSG.DHALTER,
+CASE WHEN MSG.CODUSUREM IS NULL THEN -1 ELSE MSG.CODUSUREM END AS CODUSUREM,
+CASE WHEN MSG.CODUSUREM IS NULL THEN 'Desconhecido' ELSE USU.LOGIN END AS LOGINREM
+FROM TRIMSG MSG
+LEFT JOIN TSIUSU USU
+ON MSG.CODUSUREM = USU.CODUSU
+WHERE MSG.CODUSU = ?
+AND ROWNUM <= 20
+ORDER BY MSG.CODMSG 
+24/01/2018-13:50:40,352 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:50:40,410 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT FOTO FROM TSIUSU WHERE CODUSU = ?
+24/01/2018-13:50:40,410 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 1
+24/01/2018-13:50:40,505 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT FOTO FROM TSIUSU WHERE CODUSU = ?
+24/01/2018-13:50:40,505 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : 1º Parâmetro(java.lang.Integer): 0
+24/01/2018-13:50:43,588 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT CAMINHO, LOCALIZADOR
+FROM TSITEL
+WHERE TELA = ? 
+24/01/2018-13:50:43,588 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:50:43,590 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: INSERT INTO TSIREG
+(CODREG, CODUSU, CODSESSAO, DHACESSO, TELA)
+VALUES
+(GET_CODREG(?), ?, ?, ?, ?) 
+24/01/2018-13:50:43,591 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:50:43,591 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:50:43,591 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 982 
+24/01/2018-13:50:43,591 | INFO [class br.com.sinergia.database.conect.Statement] : 4º Parâmetro(java.sql.Timestamp): 2018-01-24 13:50:43.591 
+24/01/2018-13:50:43,591 | INFO [class br.com.sinergia.database.conect.Statement] : 5º Parâmetro(java.lang.String): Produtos 
+24/01/2018-13:50:43,615 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT TELA
+FROM (SELECT MAX(CODREG), TELA
+FROM TSIREG
+WHERE CODUSU = ?
+GROUP BY TELA
+ORDER BY 1 DESC)
+WHERE ROWNUM <= 10 
+24/01/2018-13:50:43,615 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:50:43,805 | INFO [class br.com.sinergia.database.conect.DBParalelConex] : ExecuteQuery: SELECT PRO.*, GRU.DESCRGRUPOPROD, USU.LOGIN, LOC.DESCRLOCAL
+FROM TGFPRO PRO
+INNER JOIN TGFGRU GRU
+ON (PRO.CODGRUPOPROD = GRU.CODGRUPOPROD)
+INNER JOIN TGFLOC LOC
+ON (PRO.CODLOCAL = LOC.CODLOCAL)
+LEFT JOIN TSIUSU USU
+ON (PRO.CODUSUALTER = USU.CODUSU)
+WHERE PRO.CODPROD <> 0
+ORDER BY PRO.CODPROD 
+24/01/2018-13:51:02,877 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: SELECT LISTA FROM TSIARQ
+WHERE CODUSU = ?
+AND ARQUIVO = ? 
+24/01/2018-13:51:02,878 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.lang.Integer): 1 
+24/01/2018-13:51:02,878 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.String): Finalizar com telas pendentes 
+24/01/2018-13:51:02,912 | INFO [class br.com.sinergia.database.conect.Statement] : ExecuteQuery: UPDATE TSISES
+SET DHLOGOUT = ?
+WHERE CODSESSAO = ?
+AND CODUSU = ? 
+24/01/2018-13:51:02,913 | INFO [class br.com.sinergia.database.conect.Statement] : 1º Parâmetro(java.sql.Timestamp): 2018-01-24 13:51:02.913 
+24/01/2018-13:51:02,913 | INFO [class br.com.sinergia.database.conect.Statement] : 2º Parâmetro(java.lang.Integer): 982 
+24/01/2018-13:51:02,913 | INFO [class br.com.sinergia.database.conect.Statement] : 3º Parâmetro(java.lang.Integer): 1 
