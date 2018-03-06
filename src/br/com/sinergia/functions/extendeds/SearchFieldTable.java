@@ -47,10 +47,6 @@ public class SearchFieldTable {
 
     public SearchFieldTable(ImageView searchImage, String descrField, Integer qtdFields, String[] descrCols, String query) {
         super();
-        /*
-        SELECT CODGRUPOPROD, DESCRGRUPOPROD, ANALITICO FROM....
-        qtdFields = 3;
-        */
         setDescrField(descrField);
         setQtdFields(qtdFields);
         setQuery(query);
@@ -87,7 +83,8 @@ public class SearchFieldTable {
             hBox.setNodeOrientation(NodeOrientation.RIGHT_TO_LEFT);
             hBox.setPadding(new Insets(5, 10, 5, 10));
             hBox.setSpacing(7);
-            hBox.setStyle("-fx-border-color: LightGray; -fx-background-color: Gainsboro;");
+            hBox.setStyle("-fx-border-color: GhostWhite; -fx-background-color: GhostWhite;");
+            HBox boxFiltro = new HBox();
             VBox vBox = new VBox(TbViewRetorno, hBox);
             TbViewRetorno.setTableMenuButtonVisible(true);
             TbViewRetorno.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);

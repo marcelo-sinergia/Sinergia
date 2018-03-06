@@ -17,6 +17,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane fx:id="PanelFundo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.sinergia.controllers.fxml.ComCtrlEstController">
@@ -133,10 +134,22 @@
                                  <children>
                                     <HBox alignment="CENTER_LEFT" layoutY="1.0" prefHeight="25.0" prefWidth="627.0" spacing="20.0" style="-fx-background-color: Gainsboro;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
                                        <children>
-                                          <Label text="Somatória total de estoque:" underline="true" HBox.hgrow="ALWAYS" />
-                                          <Label fx:id="LblEstTotal" text="Estoque Total: " />
-                                          <Label fx:id="LblEstDisp" layoutX="182.0" layoutY="16.0" text="Total Disponível: " />
-                                          <Label fx:id="LblEstReserv" layoutX="313.0" layoutY="16.0" text="Total Reservado: " />
+                                          <Label text="Somatória total de estoque:" underline="true" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Label>
+                                          <Label fx:id="LblEstTotal" text="Estoque Total: ">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Label>
+                                          <Label fx:id="LblEstDisp" layoutX="182.0" layoutY="16.0" text="Total Disponível: ">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Label>
+                                          <Label fx:id="LblEstReserv" layoutX="313.0" layoutY="16.0" text="Total Reservado: ">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font></Label>
                                        </children>
                                        <padding>
                                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
