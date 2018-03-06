@@ -28,7 +28,7 @@
             <Image url="@../properties/images/Icone_Usuário.png" />
          </image>
       </ImageView>
-      <JFXTextField fx:id="TxtLogin" alignment="CENTER" focusColor="#2551ee" layoutX="33.0" layoutY="70.0" prefHeight="25.0" prefWidth="150.0">
+      <JFXTextField fx:id="TxtLogin" alignment="CENTER" focusColor="#2b55dd" layoutX="33.0" layoutY="70.0" prefHeight="25.0" prefWidth="150.0">
          <tooltip>
             <Tooltip text="Digite aqui seu Login">
                <font>
@@ -42,7 +42,7 @@
             <Image url="@../properties/images/Icone_Senha.png" />
          </image>
       </ImageView>
-      <JFXTextField fx:id="TxtSenha" alignment="CENTER" focusColor="#2551ee" layoutX="33.0" layoutY="121.0" prefHeight="25.0" prefWidth="150.0">
+      <JFXTextField fx:id="TxtSenha" alignment="CENTER" focusColor="#2b55dd" layoutX="33.0" layoutY="121.0" prefHeight="25.0" prefWidth="150.0">
          <tooltip>
             <Tooltip text="Digite aqui sua Senha">
                <font>
