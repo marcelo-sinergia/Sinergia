@@ -26,13 +26,13 @@ public class Main extends Application {
             System.err.println(ex.getMessage());
             ex.printStackTrace();
         }
-        Parent root = FXMLLoader.load(getClass().getResource("/br/com/sinergia/views/Login.fxml"));
+        /*Parent root = FXMLLoader.load(getClass().getResource("/br/com/sinergia/views/Login.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setTitle("Sistema Sinergia");
         stage.getIcons().add(new Image("/br/com/sinergia/properties/images/Icone_Sistema.png"));
         stage.setResizable(false);
         stage.show();
-        stage.setY(stage.getY() * 3f / 2f); //Centraliza a tela
+        stage.setY(stage.getY() * 3f / 2f); //Centraliza a tela*/
     }
 }

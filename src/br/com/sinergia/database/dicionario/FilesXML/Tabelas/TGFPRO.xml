@@ -20,20 +20,24 @@
             <Opcoes/>
         </Campo>
         <Campo nuCampo="5" idCampo="5" nomeCampo="ATIVO" descrCampo="Ativo" pesqCampo="Ativo">
-            <InfoCampo tipoCampo="6" vlrCampo="1" foreign="N" nullable="N" default="S">
-                <Opcoes>
-                    <Opcao idx="1" valor="S" resultado="Sim"/>
-                    <Opcao idx="2" valor="N" resultado="Não"/>
-                </Opcoes>
-            </InfoCampo>
+            <InfoCampo tipoCampo="6" vlrCampo="1" foreign="N" nullable="N" default="S"/>
+            <Opcoes>
+                <Opcao idx="1" valor="S" resultado="Sim"/>
+                <Opcao idx="2" valor="N" resultado="Não"/>
+            </Opcoes>
         </Campo>
-        <Campo nuCampo="5" idCampo="5" nomeCampo="TESTE" descrCampo="TESTE" pesqCampo="TESTE">
-            <InfoCampo tipoCampo="6" vlrCampo="1" foreign="N" nullable="N" default="S">
-                <Opcoes>
-                    <Opcao idx="1" valor="S" resultado="Sim"/>
-                    <Opcao idx="2" valor="N" resultado="Não"/>
-                </Opcoes>
-            </InfoCampo>
+        <Campo nuCampo="6" idCampo="6" nomeCampo="CODGRUPOPROD" descrCampo="Código do Grupo de produtos"
+               pesqCampo="Cód. Grupo Prod.">
+            <InfoCampo tipoCampo="1" vlrCampo="38" foreign="S" nullable="N" default="0"/>
+            <Opcao/>
+        </Campo>
+        <Campo nuCampo="7" idCampo="7" nomeCampo="DHCRIACAO" descrCampo="Data/Hora criação do produto" pesqCampo="Data/Hora Criação">
+            <InfoCampo tipoCampo="2" vlrCamp="0" foreign="N" nullable="N" default="SYSDATE"/>
+            <Opcoes/>
+        </Campo>
+        <Campo nuCampo="8" idCampo="8" nomeCampo="DHALTER" descrCampo="Data/Hora Alteração do produto" pesqCampo="Data/Hora Alteração">
+            <InfoCampo tipoCampo="2" vlrCamp="0" foreign="N" nullable="N" default="SYSDATE"/>
+            <Opcoes/>
         </Campo>
     </Tabela>
 </Tabelas>
