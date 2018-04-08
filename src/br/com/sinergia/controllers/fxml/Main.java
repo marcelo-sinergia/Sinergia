@@ -13,7 +13,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        try {
+        //Teste leitura de XML
+        /*try {
             TabelaFull tabTGFPRO = ReaderDBDic.getTabelaFullByIndex(0);
             tabTGFPRO.getCampos().forEach(campo-> {
                 System.out.println(campo.getCodCampo() + " - " + campo.getNomeCampo());
@@ -25,7 +26,7 @@ public class Main extends Application {
         } catch (Exception ex) {
             System.err.println(ex.getMessage());
             ex.printStackTrace();
-        }
+        }*/
         Parent root = FXMLLoader.load(getClass().getResource("/br/com/sinergia/views/Login.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
